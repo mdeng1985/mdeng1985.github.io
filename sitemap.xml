@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://mdeng1985.github.io/2017/01/24/hexo-edit-blog/</loc>
+    
+    <lastmod>2017-01-24T19:05:17.162Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://mdeng1985.github.io/2017/01/23/installHexo/</loc>
     
-    <lastmod>2017-01-24T04:12:48.486Z</lastmod>
+    <lastmod>2017-01-24T16:41:02.078Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://mdeng1985.github.io/2017/01/23/hexo_coding_github/</loc>
+    
+    <lastmod>2017-01-24T07:05:09.706Z</lastmod>
     
   </url>
   

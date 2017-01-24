@@ -102,7 +102,7 @@ hexo init hexoblog
 这样，在hexoRoot目录下就创建了个hexoblog文件夹，进入到hexoBlog文件夹运行
 hexo server
 然后在浏览器窗口输入 ht">
-<meta property="og:updated_time" content="2017-01-24T04:12:48.486Z">
+<meta property="og:updated_time" content="2017-01-24T16:41:02.078Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="用hexo创建博客并发布到github pages">
 <meta name="twitter:description" content="安装和配置hexo首先需要安装node.js和git, 然后在命令行下安装hexo:npm install -g hexo
@@ -445,7 +445,7 @@ hexo server
 <h1 id="发布hexo博客到github-pages"><a href="#发布hexo博客到github-pages" class="headerlink" title="发布hexo博客到github pages"></a>发布hexo博客到github pages</h1><ul>
 <li><strong>github建立远程仓库</strong></li>
 </ul>
-<p>首先需要在github上建一个仓库名为username.github.io（username对应自己的github用户名，这里假设为zhangshan; github.io是则说明建的是个人用户页，不是项目页，两者区别参见：<a href="https://help.github.com/articles/user-organization-and-project-pages/" target="_blank" rel="external">User, Organization, and Project Pages</a>）.这样参控股的网址为(可在项目里查看):</p>
+<p>首先需要在github上建一个仓库名为username.github.io（username对应自己的github用户名，这里假设为zhangshan; github.io是则说明建的是个人用户页，不是项目页，两者区别参见：<a href="https://help.github.com/articles/user-organization-and-project-pages/" target="_blank" rel="external">User, Organization, and Project Pages</a>）.这个项目的网址为(可在项目里查看):</p>
 <blockquote>
 <p><code>zhangshan/zhangshan.github.io.git</code></p>
 </blockquote>
@@ -457,8 +457,9 @@ hexo server
 <p>然后执行如下命令：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo clean</div><div class="line">hexo generate</div><div class="line">hexo deploy</div></pre></td></tr></table></figure>
 <ul>
-<li>浏览器窗口输入<code>https://zhangshan.github.io/</code>就可以看到博客效果</li>
+<li><strong>浏览器窗口查看</strong></li>
 </ul>
+<p>输入<code>https://zhangshan.github.io/</code>就可以看到博客效果</p>
 <h1 id="添加博客文章"><a href="#添加博客文章" class="headerlink" title="添加博客文章"></a>添加博客文章</h1><p>在命令行工具下进入到hexoBlog目录，运行：</p>
 <p><code>hexo new &quot;arc1&quot;</code></p>
 <p>这样在source/_posts目录下就新建了一个arc1.md博客文件，打开以后有固定的格式：</p>
@@ -582,6 +583,10 @@ hexo server
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2017/01/23/hexo_coding_github/" rel="prev" title="利用hexo将博客同时推送到coding pages和github pages">
+                利用hexo将博客同时推送到coding pages和github pages <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -609,6 +614,8 @@ hexo server
       
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/01/23/hexo_coding_github/">利用hexo将博客同时推送到coding pages和github pages</a>
             
           </div>
 
@@ -704,7 +711,7 @@ hexo server
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -722,7 +729,7 @@ hexo server
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

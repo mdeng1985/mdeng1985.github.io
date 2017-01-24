@@ -4,8 +4,30 @@
 
     
   <url>
+    <loc>http://mdeng1985.github.io/2017/01/24/hexo-edit-blog/</loc>
+    <lastmod>2017-01-24T19:05:17.162Z</lastmod>
+    <data>
+        <display>
+        <title>Hexo撰写博客教程</title>
+        <pubTime>2017-01-24T16:50:51.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+        <tag>git</tag>
+         
+         
+           
+             
+              <breadCrumb title="建站" url="http://mdeng1985.github.io/categories/%E5%BB%BA%E7%AB%99/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://mdeng1985.github.io/2017/01/23/installHexo/</loc>
-    <lastmod>2017-01-24T04:12:48.486Z</lastmod>
+    <lastmod>2017-01-24T16:41:02.078Z</lastmod>
     <data>
         <display>
         <title>用hexo创建博客并发布到github pages</title>
@@ -16,6 +38,32 @@
         <tag>git</tag>
          
         <tag>github pages</tag>
+         
+         
+           
+             
+              <breadCrumb title="建站" url="http://mdeng1985.github.io/categories/%E5%BB%BA%E7%AB%99/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://mdeng1985.github.io/2017/01/23/hexo_coding_github/</loc>
+    <lastmod>2017-01-24T07:05:09.706Z</lastmod>
+    <data>
+        <display>
+        <title>利用hexo将博客同时推送到coding pages和github pages</title>
+        <pubTime>2017-01-23T15:58:24.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+        <tag>git</tag>
+         
+        <tag>github pages</tag>
+         
+        <tag>coding pages</tag>
          
          
            
