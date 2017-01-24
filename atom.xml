@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mdeng1985.github.io/"/>
-  <updated>2017-01-23T19:30:53.886Z</updated>
+  <updated>2017-01-23T23:10:06.285Z</updated>
   <id>http://mdeng1985.github.io/</id>
   
   <author>
@@ -16,97 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>用hexo创建博客并发布到github pages</title>
-    <link href="http://mdeng1985.github.io/2017/01/23/installHexo/"/>
-    <id>http://mdeng1985.github.io/2017/01/23/installHexo/</id>
-    <published>2017-01-23T15:58:24.000Z</published>
-    <updated>2017-01-23T19:30:53.886Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="安装和配置hexo"><a href="#安装和配置hexo" class="headerlink" title="安装和配置hexo"></a>安装和配置hexo</h1><p>首先需要安装node.js和git, 然后在命令行下安装hexo:<br><br><code>npm install -g hexo</code></p>
-<p>命令行进入到blog的上一级目录(比如说D://hexoRoot),创建一个hexo项目</p>
-<p><code>hexo init hexoblog</code></p>
-<p>这样，在hexoRoot目录下就创建了个hexoblog的项目，进入到hexoBlog文件夹运行</p>
-<p><code>hexo server</code></p>
-<p>然后在浏览器窗口输入 <code>http://localhost:4000/</code>，就可以预览博客。</p>
-<p>如果看不到，换一个端口试试，比如： <code>hexo s -p 3600</code>，浏览器窗口输入：<code>http://localhost:3600/</code></p>
-<p>最后安装插件（在命令行工具下的目录hexoBlog中执行下述命令）：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">npm install hexo-generator-index --save</div><div class="line">npm install hexo-generator-archive --save</div><div class="line">npm install hexo-generator-category --save</div><div class="line">npm install hexo-generator-tag --save</div><div class="line">npm install hexo-server --save</div><div class="line">npm install hexo-deployer-git --save</div><div class="line">npm install hexo-deployer-heroku --save</div><div class="line">npm install hexo-deployer-rsync --save</div><div class="line">npm install hexo-deployer-openshift --save</div><div class="line">npm install hexo-renderer-marked@0.2 --save</div><div class="line">npm install hexo-renderer-stylus@0.2 --save</div><div class="line">npm install hexo-generator-feed@1 --save</div><div class="line">npm install hexo-generator-sitemap@1 --save</div></pre></td></tr></table></figure>
-<h1 id="发布hexo博客到github-pages"><a href="#发布hexo博客到github-pages" class="headerlink" title="发布hexo博客到github pages"></a>发布hexo博客到github pages</h1><ul>
-<li>首先需要在github上建一个仓库名为username.github.io（username对应自己的github用户名，这里假设为zhangshan; github.io是则说明建的是个人用户页，不是项目页，两者区别参见：<a href="https://help.github.com/articles/user-organization-and-project-pages/" target="_blank" rel="external">User, Organization, and Project Pages</a>）.进入到项目里查看git网址：<code>zhangshan/zhangshan.github.io.git</code></li>
-<li><p>在本地进入到新建的hexoBlog文件夹里，配置_config.yml文件：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">type: git</div><div class="line">repository: git@github.com:zhangshan/zhangshan.github.io.git</div><div class="line">branch: master</div></pre></td></tr></table></figure>
-<p>然后执行如下命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo clean</div><div class="line">hexo generate</div><div class="line">hexo deploy</div></pre></td></tr></table></figure>
-</li>
-<li><p>浏览器窗口输入<code>https://zhangshan.github.io/</code>就可以看到博客效果</p>
-</li>
-</ul>
-<h1 id="hexo博客的优化与美化"><a href="#hexo博客的优化与美化" class="headerlink" title="hexo博客的优化与美化"></a>hexo博客的优化与美化</h1><h2 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h2><p>安装主题的主要流程：将主题包下载下来，放到themes文件夹下，然后在_config.yml里进行配置， 以<a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">next</a>主题为例进行说明：</p>
-<ul>
-<li><p>在hexoBlog目录下进行git克隆</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git clone https://github.com/iissnan/hexo-theme-next themes/next</div></pre></td></tr></table></figure>
-<p>这样主题就自动下载到next文件夹了(也可以手动下载主题，然后解压缩)</p>
-</li>
-<li><p>修改hexoBlog目录下的_config.yml文件：<code>theme: next</code></p>
-</li>
-<li><p>如果要修改next主题的一些配置，则需要修改next文件夹下的_config_yml文件。</p>
-</li>
-</ul>
-<p>我比较喜欢的两个主题有</p>
-<ul>
-<li><a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">next</a></li>
-<li><a href="https://github.com/wuchong/jacman" target="_blank" rel="external">jacman</a></li>
-</ul>
-<h1 id="添加博客文章"><a href="#添加博客文章" class="headerlink" title="添加博客文章"></a>添加博客文章</h1><p>在命令行工具下进入到hexoBlog目录，运行：</p>
-<p><code>hexo new &quot;arc1&quot;</code></p>
-<p>这样在source/_posts目录下就新建了一个arc1.md博客文件，打开以后有固定的格式：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">title: myarc</div><div class="line">date: 2017-01-23 10:24:47</div><div class="line">tags:</div><div class="line">---</div></pre></td></tr></table></figure>
-<p>其中title为博客的标题，tags为博客的标签，对于多个标签可以采用<code>tags:[tag1,tag2]</code>来实现。博客的撰写需要采用markdown语法，可以参见<a href="/2017/01/23/markdown_gram/" title="Markdown语法总结">Markdown语法总结</a>.</p>
-<p>写完以后运行<code>hexo s -p 3600</code> 进行预览，没问题了再运行<code>hexo generate</code> <code>hexo deploy</code>发布到github pages</p>
-<h1 id="使用过程中的FAQ"><a href="#使用过程中的FAQ" class="headerlink" title="使用过程中的FAQ"></a>使用过程中的FAQ</h1><ul>
-<li><p>引用自己博客里的其他文章：A引用Bfg.md，则在A的md文件里输入：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% post_link Bfg %&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p><a href="https://github.com/iissnan/hexo-theme-next/wiki/%E8%AE%BE%E7%BD%AE%E4%BE%A7%E8%BE%B9%E6%A0%8F%E7%A4%BE%E4%BA%A4%E9%93%BE%E6%8E%A5" target="_blank" rel="external">在博客里添加自己的社交链接</a></p>
-</li>
-<li><p>添加私密文章或者草稿</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">`hexo new **draft** &quot;arc1&quot;` )</div></pre></td></tr></table></figure>
-<p>这样在source/_drafts目录下新建了arc1.md，然后在本地可以强行预览草稿：<code>hexo server --drafts</code></p>
-<ul>
-<li><a href="http://colin1994.github.io/2016/06/02/hexo-copyright-and-donate/" target="_blank" rel="external">添加版权申明</a></li>
-</ul>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1></li>
-</ul>
-<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ol>
-<li><a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="external">hexo帮助文档</a></li>
-<li><a href="https://wizardforcel.gitbooks.io/markdown-simple-world/content/hexo-tutor-7.html" target="_blank" rel="external">Markdown 简单的世界</a></li>
-</ol>
-<hr>
-<p>本作品采用知识共享署名 <a href="https://creativecommons.org/licenses/by/2.5/cn/" target="_blank" rel="external">2.5 中国大陆许可协议</a>进行许可，欢迎转载， 但转载请注明来自 <a href="mdeng1985.github.io">mli’s Blog</a>，并保持转载后文章内容的完整。本人保留所有版权相关权利。</p>
-<p>本文链接：<a href="http://mdeng1985.github.io/2017/01/23/installHexo/">http://mdeng1985.github.io/2017/01/23/installHexo/</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;安装和配置hexo&quot;&gt;&lt;a href=&quot;#安装和配置hexo&quot; class=&quot;headerlink&quot; title=&quot;安装和配置hexo&quot;&gt;&lt;/a&gt;安装和配置hexo&lt;/h1&gt;&lt;p&gt;首先需要安装node.js和git, 然后在命令行下安装hexo:&lt;br&gt;&lt;br&gt;&lt;
-    
-    </summary>
-    
-    
-      <category term="hexo" scheme="http://mdeng1985.github.io/tags/hexo/"/>
-    
-      <category term="git" scheme="http://mdeng1985.github.io/tags/git/"/>
-    
-      <category term="github pages" scheme="http://mdeng1985.github.io/tags/github-pages/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Markdown语法总结</title>
     <link href="http://mdeng1985.github.io/2017/01/23/markdown_gram/"/>
     <id>http://mdeng1985.github.io/2017/01/23/markdown_gram/</id>
     <published>2017-01-23T15:58:24.000Z</published>
-    <updated>2017-01-23T16:40:54.613Z</updated>
+    <updated>2017-01-23T23:10:06.285Z</updated>
     
     <content type="html"><![CDATA[<p>@: [gitbookLearnBook, markdown_grammer] <!-- gitbookLearnBook 为本地的书籍的标题 --> <!-- markdown_grammer为本地的.md名字 --></p>
 <h1 id="分级标题"><a href="#分级标题" class="headerlink" title="分级标题"></a>分级标题</h1><blockquote>
@@ -173,9 +87,6 @@
 <li><a href="http://www.markdowntutorial.com/" target="_blank" rel="external">Markdown Tutorial</a></li>
 <li><a href="http://col.dog/2015/11/22/Markdown-Syntax/" target="_blank" rel="external">Markdown 语法基础及使用教程</a></li>
 </ol>
-<hr>
-<p>本作品采用知识共享署名 <a href="https://creativecommons.org/licenses/by/2.5/cn/" target="_blank" rel="external">2.5 中国大陆许可协议</a>进行许可，欢迎转载， 但转载请注明来自 <a href="mdeng1985.github.io">mli’s Blog</a>，并保持转载后文章内容的完整。本人保留所有版权相关权利。</p>
-<p>本文链接：<a href="http://mdeng1985.github.io/2017/01/23/markdown_gram/">http://mdeng1985.github.io/2017/01/23/markdown_gram/</a></p>
 ]]></content>
     
     <summary type="html">
@@ -185,10 +96,139 @@
     
     </summary>
     
+      <category term="建站" scheme="http://mdeng1985.github.io/categories/%E5%BB%BA%E7%AB%99/"/>
+    
+    
+      <category term="markdown" scheme="http://mdeng1985.github.io/tags/markdown/"/>
     
       <category term="github pages" scheme="http://mdeng1985.github.io/tags/github-pages/"/>
     
-      <category term="markdown" scheme="http://mdeng1985.github.io/tags/markdown/"/>
+  </entry>
+  
+  <entry>
+    <title>用hexo创建博客并发布到github pages</title>
+    <link href="http://mdeng1985.github.io/2017/01/23/installHexo/"/>
+    <id>http://mdeng1985.github.io/2017/01/23/installHexo/</id>
+    <published>2017-01-23T15:58:24.000Z</published>
+    <updated>2017-01-24T02:39:24.667Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="安装和配置hexo"><a href="#安装和配置hexo" class="headerlink" title="安装和配置hexo"></a>安装和配置hexo</h1><p>首先需要安装node.js和git, 然后在命令行下安装hexo:<br><br><code>npm install -g hexo</code></p>
+<p>命令行进入到blog的上一级目录(比如说D://hexoRoot),创建一个hexo项目</p>
+<p><code>hexo init hexoblog</code></p>
+<p>这样，在hexoRoot目录下就创建了个hexoblog文件夹，进入到hexoBlog文件夹运行</p>
+<p><code>hexo server</code></p>
+<p>然后在浏览器窗口输入 <code>http://localhost:4000/</code>，就可以预览博客。</p>
+<p>如果看不到，换一个端口试试，比如：<br><br><code>hexo s -p 3600</code><br><br>然后在浏览器窗口输入：</p>
+<p><code>http://localhost:3600/</code><br></p>
+<p>进行预览 最后安装插件（在命令行工具下,先进入到hexoBlog目录中执行下述命令）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">npm install hexo-generator-index --save</div><div class="line">npm install hexo-generator-archive --save</div><div class="line">npm install hexo-generator-category --save</div><div class="line">npm install hexo-generator-tag --save</div><div class="line">npm install hexo-server --save</div><div class="line">npm install hexo-deployer-git --save</div><div class="line">npm install hexo-deployer-heroku --save</div><div class="line">npm install hexo-deployer-rsync --save</div><div class="line">npm install hexo-deployer-openshift --save</div><div class="line">npm install hexo-renderer-marked@0.2 --save</div><div class="line">npm install hexo-renderer-stylus@0.2 --save</div><div class="line">npm install hexo-generator-feed@1 --save</div><div class="line">npm install hexo-generator-sitemap@1 --save</div></pre></td></tr></table></figure>
+<h1 id="发布hexo博客到github-pages"><a href="#发布hexo博客到github-pages" class="headerlink" title="发布hexo博客到github pages"></a>发布hexo博客到github pages</h1><ul>
+<li><strong>github建立远程仓库</strong></li>
+</ul>
+<p>首先需要在github上建一个仓库名为username.github.io（username对应自己的github用户名，这里假设为zhangshan; github.io是则说明建的是个人用户页，不是项目页，两者区别参见：<a href="https://help.github.com/articles/user-organization-and-project-pages/" target="_blank" rel="external">User, Organization, and Project Pages</a>）.这样参控股的网址为(可在项目里查看):</p>
+<blockquote>
+<p><code>zhangshan/zhangshan.github.io.git</code></p>
+</blockquote>
+<ul>
+<li><strong>本地配置远程的git仓库</strong></li>
+</ul>
+<p>在本地进入到新建的hexoBlog文件夹里，配置_config.yml文件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">type: git</div><div class="line">repository: git@github.com:zhangshan/zhangshan.github.io.git</div><div class="line">branch: master</div></pre></td></tr></table></figure>
+<p>然后执行如下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo clean</div><div class="line">hexo generate</div><div class="line">hexo deploy</div></pre></td></tr></table></figure>
+<ul>
+<li>浏览器窗口输入<code>https://zhangshan.github.io/</code>就可以看到博客效果</li>
+</ul>
+<h1 id="添加博客文章"><a href="#添加博客文章" class="headerlink" title="添加博客文章"></a>添加博客文章</h1><p>在命令行工具下进入到hexoBlog目录，运行：</p>
+<p><code>hexo new &quot;arc1&quot;</code></p>
+<p>这样在source/_posts目录下就新建了一个arc1.md博客文件，打开以后有固定的格式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">title: myarc</div><div class="line">date: 2017-01-23 10:24:47</div><div class="line">tags:</div><div class="line">---</div></pre></td></tr></table></figure>
+<p>其中title为博客的标题，tags为博客的标签，对于多个标签可以采用<code>tags:[tag1,tag2]</code>来实现。博客的撰写需要采用markdown语法，可以参见<a href="/2017/01/23/markdown_gram/" title="Markdown语法总结">Markdown语法总结</a>.</p>
+<p>写完以后运行<code>hexo s -p 3600</code> 进行预览，没问题了再运行<code>hexo generate</code> <code>hexo deploy</code>发布到github pages</p>
+<h1 id="hexo博客的优化与美化"><a href="#hexo博客的优化与美化" class="headerlink" title="hexo博客的优化与美化"></a>hexo博客的优化与美化</h1><h2 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h2><p>安装主题的主要流程：将主题包下载下来，放到themes文件夹下，然后在_config.yml里进行配置， 以<a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">next</a>主题为例进行说明：</p>
+<ul>
+<li><p>在hexoBlog目录下进行git克隆</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git clone https://github.com/iissnan/hexo-theme-next themes/next</div></pre></td></tr></table></figure>
+<p>这样主题就自动下载到next文件夹了(也可以手动下载主题，然后解压缩)</p>
+</li>
+<li><p>修改hexoBlog目录下的_config.yml文件：<code>theme: next</code></p>
+</li>
+<li><p>如果要修改next主题的一些配置，则需要修改next文件夹下的_config_yml文件。</p>
+</li>
+</ul>
+<p>我比较喜欢的两个主题有</p>
+<ul>
+<li><a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">next</a></li>
+<li><a href="https://github.com/wuchong/jacman" target="_blank" rel="external">jacman</a></li>
+</ul>
+<h2 id="添加多说分享和评论功能"><a href="#添加多说分享和评论功能" class="headerlink" title="添加多说分享和评论功能"></a>添加多说分享和评论功能</h2><p>开始以为添加百度分享分享到微博、微信等，但是发现next主题的百度分享不支持https的站点，就使用多说分享了。首先去<a href="duoshuo.com">多说</a>用微信或者 qq登陆，设置shortname, 然后在站点的_config.yml（注意不是主题下的_config.yml）添加两行（第一行设置评论，第二行设置分享）</p>
+<blockquote>
+<p><code>duoshuo_shortname:自己设置的shortname</code><br><br><code>duoshuo_share: true</code></p>
+</blockquote>
+<p>具体设置参见<a href="http://theme-next.iissnan.com/third-party-services.html" target="_blank" rel="external">next主题的说明文档</a>。如果还是不行的话，可能和其他插件冲突，比如 disqus，检查下主题下的_config.yml和站点下的_config.yml。</p>
+<h2 id="添加版权申明"><a href="#添加版权申明" class="headerlink" title="添加版权申明"></a>添加版权申明</h2><p>参考”<a href="http://ixiusama.com/2016/02/15/%E4%B8%BA%20Next%20%E4%B8%BB%E9%A2%98%E6%96%87%E6%9C%AB%E6%B7%BB%E5%8A%A0%E7%89%88%E6%9D%83%E7%AD%89%E4%BF%A1%E6%81%AF/" target="_blank" rel="external">为 Next 主题文末添加版权等信息</a>“，只不过我的是在next\layout_macro的post.swig的<code>{\% endmacro \%}</code>那行前面加上如下的代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;page-footer&quot;&gt;</div><div class="line">    &#123;% if not is_index %&#125;</div><div class="line">      &lt;div id=&quot;eof&quot; class=&quot;print-invisible&quot;&gt;</div><div class="line">        &lt;hr class=&quot;eof&quot;&gt;</div><div class="line">      &lt;/div&gt;</div><div class="line"></div><div class="line">      &lt;div class=&quot;copyright&quot; style=&quot;clear:both;&quot;&gt;</div><div class="line">         &lt;p&gt;&lt;span&gt;本文标题:&lt;/span&gt;&lt;a href=&quot;&#123;&#123; url_for(page.path) &#125;&#125;&quot;&gt;&#123;&#123; page.title &#125;&#125;&lt;/a&gt;&lt;/p&gt;</div><div class="line">         &lt;p&gt;&lt;span&gt;文章作者:&lt;/span&gt;&lt;a href=&quot;/&quot; title=&quot;访问 &#123;&#123; theme.author &#125;&#125; 的个人博客&quot;&gt;&#123;&#123; theme.author &#125;&#125;&lt;/a&gt;&lt;/p&gt;</div><div class="line">         &lt;p&gt;&lt;span&gt;原始链接:&lt;/span&gt;&lt;a href=&quot;&#123;&#123; url_for(page.path) &#125;&#125;&quot; title=&quot;&#123;&#123; page.title &#125;&#125;&quot;&gt;&#123;&#123; page.permalink &#125;&#125;&lt;/a&gt;&lt;/p&gt;</div><div class="line">         &lt;p&gt;&lt;span&gt;许可协议:&lt;/span&gt;&lt;i class=&quot;fa fa-creative-commons&quot;&gt;&lt;/i&gt; &lt;a rel=&quot;license&quot; href=&quot;http://creativecommons.org/licenses/by-nc/4.0/&quot; title=&quot;Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)&quot;&gt;Attribution-NonCommercial 4.0&lt;/a&gt;&lt;/p&gt;</div><div class="line">         &lt;p&gt;&lt;span&gt;转载请保留以上信息。&lt;/span&gt;&lt;/p&gt;</div><div class="line">      &lt;/div&gt;</div><div class="line">    &#123;% endif %&#125;</div><div class="line"></div><div class="line">    &#123;% if not is_index and (post.prev or post.next) %&#125;</div><div class="line">      &lt;div class=&quot;post-nav&quot;&gt;</div><div class="line">        &lt;div class=&quot;post-nav-prev post-nav-item&quot;&gt;</div><div class="line">          &#123;% if post.prev %&#125;</div><div class="line">            &lt;a href=&quot;&#123;&#123; url_for(post.prev.path) &#125;&#125;&quot;&gt;&#123;&#123;post.prev.title&#125;&#125;&lt;/a&gt;</div><div class="line">          &#123;% endif %&#125;</div><div class="line">        &lt;/div&gt;</div><div class="line"></div><div class="line">        &lt;div class=&quot;post-nav-next post-nav-item&quot;&gt;</div><div class="line">          &#123;% if post.next %&#125;</div><div class="line">            &lt;a href=&quot;&#123;&#123; url_for(post.next.path) &#125;&#125;&quot;&gt;&#123;&#123;post.next.title&#125;&#125;&lt;/a&gt;</div><div class="line">          &#123;% endif %&#125;</div><div class="line">        &lt;/div&gt;</div><div class="line">      &lt;/div&gt;</div><div class="line">    &#123;% endif %&#125;</div><div class="line"></div><div class="line">  &lt;/div&gt;</div></pre></td></tr></table></figure>
+<blockquote>
+<h1 id="使用过程中的FAQ"><a href="#使用过程中的FAQ" class="headerlink" title="使用过程中的FAQ"></a>使用过程中的FAQ</h1></blockquote>
+<ul>
+<li><p>引用自己博客里的其他文章：A引用Bfg.md，则在A的md文件里输入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% post_link Bfg %&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p><a href="https://github.com/iissnan/hexo-theme-next/wiki/%E8%AE%BE%E7%BD%AE%E4%BE%A7%E8%BE%B9%E6%A0%8F%E7%A4%BE%E4%BA%A4%E9%93%BE%E6%8E%A5" target="_blank" rel="external">在博客里添加自己的社交链接</a></p>
+</li>
+<li><p>添加私密文章或者草稿</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">`hexo new **draft** &quot;arc1&quot;` )</div></pre></td></tr></table></figure>
+<p>这样在source/_drafts目录下新建了arc1.md，然后在本地可以强行预览草稿：<code>hexo server --drafts</code></p>
+<ul>
+<li><a href="http://colin1994.github.io/2016/06/02/hexo-copyright-and-donate/" target="_blank" rel="external">添加版权申明</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="我进行的相关配置总结"><a href="#我进行的相关配置总结" class="headerlink" title="我进行的相关配置总结"></a>我进行的相关配置总结</h1><ul>
+<li>本地博客根目录下hexoBlog配置远程仓库的网址(修改站点配置文件_config.yml，参见前文)</li>
+<li><a href="https://github.com/iissnan/hexo-theme-next/wiki/%E5%88%9B%E5%BB%BA-%22%E5%85%B3%E4%BA%8E%E6%88%91%22-%E9%A1%B5%E9%9D%A2" target="_blank" rel="external">创建”关于我”的页面</a></li>
+<li><p>和主题有关的设置(我用的是next主题)</p>
+<ul>
+<li><a href="https://github.com/iissnan/hexo-theme-next/wiki/%E5%88%9B%E5%BB%BA%E5%88%86%E7%B1%BB%E9%A1%B5%E9%9D%A2" target="_blank" rel="external">创建分类页面</a>，创建完以后怎么对博客分类可以参考<a href="http://ijiaober.github.io/2014/08/05/hexo/hexo-04/" target="_blank" rel="external">Hexo的分类和标签设置</a></li>
+<li><a href="https://github.com/iissnan/hexo-theme-next/wiki/%E5%88%9B%E5%BB%BA-%22%E5%85%B3%E4%BA%8E%E6%88%91%22-%E9%A1%B5%E9%9D%A2" target="_blank" rel="external">创建关于我的页面</a></li>
+<li><a href="https://github.com/iissnan/hexo-theme-next/wiki/%E8%AE%BE%E7%BD%AE%E4%BE%A7%E8%BE%B9%E6%A0%8F%E5%A4%B4%E5%83%8F" target="_blank" rel="external">设置侧边栏头像</a></li>
+<li><a href="https://github.com/iissnan/hexo-theme-next/wiki/%E8%AE%BE%E7%BD%AE%E8%AF%AD%E8%A8%80" target="_blank" rel="external">设置语言</a></li>
+<li><a href="https://github.com/iissnan/hexo-theme-next/wiki/%E8%AE%BE%E7%BD%AE%E4%BE%A7%E8%BE%B9%E6%A0%8F%E7%A4%BE%E4%BA%A4%E9%93%BE%E6%8E%A5" target="_blank" rel="external">添加社交链接</a></li>
+<li>设置多说分享和多说评论，参见前文。</li>
+<li><a href="https://qiutc.me/post/%E4%BD%BF%E7%94%A8hexo-github%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2.html" target="_blank" rel="external">添加版权协议</a></li>
+<li>添加版权申明,参见前文。</li>
+<li><a href="http://theme-next.iissnan.com/third-party-services.html#analytics-busuanzi" target="_blank" rel="external">添加不蒜子统计</a></li>
+<li><a href="http://theme-next.iissnan.com/third-party-services.html#local-search" target="_blank" rel="external">添加local search</a></li>
+<li><a href="http://theme-next.iissnan.com/third-party-services.html#mathjax-new-settings" target="_blank" rel="external">添加MathJax</a></li>
+<li><a href="http://www.cylong.com/blog/2016/04/25/hexo-next-duoshuo/" target="_blank" rel="external">添加最新访客功能</a></li>
+<li><a href="http://theme-next.iissnan.com/third-party-services.html" target="_blank" rel="external">添加sitemap</a></li>
+</ul>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1></li>
+<li><p><a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="external">hexo帮助文档</a></p>
+</li>
+<li><p><a href="https://qiutc.me/post/%E4%BD%BF%E7%94%A8hexo-github%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2.html" target="_blank" rel="external">使用hexo-github搭建静态博客：对配置文件里的每项参数做出了说明</a></p>
+</li>
+<li><p><a href="http://theme-next.iissnan.com/" target="_blank" rel="external">next theme的说明文档</a></p>
+</li>
+<li><p><a href="https://wizardforcel.gitbooks.io/markdown-simple-world/content/hexo-tutor-7.html" target="_blank" rel="external">Markdown 简单的世界</a></p>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;安装和配置hexo&quot;&gt;&lt;a href=&quot;#安装和配置hexo&quot; class=&quot;headerlink&quot; title=&quot;安装和配置hexo&quot;&gt;&lt;/a&gt;安装和配置hexo&lt;/h1&gt;&lt;p&gt;首先需要安装node.js和git, 然后在命令行下安装hexo:&lt;br&gt;&lt;br&gt;&lt;
+    
+    </summary>
+    
+      <category term="建站" scheme="http://mdeng1985.github.io/categories/%E5%BB%BA%E7%AB%99/"/>
+    
+    
+      <category term="github pages" scheme="http://mdeng1985.github.io/tags/github-pages/"/>
+    
+      <category term="hexo" scheme="http://mdeng1985.github.io/tags/hexo/"/>
+    
+      <category term="git" scheme="http://mdeng1985.github.io/tags/git/"/>
     
   </entry>
   
@@ -197,20 +237,18 @@
     <link href="http://mdeng1985.github.io/2017/01/23/hello-world/"/>
     <id>http://mdeng1985.github.io/2017/01/23/hello-world/</id>
     <published>2017-01-23T14:17:42.100Z</published>
-    <updated>2017-01-23T14:17:42.104Z</updated>
+    <updated>2017-01-24T01:06:41.924Z</updated>
     
     <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>$$a=3^2+\sqrt(3)$$</p>
+<h1 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h1><h2 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<h2 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<h2 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<h2 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-<hr>
-<p>本作品采用知识共享署名 <a href="https://creativecommons.org/licenses/by/2.5/cn/" target="_blank" rel="external">2.5 中国大陆许可协议</a>进行许可，欢迎转载， 但转载请注明来自 <a href="mdeng1985.github.io">mli’s Blog</a>，并保持转载后文章内容的完整。本人保留所有版权相关权利。</p>
-<p>本文链接：<a href="http://mdeng1985.github.io/2017/01/23/hello-world/">http://mdeng1985.github.io/2017/01/23/hello-world/</a></p>
 ]]></content>
     
     <summary type="html">
