@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="github pages,hexo,git," />
+  <meta name="keywords" content="hexo,git,github pages," />
 
 
 
@@ -102,7 +102,7 @@ hexo init hexoblog
 这样，在hexoRoot目录下就创建了个hexoblog文件夹，进入到hexoBlog文件夹运行
 hexo server
 然后在浏览器窗口输入 ht">
-<meta property="og:updated_time" content="2017-01-24T02:57:02.083Z">
+<meta property="og:updated_time" content="2017-01-24T03:12:09.971Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="用hexo创建博客并发布到github pages">
 <meta name="twitter:description" content="安装和配置hexo首先需要安装node.js和git, 然后在命令行下安装hexo:npm install -g hexo
@@ -479,6 +479,7 @@ hexo server
 <h2 id="添加版权申明"><a href="#添加版权申明" class="headerlink" title="添加版权申明"></a>添加版权申明</h2><p>参考”<a href="http://ixiusama.com/2016/02/15/%E4%B8%BA%20Next%20%E4%B8%BB%E9%A2%98%E6%96%87%E6%9C%AB%E6%B7%BB%E5%8A%A0%E7%89%88%E6%9D%83%E7%AD%89%E4%BF%A1%E6%81%AF/" target="_blank" rel="external">为 Next 主题文末添加版权等信息</a>“，只不过我的是在next\layout_macro的post.swig的<code>{\% endmacro \%}</code>那行前面加上如下的代码</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;page-footer&quot;&gt;</div><div class="line">    &#123;% if not is_index %&#125;</div><div class="line">      &lt;div id=&quot;eof&quot; class=&quot;print-invisible&quot;&gt;</div><div class="line">        &lt;hr class=&quot;eof&quot;&gt;</div><div class="line">      &lt;/div&gt;</div><div class="line"></div><div class="line">      &lt;div class=&quot;copyright&quot; style=&quot;clear:both;&quot;&gt;</div><div class="line">         &lt;p&gt;&lt;span&gt;本文标题:&lt;/span&gt;&lt;a href=&quot;&#123;&#123; url_for(page.path) &#125;&#125;&quot;&gt;&#123;&#123; page.title &#125;&#125;&lt;/a&gt;&lt;/p&gt;</div><div class="line">         &lt;p&gt;&lt;span&gt;文章作者:&lt;/span&gt;&lt;a href=&quot;/&quot; title=&quot;访问 &#123;&#123; theme.author &#125;&#125; 的个人博客&quot;&gt;&#123;&#123; theme.author &#125;&#125;&lt;/a&gt;&lt;/p&gt;</div><div class="line">         &lt;p&gt;&lt;span&gt;原始链接:&lt;/span&gt;&lt;a href=&quot;&#123;&#123; url_for(page.path) &#125;&#125;&quot; title=&quot;&#123;&#123; page.title &#125;&#125;&quot;&gt;&#123;&#123; page.permalink &#125;&#125;&lt;/a&gt;&lt;/p&gt;</div><div class="line">         &lt;p&gt;&lt;span&gt;许可协议:&lt;/span&gt;&lt;i class=&quot;fa fa-creative-commons&quot;&gt;&lt;/i&gt; &lt;a rel=&quot;license&quot; href=&quot;http://creativecommons.org/licenses/by-nc/4.0/&quot; title=&quot;Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)&quot;&gt;Attribution-NonCommercial 4.0&lt;/a&gt;&lt;/p&gt;</div><div class="line">         &lt;p&gt;&lt;span&gt;转载请保留以上信息。&lt;/span&gt;&lt;/p&gt;</div><div class="line">      &lt;/div&gt;</div><div class="line">    &#123;% endif %&#125;</div><div class="line"></div><div class="line">    &#123;% if not is_index and (post.prev or post.next) %&#125;</div><div class="line">      &lt;div class=&quot;post-nav&quot;&gt;</div><div class="line">        &lt;div class=&quot;post-nav-prev post-nav-item&quot;&gt;</div><div class="line">          &#123;% if post.prev %&#125;</div><div class="line">            &lt;a href=&quot;&#123;&#123; url_for(post.prev.path) &#125;&#125;&quot;&gt;&#123;&#123;post.prev.title&#125;&#125;&lt;/a&gt;</div><div class="line">          &#123;% endif %&#125;</div><div class="line">        &lt;/div&gt;</div><div class="line"></div><div class="line">        &lt;div class=&quot;post-nav-next post-nav-item&quot;&gt;</div><div class="line">          &#123;% if post.next %&#125;</div><div class="line">            &lt;a href=&quot;&#123;&#123; url_for(post.next.path) &#125;&#125;&quot;&gt;&#123;&#123;post.next.title&#125;&#125;&lt;/a&gt;</div><div class="line">          &#123;% endif %&#125;</div><div class="line">        &lt;/div&gt;</div><div class="line">      &lt;/div&gt;</div><div class="line">    &#123;% endif %&#125;</div><div class="line"></div><div class="line">  &lt;/div&gt;</div></pre></td></tr></table></figure>
 <h2 id="添加到搜索引擎"><a href="#添加到搜索引擎" class="headerlink" title="添加到搜索引擎"></a>添加到搜索引擎</h2><p>https不是http</p>
+<p>https:// 百度的时候</p>
 <blockquote>
 <h1 id="使用过程中的FAQ"><a href="#使用过程中的FAQ" class="headerlink" title="使用过程中的FAQ"></a>使用过程中的FAQ</h1></blockquote>
 <ul>
@@ -547,11 +548,11 @@ hexo server
       
         <div class="post-tags">
           
-            <a href="/tags/github-pages/" rel="tag"># github pages</a>
-          
             <a href="/tags/hexo/" rel="tag"># hexo</a>
           
             <a href="/tags/git/" rel="tag"># git</a>
+          
+            <a href="/tags/github-pages/" rel="tag"># github pages</a>
           
         </div>
       
@@ -560,8 +561,8 @@ hexo server
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/01/23/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2017/01/23/markdown_gram/" rel="next" title="Markdown语法总结">
+                <i class="fa fa-chevron-left"></i> Markdown语法总结
               </a>
             
           </div>
@@ -569,10 +570,6 @@ hexo server
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/01/23/markdown_gram/" rel="prev" title="Markdown语法总结">
-                Markdown语法总结 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -602,13 +599,11 @@ hexo server
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/01/23/markdown_gram/">Markdown语法总结</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/01/23/hello-world/">Hello World</a>
+              <a href="/2017/01/23/markdown_gram/">Markdown语法总结</a>
             
           </div>
         </div>
@@ -1106,6 +1101,21 @@ hexo server
   
 
   
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
 
   
 
