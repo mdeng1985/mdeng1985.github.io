@@ -92,15 +92,14 @@
 <meta property="og:url" content="http://mdeng1985.github.io/2017/01/24/hexo-edit-blog/index.html">
 <meta property="og:site_name" content="MLi's Blog">
 <meta property="og:description" content="插入图片用hexo创建博客并发布到github pages 给出了一些关于hexo的配置和博客发布过程。这篇文章主要针对的是利用hexo撰写博客。首先设置站点_config.yml, ‘post_asset_folder: true’, 在cmd输入: hexo new &amp;quot;blog&amp;quot;, 这样 source\_posts 下建立blog.md和同名的blog的文件夹。然后将图片放">
-<meta property="og:image" content="http://mdeng1985.github.io/2017/01/24/hexo-edit-blog/images/2017/01/example.jpg">
+<meta property="og:image" content="http://mdeng1985.github.io/2017/01/24/hexo-edit-blog/2017/01/24/hexo-edit-blog/example.jpg">
 <meta property="og:image" content="http://mdeng1985.github.io/2017/01/24/hexo-edit-blog/example.jpg">
 <meta property="og:image" content="http://mdeng1985.github.io/2017/01/24/hexo-edit-blog/img/example.jpg">
-<meta property="og:image" content="http://mdeng1985.github.io/2017/01/24/hexo-edit-blog/example.jpg">
-<meta property="og:updated_time" content="2017-01-24T19:05:17.162Z">
+<meta property="og:updated_time" content="2017-01-24T19:40:36.764Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo撰写博客教程">
 <meta name="twitter:description" content="插入图片用hexo创建博客并发布到github pages 给出了一些关于hexo的配置和博客发布过程。这篇文章主要针对的是利用hexo撰写博客。首先设置站点_config.yml, ‘post_asset_folder: true’, 在cmd输入: hexo new &amp;quot;blog&amp;quot;, 这样 source\_posts 下建立blog.md和同名的blog的文件夹。然后将图片放">
-<meta name="twitter:image" content="http://mdeng1985.github.io/2017/01/24/hexo-edit-blog/images/2017/01/example.jpg">
+<meta name="twitter:image" content="http://mdeng1985.github.io/2017/01/24/hexo-edit-blog/2017/01/24/hexo-edit-blog/example.jpg">
 
 
 
@@ -423,12 +422,11 @@
 
       
         <h1 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h1><a href="/2017/01/23/installHexo/" title="用hexo创建博客并发布到github pages">用hexo创建博客并发布到github pages</a> 给出了一些关于hexo的配置和博客发布过程。这篇文章主要针对的是利用hexo撰写博客。<br><br>首先设置站点_config.yml, ‘post_asset_folder: true’, 在cmd输入: <code>hexo new &quot;blog&quot;</code>, 这样 <code>source\_posts</code> 下建立blog.md和同名的blog的文件夹。<br><br>然后将图片放到这个文件里，比如<code>example.jpg</code>, 在blog里插入这个图片的方式：<br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% asset_img example.jpg 图片的标题说明 %&#125;</div></pre></td></tr></table></figure>
+<p>ps： 测试的时候犯了一个很低级的错误，就是我将图片命名为example.jpg.jpg, 导致一直预览不到； 另外我用的是atom编辑器，它是无法预览本地图片的。</p>
 <p>“图片的标题说明”是针对图片做的说明，会显示在博客里，也可以不写。</p>
-
-<p><img src="/2017/01/24/hexo-edit-blog/images/2017/01/example.jpg" alt=""></p>
+<img src="/2017/01/24/hexo-edit-blog/2017/01/24/hexo-edit-blog/example.jpg" alt="图片的标题说明" title="图片的标题说明">
 <p><img src="/2017/01/24/hexo-edit-blog/example.jpg" alt=""></p>
 <p><img src="/2017/01/24/hexo-edit-blog/img/example.jpg" alt=""></p>
-<p><img src="/2017/01/24/hexo-edit-blog/example.jpg" alt=""> ….</p>
 
       
     </div>
