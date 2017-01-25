@@ -4,6 +4,31 @@
 
     
   <url>
+    <loc>http://mdeng1985.github.io/2017/01/23/installHexo/</loc>
+    <lastmod>2017-01-25T00:44:13.377Z</lastmod>
+    <data>
+        <display>
+        <title>用hexo创建博客并发布到github pages</title>
+        <pubTime>2017-01-23T15:58:24.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+        <tag>git</tag>
+         
+        <tag>github pages</tag>
+         
+         
+           
+             
+              <breadCrumb title="建站" url="http://mdeng1985.github.io/categories/%E5%BB%BA%E7%AB%99/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
     <loc>http://mdeng1985.github.io/2017/01/23/hexo_coding_github/</loc>
     <lastmod>2017-01-25T00:33:23.629Z</lastmod>
     <data>
@@ -50,31 +75,6 @@
     </data>
     </url>
 
-    
-  <url>
-    <loc>http://mdeng1985.github.io/2017/01/23/installHexo/</loc>
-    <lastmod>2017-01-24T22:56:57.339Z</lastmod>
-    <data>
-        <display>
-        <title>用hexo创建博客并发布到github pages</title>
-        <pubTime>2017-01-23T15:58:24.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-        <tag>git</tag>
-         
-        <tag>github pages</tag>
-         
-         
-           
-             
-              <breadCrumb title="建站" url="http://mdeng1985.github.io/categories/%E5%BB%BA%E7%AB%99/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
     
   <url>
     <loc>http://mdeng1985.github.io/2017/01/23/hello-world/</loc>
