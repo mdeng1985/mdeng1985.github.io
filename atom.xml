@@ -243,46 +243,6 @@
   </entry>
   
   <entry>
-    <title>(Hexo2)利用hexo将博客同时推送到coding pages和github pages</title>
-    <link href="http://mdeng1985.github.io/2017/01/23/hexo_coding_github/"/>
-    <id>http://mdeng1985.github.io/2017/01/23/hexo_coding_github/</id>
-    <published>2017-01-23T15:58:24.000Z</published>
-    <updated>2017-01-25T16:37:43.137Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在文章<a href="/2017/01/23/installHexo/" title="(Hexo 1) 用hexo创建博客并发布到github pages">(Hexo 1) 用hexo创建博客并发布到github pages</a>中给出了如何将hexo创建的博客推送到github，这篇文章在”<a href="/2017/01/23/installHexo/" title="(Hexo 1) 用hexo创建博客并发布到github pages">(Hexo 1) 用hexo创建博客并发布到github pages</a>“的基础上，将hexo创建的 博客同时发布到github pages和coding pages. 之所以这么做是有连个目的：一是为了分流，使得国内的用户访问coding pages，国外的用户访问github pages； 另外一个原因就是github pages貌似不能被百度收录，所以还要用coding pages。</p>
-<h1 id="预备内容"><a href="#预备内容" class="headerlink" title="预备内容"></a>预备内容</h1><p>需要安装git软件，并生成公私匙，可以参考<a href="http://itfan.github.io/#show/2013-06-07-use-github-on-windows" target="_blank" rel="external">这篇文章</a>和<a href="https://coding.net/help/doc/git/ssh-key.html" target="_blank" rel="external">配置SSH公钥</a>。这里只需要用公钥<code>id_rsa.pub</code>文件</p>
-<h1 id="在coding-net上创建仓库"><a href="#在coding-net上创建仓库" class="headerlink" title="在coding.net上创建仓库"></a>在coding.net上创建仓库</h1><p>coding.net和github类似，它的page也分为用户页和项目页两大类( <a href="https://coding.net/help/doc/pages/index.html" target="_blank" rel="external">Coding Pages 介绍</a>)。在coding上申请一个账户，假设用户名为zhangshan，创建一个仓库，名字为<code>zhangshan.coding.me</code> (这种格式对应的是用户页，如果需要创建项目页，则名字可以随意。但是我测试发现，<strong>如果创建项目页，博客预览的格式不理想，不知道怎么回事</strong>)</p>
-<h1 id="配置coding上的公钥"><a href="#配置coding上的公钥" class="headerlink" title="配置coding上的公钥"></a>配置coding上的公钥</h1><p>配置的目的是在本地可以git直接将hexo博客推送到coding.net上。首先在<a href="https://coding.net/user" target="_blank" rel="external">用户主页</a>，将本地<code>id_rsa.pub</code>文件的内容配置到coding上。如下图所示 <img src="/2017/01/23/hexo_coding_github/ssh_key.png" alt=""></p>
-<p>配置完以后，在本地的git bash(不是cmd里)进行验证</p>
-<p><code>ssh -T git@git.coding.net</code></p>
-<p>会提示”The authenticity of host ‘git.coding.net (220.243.237.72)’ can’t be established…”，这时候直接按回车，直到提示”You’ve connected to Coding.net via SSH successfully!”, 就说明配置成功。</p>
-<h1 id="在hexo里配置coding的推送地址"><a href="#在hexo里配置coding的推送地址" class="headerlink" title="在hexo里配置coding的推送地址"></a>在hexo里配置coding的推送地址</h1><p>在hexo的站点目录下(我的为hexoBlog)打开_config.yml，将coding.net的git地址放进去，如下所示</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repository:</div><div class="line">    github: git@github.com:zhangshan/zhangshan.github.io.git</div><div class="line">    coding: git@git.coding.net:zhangshan/zhangshan.coding.me.git</div><div class="line">  branch: master</div><div class="line">  message: hexo deploy</div></pre></td></tr></table></figure>
-<h1 id="进行推送"><a href="#进行推送" class="headerlink" title="进行推送"></a>进行推送</h1><p>和github pages的推送方式一样，不做赘述, 可以参考(<a href="/2017/01/23/installHexo/" title="(Hexo 1) 用hexo创建博客并发布到github pages">(Hexo 1) 用hexo创建博客并发布到github pages</a>)</p>
-<h1 id="coding-的pages设置"><a href="#coding-的pages设置" class="headerlink" title="coding 的pages设置"></a>coding 的pages设置</h1><p>在coding.net进入到自己的zhangshan.coding.me点pages服务，然后”部署来源”为master分支，就可以在浏览器中输入<code>http://zhangshan.coding.me/zhangshan.coding.me</code>中浏览博客。</p>
-<p>至此已经完成了hexo博客同时推送到coding pages和github pages的任务。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;在文章&lt;a href=&quot;/2017/01/23/installHexo/&quot; title=&quot;(Hexo 1) 用hexo创建博客并发布到git
-    
-    </summary>
-    
-      <category term="建站" scheme="http://mdeng1985.github.io/categories/%E5%BB%BA%E7%AB%99/"/>
-    
-    
-      <category term="github pages" scheme="http://mdeng1985.github.io/tags/github-pages/"/>
-    
-      <category term="hexo" scheme="http://mdeng1985.github.io/tags/hexo/"/>
-    
-      <category term="git" scheme="http://mdeng1985.github.io/tags/git/"/>
-    
-      <category term="coding pages" scheme="http://mdeng1985.github.io/tags/coding-pages/"/>
-    
-  </entry>
-  
-  <entry>
     <title>(Hexo 1) 用hexo创建博客并发布到github pages</title>
     <link href="http://mdeng1985.github.io/2017/01/23/installHexo/"/>
     <id>http://mdeng1985.github.io/2017/01/23/installHexo/</id>
@@ -345,6 +305,46 @@
       <category term="hexo" scheme="http://mdeng1985.github.io/tags/hexo/"/>
     
       <category term="git" scheme="http://mdeng1985.github.io/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>(Hexo2)利用hexo将博客同时推送到coding pages和github pages</title>
+    <link href="http://mdeng1985.github.io/2017/01/23/hexo_coding_github/"/>
+    <id>http://mdeng1985.github.io/2017/01/23/hexo_coding_github/</id>
+    <published>2017-01-23T15:58:24.000Z</published>
+    <updated>2017-01-25T16:37:43.137Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在文章<a href="/2017/01/23/installHexo/" title="(Hexo 1) 用hexo创建博客并发布到github pages">(Hexo 1) 用hexo创建博客并发布到github pages</a>中给出了如何将hexo创建的博客推送到github，这篇文章在”<a href="/2017/01/23/installHexo/" title="(Hexo 1) 用hexo创建博客并发布到github pages">(Hexo 1) 用hexo创建博客并发布到github pages</a>“的基础上，将hexo创建的 博客同时发布到github pages和coding pages. 之所以这么做是有连个目的：一是为了分流，使得国内的用户访问coding pages，国外的用户访问github pages； 另外一个原因就是github pages貌似不能被百度收录，所以还要用coding pages。</p>
+<h1 id="预备内容"><a href="#预备内容" class="headerlink" title="预备内容"></a>预备内容</h1><p>需要安装git软件，并生成公私匙，可以参考<a href="http://itfan.github.io/#show/2013-06-07-use-github-on-windows" target="_blank" rel="external">这篇文章</a>和<a href="https://coding.net/help/doc/git/ssh-key.html" target="_blank" rel="external">配置SSH公钥</a>。这里只需要用公钥<code>id_rsa.pub</code>文件</p>
+<h1 id="在coding-net上创建仓库"><a href="#在coding-net上创建仓库" class="headerlink" title="在coding.net上创建仓库"></a>在coding.net上创建仓库</h1><p>coding.net和github类似，它的page也分为用户页和项目页两大类( <a href="https://coding.net/help/doc/pages/index.html" target="_blank" rel="external">Coding Pages 介绍</a>)。在coding上申请一个账户，假设用户名为zhangshan，创建一个仓库，名字为<code>zhangshan.coding.me</code> (这种格式对应的是用户页，如果需要创建项目页，则名字可以随意。但是我测试发现，<strong>如果创建项目页，博客预览的格式不理想，不知道怎么回事</strong>)</p>
+<h1 id="配置coding上的公钥"><a href="#配置coding上的公钥" class="headerlink" title="配置coding上的公钥"></a>配置coding上的公钥</h1><p>配置的目的是在本地可以git直接将hexo博客推送到coding.net上。首先在<a href="https://coding.net/user" target="_blank" rel="external">用户主页</a>，将本地<code>id_rsa.pub</code>文件的内容配置到coding上。如下图所示 <img src="/2017/01/23/hexo_coding_github/ssh_key.png" alt=""></p>
+<p>配置完以后，在本地的git bash(不是cmd里)进行验证</p>
+<p><code>ssh -T git@git.coding.net</code></p>
+<p>会提示”The authenticity of host ‘git.coding.net (220.243.237.72)’ can’t be established…”，这时候直接按回车，直到提示”You’ve connected to Coding.net via SSH successfully!”, 就说明配置成功。</p>
+<h1 id="在hexo里配置coding的推送地址"><a href="#在hexo里配置coding的推送地址" class="headerlink" title="在hexo里配置coding的推送地址"></a>在hexo里配置coding的推送地址</h1><p>在hexo的站点目录下(我的为hexoBlog)打开_config.yml，将coding.net的git地址放进去，如下所示</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repository:</div><div class="line">    github: git@github.com:zhangshan/zhangshan.github.io.git</div><div class="line">    coding: git@git.coding.net:zhangshan/zhangshan.coding.me.git</div><div class="line">  branch: master</div><div class="line">  message: hexo deploy</div></pre></td></tr></table></figure>
+<h1 id="进行推送"><a href="#进行推送" class="headerlink" title="进行推送"></a>进行推送</h1><p>和github pages的推送方式一样，不做赘述, 可以参考(<a href="/2017/01/23/installHexo/" title="(Hexo 1) 用hexo创建博客并发布到github pages">(Hexo 1) 用hexo创建博客并发布到github pages</a>)</p>
+<h1 id="coding-的pages设置"><a href="#coding-的pages设置" class="headerlink" title="coding 的pages设置"></a>coding 的pages设置</h1><p>在coding.net进入到自己的zhangshan.coding.me点pages服务，然后”部署来源”为master分支，就可以在浏览器中输入<code>http://zhangshan.coding.me/zhangshan.coding.me</code>中浏览博客。</p>
+<p>至此已经完成了hexo博客同时推送到coding pages和github pages的任务。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;在文章&lt;a href=&quot;/2017/01/23/installHexo/&quot; title=&quot;(Hexo 1) 用hexo创建博客并发布到git
+    
+    </summary>
+    
+      <category term="建站" scheme="http://mdeng1985.github.io/categories/%E5%BB%BA%E7%AB%99/"/>
+    
+    
+      <category term="github pages" scheme="http://mdeng1985.github.io/tags/github-pages/"/>
+    
+      <category term="hexo" scheme="http://mdeng1985.github.io/tags/hexo/"/>
+    
+      <category term="git" scheme="http://mdeng1985.github.io/tags/git/"/>
+    
+      <category term="coding pages" scheme="http://mdeng1985.github.io/tags/coding-pages/"/>
     
   </entry>
   
