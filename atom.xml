@@ -63,51 +63,11 @@
   </entry>
   
   <entry>
-    <title>利用hexo将博客同时推送到coding pages和github pages</title>
-    <link href="http://mdeng1985.github.io/2017/01/23/hexo_coding_github/"/>
-    <id>http://mdeng1985.github.io/2017/01/23/hexo_coding_github/</id>
-    <published>2017-01-23T15:58:24.000Z</published>
-    <updated>2017-01-25T00:33:23.629Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在文章<a href="/2017/01/23/installHexo/" title="用hexo创建博客并发布到github pages">用hexo创建博客并发布到github pages</a>中给出了如何将hexo创建的博客推送到github，这篇文章在”<a href="/2017/01/23/installHexo/" title="用hexo创建博客并发布到github pages">用hexo创建博客并发布到github pages</a>“的基础上，将hexo创建的 博客同时发布到github pages和coding pages. 之所以这么做是有连个目的：一是为了分流，使得国内的用户访问coding pages，国外的用户访问github pages； 另外一个原因就是github pages貌似不能被百度收录，所以还要用coding pages。</p>
-<h1 id="预备内容"><a href="#预备内容" class="headerlink" title="预备内容"></a>预备内容</h1><p>需要安装git软件，并生成公私匙，可以参考<a href="http://itfan.github.io/#show/2013-06-07-use-github-on-windows" target="_blank" rel="external">这篇文章</a>和<a href="https://coding.net/help/doc/git/ssh-key.html" target="_blank" rel="external">配置SSH公钥</a>。这里只需要用公钥<code>id_rsa.pub</code>文件</p>
-<h1 id="在coding-net上创建仓库"><a href="#在coding-net上创建仓库" class="headerlink" title="在coding.net上创建仓库"></a>在coding.net上创建仓库</h1><p>coding.net和github类似，它的page也分为用户页和项目页两大类( <a href="https://coding.net/help/doc/pages/index.html" target="_blank" rel="external">Coding Pages 介绍</a>)。在coding上申请一个账户，假设用户名为zhangshan，创建一个仓库，名字为<code>zhangshan.coding.me</code> (这种格式对应的是用户页，如果需要创建项目页，则名字可以随意。但是我测试发现，<strong>如果创建项目页，博客预览的格式不理想，不知道怎么回事</strong>)</p>
-<h1 id="配置coding上的公钥"><a href="#配置coding上的公钥" class="headerlink" title="配置coding上的公钥"></a>配置coding上的公钥</h1><p>配置的目的是在本地可以git直接将hexo博客推送到coding.net上。首先在<a href="https://coding.net/user" target="_blank" rel="external">用户主页</a>，将本地<code>id_rsa.pub</code>文件的内容配置到coding上。如下图所示 <img src="/2017/01/23/hexo_coding_github/ssh_key.png" alt=""></p>
-<p>配置完以后，在本地的git bash(不是cmd里)进行验证</p>
-<p><code>ssh -T git@git.coding.net</code></p>
-<p>会提示”The authenticity of host ‘git.coding.net (220.243.237.72)’ can’t be established…”，这时候直接按回车，直到提示”You’ve connected to Coding.net via SSH successfully!”, 就说明配置成功。</p>
-<h1 id="在hexo里配置coding的推送地址"><a href="#在hexo里配置coding的推送地址" class="headerlink" title="在hexo里配置coding的推送地址"></a>在hexo里配置coding的推送地址</h1><p>在hexo的站点目录下(我的为hexoBlog)打开_config.yml，将coding.net的git地址放进去，如下所示</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repository:</div><div class="line">    github: git@github.com:zhangshan/zhangshan.github.io.git</div><div class="line">    coding: git@git.coding.net:zhangshan/zhangshan.coding.me.git</div><div class="line">  branch: master</div><div class="line">  message: hexo deploy</div></pre></td></tr></table></figure>
-<h1 id="进行推送"><a href="#进行推送" class="headerlink" title="进行推送"></a>进行推送</h1><p>和github pages的推送方式一样，不做赘述, 可以参考(<a href="/2017/01/23/installHexo/" title="用hexo创建博客并发布到github pages">用hexo创建博客并发布到github pages</a>)</p>
-<h1 id="coding-的pages设置"><a href="#coding-的pages设置" class="headerlink" title="coding 的pages设置"></a>coding 的pages设置</h1><p>在coding.net进入到自己的zhangshan.coding.me点pages服务，然后”部署来源”为master分支，就可以在浏览器中输入<code>http://zhangshan.coding.me/zhangshan.coding.me</code>中浏览博客。</p>
-<p>至此已经完成了hexo博客同时推送到coding pages和github pages的任务。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;在文章&lt;a href=&quot;/2017/01/23/installHexo/&quot; title=&quot;用hexo创建博客并发布到github pages
-    
-    </summary>
-    
-      <category term="建站" scheme="http://mdeng1985.github.io/categories/%E5%BB%BA%E7%AB%99/"/>
-    
-    
-      <category term="hexo" scheme="http://mdeng1985.github.io/tags/hexo/"/>
-    
-      <category term="git" scheme="http://mdeng1985.github.io/tags/git/"/>
-    
-      <category term="github pages" scheme="http://mdeng1985.github.io/tags/github-pages/"/>
-    
-      <category term="coding pages" scheme="http://mdeng1985.github.io/tags/coding-pages/"/>
-    
-  </entry>
-  
-  <entry>
     <title>用hexo创建博客并发布到github pages</title>
     <link href="http://mdeng1985.github.io/2017/01/23/installHexo/"/>
     <id>http://mdeng1985.github.io/2017/01/23/installHexo/</id>
     <published>2017-01-23T15:58:24.000Z</published>
-    <updated>2017-01-25T00:44:13.377Z</updated>
+    <updated>2017-01-25T01:58:38.997Z</updated>
     
     <content type="html"><![CDATA[<h1 id="安装和配置hexo"><a href="#安装和配置hexo" class="headerlink" title="安装和配置hexo"></a>安装和配置hexo</h1><p>首先需要安装node.js和git, 然后在命令行下安装hexo:<br><br><code>npm install -g hexo</code></p>
 <p>命令行进入到blog的上一级目录(比如说D://hexoRoot),创建一个hexo项目</p>
@@ -160,7 +120,13 @@
 <p>具体设置参见<a href="http://theme-next.iissnan.com/third-party-services.html" target="_blank" rel="external">next主题的说明文档</a>。如果还是不行的话，可能和其他插件冲突，比如 disqus，检查下主题下的_config.yml和站点下的_config.yml。</p>
 <h2 id="添加版权申明"><a href="#添加版权申明" class="headerlink" title="添加版权申明"></a>添加版权申明</h2><p>参考”<a href="http://ixiusama.com/2016/02/15/%E4%B8%BA%20Next%20%E4%B8%BB%E9%A2%98%E6%96%87%E6%9C%AB%E6%B7%BB%E5%8A%A0%E7%89%88%E6%9D%83%E7%AD%89%E4%BF%A1%E6%81%AF/" target="_blank" rel="external">为 Next 主题文末添加版权等信息</a>“，只不过我的是在next\layout_macro的post.swig的<code>{\% endmacro \%}</code>那行前面加上如下的代码</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;page-footer&quot;&gt;</div><div class="line">    &#123;% if not is_index %&#125;</div><div class="line">      &lt;div id=&quot;eof&quot; class=&quot;print-invisible&quot;&gt;</div><div class="line">        &lt;hr class=&quot;eof&quot;&gt;</div><div class="line">      &lt;/div&gt;</div><div class="line"></div><div class="line">      &lt;div class=&quot;copyright&quot; style=&quot;clear:both;&quot;&gt;</div><div class="line">         &lt;p&gt;&lt;span&gt;本文标题:&lt;/span&gt;&lt;a href=&quot;&#123;&#123; url_for(page.path) &#125;&#125;&quot;&gt;&#123;&#123; page.title &#125;&#125;&lt;/a&gt;&lt;/p&gt;</div><div class="line">         &lt;p&gt;&lt;span&gt;文章作者:&lt;/span&gt;&lt;a href=&quot;/&quot; title=&quot;访问 &#123;&#123; theme.author &#125;&#125; 的个人博客&quot;&gt;&#123;&#123; theme.author &#125;&#125;&lt;/a&gt;&lt;/p&gt;</div><div class="line">         &lt;p&gt;&lt;span&gt;原始链接:&lt;/span&gt;&lt;a href=&quot;&#123;&#123; url_for(page.path) &#125;&#125;&quot; title=&quot;&#123;&#123; page.title &#125;&#125;&quot;&gt;&#123;&#123; page.permalink &#125;&#125;&lt;/a&gt;&lt;/p&gt;</div><div class="line">         &lt;p&gt;&lt;span&gt;许可协议:&lt;/span&gt;&lt;i class=&quot;fa fa-creative-commons&quot;&gt;&lt;/i&gt; &lt;a rel=&quot;license&quot; href=&quot;http://creativecommons.org/licenses/by-nc/4.0/&quot; title=&quot;Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)&quot;&gt;Attribution-NonCommercial 4.0&lt;/a&gt;&lt;/p&gt;</div><div class="line">         &lt;p&gt;&lt;span&gt;转载请保留以上信息。&lt;/span&gt;&lt;/p&gt;</div><div class="line">      &lt;/div&gt;</div><div class="line">    &#123;% endif %&#125;</div><div class="line"></div><div class="line">    &#123;% if not is_index and (post.prev or post.next) %&#125;</div><div class="line">      &lt;div class=&quot;post-nav&quot;&gt;</div><div class="line">        &lt;div class=&quot;post-nav-prev post-nav-item&quot;&gt;</div><div class="line">          &#123;% if post.prev %&#125;</div><div class="line">            &lt;a href=&quot;&#123;&#123; url_for(post.prev.path) &#125;&#125;&quot;&gt;&#123;&#123;post.prev.title&#125;&#125;&lt;/a&gt;</div><div class="line">          &#123;% endif %&#125;</div><div class="line">        &lt;/div&gt;</div><div class="line"></div><div class="line">        &lt;div class=&quot;post-nav-next post-nav-item&quot;&gt;</div><div class="line">          &#123;% if post.next %&#125;</div><div class="line">            &lt;a href=&quot;&#123;&#123; url_for(post.next.path) &#125;&#125;&quot;&gt;&#123;&#123;post.next.title&#125;&#125;&lt;/a&gt;</div><div class="line">          &#123;% endif %&#125;</div><div class="line">        &lt;/div&gt;</div><div class="line">      &lt;/div&gt;</div><div class="line">    &#123;% endif %&#125;</div><div class="line"></div><div class="line">  &lt;/div&gt;</div></pre></td></tr></table></figure>
-<p>站点的_config.yml里的必须为<code>relative_link: false</code> , 否则menu的那些链接都会失效。</p>
+<h2 id="站点的menu的链接失效都指向主页的解决方案"><a href="#站点的menu的链接失效都指向主页的解决方案" class="headerlink" title="站点的menu的链接失效都指向主页的解决方案"></a>站点的menu的链接失效都指向主页的解决方案</h2><p>站点的_config.yml里的必须为<code>relative_link: false</code> , 否则menu的那些链接都会失效。</p>
+<h2 id="git无法添加themes-next的解决方案"><a href="#git无法添加themes-next的解决方案" class="headerlink" title="git无法添加themes/next的解决方案"></a>git无法添加themes/next的解决方案</h2><p>在站点根目录(我的为hexoBlog)下，新建git仓库，发觉无法添加”themes/next”下的文件，会提示</p>
+<p>fatal: Pathspec ‘themes/next/_config.yml’ is in submodule</p>
+<p>这时候因为在next下有个submodule，需要先进入到这个目录运行更新子模块，命令如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cd themes/next</div><div class="line">git --git-dir=.git --work-tree=. add .</div><div class="line">git --git-dir=.git --work-tree=. commit -m &quot;update next theme&quot;</div></pre></td></tr></table></figure>
+<p>然后返回到站点根目录，添加，具体如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">cd ..</div><div class="line">cd ..</div><div class="line">git add themes/next</div><div class="line">git commit -m &quot;update blog&quot;</div></pre></td></tr></table></figure>
 <h2 id="添加到搜索引擎"><a href="#添加到搜索引擎" class="headerlink" title="添加到搜索引擎"></a>添加到搜索引擎</h2><p>参考<a href="http://svend.cc/posts/22980/" target="_blank" rel="external">Hexo博客提交百度和Google收录</a>，站点能够被google站点工具验证成功，一定要记得将验证文件放到主题下的source文件夹下（themes\next\source），而不是博客的source文件夹(hexoBlog\source)下，否则验证不成功。</p>
 <p><a href="http://zhanzhang.baidu.com/" target="_blank" rel="external">百度站长网站</a></p>
 <h2 id="设置首页只显示预览，不显示全文"><a href="#设置首页只显示预览，不显示全文" class="headerlink" title="设置首页只显示预览，不显示全文"></a>设置首页只显示预览，不显示全文</h2><p>设置主题下的_config.yml, 搜索<code>auto_excerpt</code>,将enable改成true。</p>
@@ -220,6 +186,46 @@
       <category term="git" scheme="http://mdeng1985.github.io/tags/git/"/>
     
       <category term="github pages" scheme="http://mdeng1985.github.io/tags/github-pages/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>利用hexo将博客同时推送到coding pages和github pages</title>
+    <link href="http://mdeng1985.github.io/2017/01/23/hexo_coding_github/"/>
+    <id>http://mdeng1985.github.io/2017/01/23/hexo_coding_github/</id>
+    <published>2017-01-23T15:58:24.000Z</published>
+    <updated>2017-01-25T00:33:23.629Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在文章<a href="/2017/01/23/installHexo/" title="用hexo创建博客并发布到github pages">用hexo创建博客并发布到github pages</a>中给出了如何将hexo创建的博客推送到github，这篇文章在”<a href="/2017/01/23/installHexo/" title="用hexo创建博客并发布到github pages">用hexo创建博客并发布到github pages</a>“的基础上，将hexo创建的 博客同时发布到github pages和coding pages. 之所以这么做是有连个目的：一是为了分流，使得国内的用户访问coding pages，国外的用户访问github pages； 另外一个原因就是github pages貌似不能被百度收录，所以还要用coding pages。</p>
+<h1 id="预备内容"><a href="#预备内容" class="headerlink" title="预备内容"></a>预备内容</h1><p>需要安装git软件，并生成公私匙，可以参考<a href="http://itfan.github.io/#show/2013-06-07-use-github-on-windows" target="_blank" rel="external">这篇文章</a>和<a href="https://coding.net/help/doc/git/ssh-key.html" target="_blank" rel="external">配置SSH公钥</a>。这里只需要用公钥<code>id_rsa.pub</code>文件</p>
+<h1 id="在coding-net上创建仓库"><a href="#在coding-net上创建仓库" class="headerlink" title="在coding.net上创建仓库"></a>在coding.net上创建仓库</h1><p>coding.net和github类似，它的page也分为用户页和项目页两大类( <a href="https://coding.net/help/doc/pages/index.html" target="_blank" rel="external">Coding Pages 介绍</a>)。在coding上申请一个账户，假设用户名为zhangshan，创建一个仓库，名字为<code>zhangshan.coding.me</code> (这种格式对应的是用户页，如果需要创建项目页，则名字可以随意。但是我测试发现，<strong>如果创建项目页，博客预览的格式不理想，不知道怎么回事</strong>)</p>
+<h1 id="配置coding上的公钥"><a href="#配置coding上的公钥" class="headerlink" title="配置coding上的公钥"></a>配置coding上的公钥</h1><p>配置的目的是在本地可以git直接将hexo博客推送到coding.net上。首先在<a href="https://coding.net/user" target="_blank" rel="external">用户主页</a>，将本地<code>id_rsa.pub</code>文件的内容配置到coding上。如下图所示 <img src="/2017/01/23/hexo_coding_github/ssh_key.png" alt=""></p>
+<p>配置完以后，在本地的git bash(不是cmd里)进行验证</p>
+<p><code>ssh -T git@git.coding.net</code></p>
+<p>会提示”The authenticity of host ‘git.coding.net (220.243.237.72)’ can’t be established…”，这时候直接按回车，直到提示”You’ve connected to Coding.net via SSH successfully!”, 就说明配置成功。</p>
+<h1 id="在hexo里配置coding的推送地址"><a href="#在hexo里配置coding的推送地址" class="headerlink" title="在hexo里配置coding的推送地址"></a>在hexo里配置coding的推送地址</h1><p>在hexo的站点目录下(我的为hexoBlog)打开_config.yml，将coding.net的git地址放进去，如下所示</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repository:</div><div class="line">    github: git@github.com:zhangshan/zhangshan.github.io.git</div><div class="line">    coding: git@git.coding.net:zhangshan/zhangshan.coding.me.git</div><div class="line">  branch: master</div><div class="line">  message: hexo deploy</div></pre></td></tr></table></figure>
+<h1 id="进行推送"><a href="#进行推送" class="headerlink" title="进行推送"></a>进行推送</h1><p>和github pages的推送方式一样，不做赘述, 可以参考(<a href="/2017/01/23/installHexo/" title="用hexo创建博客并发布到github pages">用hexo创建博客并发布到github pages</a>)</p>
+<h1 id="coding-的pages设置"><a href="#coding-的pages设置" class="headerlink" title="coding 的pages设置"></a>coding 的pages设置</h1><p>在coding.net进入到自己的zhangshan.coding.me点pages服务，然后”部署来源”为master分支，就可以在浏览器中输入<code>http://zhangshan.coding.me/zhangshan.coding.me</code>中浏览博客。</p>
+<p>至此已经完成了hexo博客同时推送到coding pages和github pages的任务。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;在文章&lt;a href=&quot;/2017/01/23/installHexo/&quot; title=&quot;用hexo创建博客并发布到github pages
+    
+    </summary>
+    
+      <category term="建站" scheme="http://mdeng1985.github.io/categories/%E5%BB%BA%E7%AB%99/"/>
+    
+    
+      <category term="hexo" scheme="http://mdeng1985.github.io/tags/hexo/"/>
+    
+      <category term="git" scheme="http://mdeng1985.github.io/tags/git/"/>
+    
+      <category term="github pages" scheme="http://mdeng1985.github.io/tags/github-pages/"/>
+    
+      <category term="coding pages" scheme="http://mdeng1985.github.io/tags/coding-pages/"/>
     
   </entry>
   

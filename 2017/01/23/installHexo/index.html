@@ -102,7 +102,7 @@ hexo init hexoblog
 这样，在hexoRoot目录下就创建了个hexoblog文件夹，进入到hexoBlog文件夹运行
 hexo server
 然后在浏览器窗口输入 ht">
-<meta property="og:updated_time" content="2017-01-25T00:44:13.377Z">
+<meta property="og:updated_time" content="2017-01-25T01:58:38.997Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="用hexo创建博客并发布到github pages">
 <meta name="twitter:description" content="安装和配置hexo首先需要安装node.js和git, 然后在命令行下安装hexo:npm install -g hexo
@@ -483,7 +483,13 @@ hexo server
 <p>具体设置参见<a href="http://theme-next.iissnan.com/third-party-services.html" target="_blank" rel="external">next主题的说明文档</a>。如果还是不行的话，可能和其他插件冲突，比如 disqus，检查下主题下的_config.yml和站点下的_config.yml。</p>
 <h2 id="添加版权申明"><a href="#添加版权申明" class="headerlink" title="添加版权申明"></a>添加版权申明</h2><p>参考”<a href="http://ixiusama.com/2016/02/15/%E4%B8%BA%20Next%20%E4%B8%BB%E9%A2%98%E6%96%87%E6%9C%AB%E6%B7%BB%E5%8A%A0%E7%89%88%E6%9D%83%E7%AD%89%E4%BF%A1%E6%81%AF/" target="_blank" rel="external">为 Next 主题文末添加版权等信息</a>“，只不过我的是在next\layout_macro的post.swig的<code>{\% endmacro \%}</code>那行前面加上如下的代码</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;page-footer&quot;&gt;</div><div class="line">    &#123;% if not is_index %&#125;</div><div class="line">      &lt;div id=&quot;eof&quot; class=&quot;print-invisible&quot;&gt;</div><div class="line">        &lt;hr class=&quot;eof&quot;&gt;</div><div class="line">      &lt;/div&gt;</div><div class="line"></div><div class="line">      &lt;div class=&quot;copyright&quot; style=&quot;clear:both;&quot;&gt;</div><div class="line">         &lt;p&gt;&lt;span&gt;本文标题:&lt;/span&gt;&lt;a href=&quot;&#123;&#123; url_for(page.path) &#125;&#125;&quot;&gt;&#123;&#123; page.title &#125;&#125;&lt;/a&gt;&lt;/p&gt;</div><div class="line">         &lt;p&gt;&lt;span&gt;文章作者:&lt;/span&gt;&lt;a href=&quot;/&quot; title=&quot;访问 &#123;&#123; theme.author &#125;&#125; 的个人博客&quot;&gt;&#123;&#123; theme.author &#125;&#125;&lt;/a&gt;&lt;/p&gt;</div><div class="line">         &lt;p&gt;&lt;span&gt;原始链接:&lt;/span&gt;&lt;a href=&quot;&#123;&#123; url_for(page.path) &#125;&#125;&quot; title=&quot;&#123;&#123; page.title &#125;&#125;&quot;&gt;&#123;&#123; page.permalink &#125;&#125;&lt;/a&gt;&lt;/p&gt;</div><div class="line">         &lt;p&gt;&lt;span&gt;许可协议:&lt;/span&gt;&lt;i class=&quot;fa fa-creative-commons&quot;&gt;&lt;/i&gt; &lt;a rel=&quot;license&quot; href=&quot;http://creativecommons.org/licenses/by-nc/4.0/&quot; title=&quot;Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)&quot;&gt;Attribution-NonCommercial 4.0&lt;/a&gt;&lt;/p&gt;</div><div class="line">         &lt;p&gt;&lt;span&gt;转载请保留以上信息。&lt;/span&gt;&lt;/p&gt;</div><div class="line">      &lt;/div&gt;</div><div class="line">    &#123;% endif %&#125;</div><div class="line"></div><div class="line">    &#123;% if not is_index and (post.prev or post.next) %&#125;</div><div class="line">      &lt;div class=&quot;post-nav&quot;&gt;</div><div class="line">        &lt;div class=&quot;post-nav-prev post-nav-item&quot;&gt;</div><div class="line">          &#123;% if post.prev %&#125;</div><div class="line">            &lt;a href=&quot;&#123;&#123; url_for(post.prev.path) &#125;&#125;&quot;&gt;&#123;&#123;post.prev.title&#125;&#125;&lt;/a&gt;</div><div class="line">          &#123;% endif %&#125;</div><div class="line">        &lt;/div&gt;</div><div class="line"></div><div class="line">        &lt;div class=&quot;post-nav-next post-nav-item&quot;&gt;</div><div class="line">          &#123;% if post.next %&#125;</div><div class="line">            &lt;a href=&quot;&#123;&#123; url_for(post.next.path) &#125;&#125;&quot;&gt;&#123;&#123;post.next.title&#125;&#125;&lt;/a&gt;</div><div class="line">          &#123;% endif %&#125;</div><div class="line">        &lt;/div&gt;</div><div class="line">      &lt;/div&gt;</div><div class="line">    &#123;% endif %&#125;</div><div class="line"></div><div class="line">  &lt;/div&gt;</div></pre></td></tr></table></figure>
-<p>站点的_config.yml里的必须为<code>relative_link: false</code> , 否则menu的那些链接都会失效。</p>
+<h2 id="站点的menu的链接失效都指向主页的解决方案"><a href="#站点的menu的链接失效都指向主页的解决方案" class="headerlink" title="站点的menu的链接失效都指向主页的解决方案"></a>站点的menu的链接失效都指向主页的解决方案</h2><p>站点的_config.yml里的必须为<code>relative_link: false</code> , 否则menu的那些链接都会失效。</p>
+<h2 id="git无法添加themes-next的解决方案"><a href="#git无法添加themes-next的解决方案" class="headerlink" title="git无法添加themes/next的解决方案"></a>git无法添加themes/next的解决方案</h2><p>在站点根目录(我的为hexoBlog)下，新建git仓库，发觉无法添加”themes/next”下的文件，会提示</p>
+<p>fatal: Pathspec ‘themes/next/_config.yml’ is in submodule</p>
+<p>这时候因为在next下有个submodule，需要先进入到这个目录运行更新子模块，命令如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cd themes/next</div><div class="line">git --git-dir=.git --work-tree=. add .</div><div class="line">git --git-dir=.git --work-tree=. commit -m &quot;update next theme&quot;</div></pre></td></tr></table></figure>
+<p>然后返回到站点根目录，添加，具体如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">cd ..</div><div class="line">cd ..</div><div class="line">git add themes/next</div><div class="line">git commit -m &quot;update blog&quot;</div></pre></td></tr></table></figure>
 <h2 id="添加到搜索引擎"><a href="#添加到搜索引擎" class="headerlink" title="添加到搜索引擎"></a>添加到搜索引擎</h2><p>参考<a href="http://svend.cc/posts/22980/" target="_blank" rel="external">Hexo博客提交百度和Google收录</a>，站点能够被google站点工具验证成功，一定要记得将验证文件放到主题下的source文件夹下（themes\next\source），而不是博客的source文件夹(hexoBlog\source)下，否则验证不成功。</p>
 <p><a href="http://zhanzhang.baidu.com/" target="_blank" rel="external">百度站长网站</a></p>
 <h2 id="设置首页只显示预览，不显示全文"><a href="#设置首页只显示预览，不显示全文" class="headerlink" title="设置首页只显示预览，不显示全文"></a>设置首页只显示预览，不显示全文</h2><p>设置主题下的_config.yml, 搜索<code>auto_excerpt</code>,将enable改成true。</p>
@@ -563,8 +569,8 @@ hexo server
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/01/23/markdown_gram/" rel="next" title="Markdown语法总结">
-                <i class="fa fa-chevron-left"></i> Markdown语法总结
+              <a href="/2017/01/23/hexo_coding_github/" rel="next" title="利用hexo将博客同时推送到coding pages和github pages">
+                <i class="fa fa-chevron-left"></i> 利用hexo将博客同时推送到coding pages和github pages
               </a>
             
           </div>
@@ -573,8 +579,8 @@ hexo server
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/01/23/hexo_coding_github/" rel="prev" title="利用hexo将博客同时推送到coding pages和github pages">
-                利用hexo将博客同时推送到coding pages和github pages <i class="fa fa-chevron-right"></i>
+              <a href="/2017/01/24/hexo-edit-blog/" rel="prev" title="Hexo撰写博客教程">
+                Hexo撰写博客教程 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -605,13 +611,13 @@ hexo server
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/01/23/hexo_coding_github/">利用hexo将博客同时推送到coding pages和github pages</a>
+              <a href="/2017/01/24/hexo-edit-blog/">Hexo撰写博客教程</a>
             
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/01/23/markdown_gram/">Markdown语法总结</a>
+              <a href="/2017/01/23/hexo_coding_github/">利用hexo将博客同时推送到coding pages和github pages</a>
             
           </div>
         </div>
@@ -778,7 +784,7 @@ hexo server
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#安装和配置hexo"><span class="nav-number">1.</span> <span class="nav-text">安装和配置hexo</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#发布hexo博客到github-pages"><span class="nav-number">2.</span> <span class="nav-text">发布hexo博客到github pages</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#hexo博客的优化与美化"><span class="nav-number">3.</span> <span class="nav-text">hexo博客的优化与美化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装主题"><span class="nav-number">3.1.</span> <span class="nav-text">安装主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加多说分享和评论功能"><span class="nav-number">3.2.</span> <span class="nav-text">添加多说分享和评论功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加版权申明"><span class="nav-number">3.3.</span> <span class="nav-text">添加版权申明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加到搜索引擎"><span class="nav-number">3.4.</span> <span class="nav-text">添加到搜索引擎</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置首页只显示预览，不显示全文"><span class="nav-number">3.5.</span> <span class="nav-text">设置首页只显示预览，不显示全文</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使用过程中的FAQ"><span class="nav-number">4.</span> <span class="nav-text">使用过程中的FAQ</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#我进行的相关配置总结"><span class="nav-number">5.</span> <span class="nav-text">我进行的相关配置总结</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考资料"><span class="nav-number">6.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#安装和配置hexo"><span class="nav-number">1.</span> <span class="nav-text">安装和配置hexo</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#发布hexo博客到github-pages"><span class="nav-number">2.</span> <span class="nav-text">发布hexo博客到github pages</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#hexo博客的优化与美化"><span class="nav-number">3.</span> <span class="nav-text">hexo博客的优化与美化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装主题"><span class="nav-number">3.1.</span> <span class="nav-text">安装主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加多说分享和评论功能"><span class="nav-number">3.2.</span> <span class="nav-text">添加多说分享和评论功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加版权申明"><span class="nav-number">3.3.</span> <span class="nav-text">添加版权申明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#站点的menu的链接失效都指向主页的解决方案"><span class="nav-number">3.4.</span> <span class="nav-text">站点的menu的链接失效都指向主页的解决方案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git无法添加themes-next的解决方案"><span class="nav-number">3.5.</span> <span class="nav-text">git无法添加themes/next的解决方案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加到搜索引擎"><span class="nav-number">3.6.</span> <span class="nav-text">添加到搜索引擎</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置首页只显示预览，不显示全文"><span class="nav-number">3.7.</span> <span class="nav-text">设置首页只显示预览，不显示全文</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使用过程中的FAQ"><span class="nav-number">4.</span> <span class="nav-text">使用过程中的FAQ</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#我进行的相关配置总结"><span class="nav-number">5.</span> <span class="nav-text">我进行的相关配置总结</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考资料"><span class="nav-number">6.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
             
 
           </div>
