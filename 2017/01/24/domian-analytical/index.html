@@ -88,25 +88,27 @@
 
 <meta name="description" content="说明这篇文章的目的就是将coding.me上的和github.io的个人博客和自己注册的域名关联起来，并且实现国内的用户访问域名的时候定向到 coding.me，国际的用户访问的时候，定向到github.io。
 前期准备
-有自己的github.io博客，参考”用hexo创建博客并发布到github pages“，假设为zs.github.io
-有自己的coding.me博客，参考”利用hexo将博">
+有自己的github.io博客，参考”(Hexo 1) 用hexo创建博客并发布到github pages“，假设为zs.github.io
+有自己的coding.me博客，参考">
 <meta property="og:type" content="article">
-<meta property="og:title" content="coding.me + github.io + 域名解析">
+<meta property="og:title" content="(Hexo 3) coding.me + github.io + 域名解析">
 <meta property="og:url" content="http://mdeng1985.github.io/2017/01/24/domian-analytical/index.html">
 <meta property="og:site_name" content="MLi's Blog">
 <meta property="og:description" content="说明这篇文章的目的就是将coding.me上的和github.io的个人博客和自己注册的域名关联起来，并且实现国内的用户访问域名的时候定向到 coding.me，国际的用户访问的时候，定向到github.io。
 前期准备
-有自己的github.io博客，参考”用hexo创建博客并发布到github pages“，假设为zs.github.io
-有自己的coding.me博客，参考”利用hexo将博">
+有自己的github.io博客，参考”(Hexo 1) 用hexo创建博客并发布到github pages“，假设为zs.github.io
+有自己的coding.me博客，参考">
 <meta property="og:image" content="http://mdeng1985.github.io/2017/01/24/domian-analytical/before_analy.png">
 <meta property="og:image" content="http://mdeng1985.github.io/2017/01/24/domian-analytical/after_analy.png">
-<meta property="og:updated_time" content="2017-01-25T06:44:53.657Z">
+<meta property="og:image" content="http://mdeng1985.github.io/2017/01/24/domian-analytical/dns_set.png">
+<meta property="og:image" content="http://mdeng1985.github.io/2017/01/24/domian-analytical/dns1.png">
+<meta property="og:updated_time" content="2017-01-25T16:42:11.372Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="coding.me + github.io + 域名解析">
+<meta name="twitter:title" content="(Hexo 3) coding.me + github.io + 域名解析">
 <meta name="twitter:description" content="说明这篇文章的目的就是将coding.me上的和github.io的个人博客和自己注册的域名关联起来，并且实现国内的用户访问域名的时候定向到 coding.me，国际的用户访问的时候，定向到github.io。
 前期准备
-有自己的github.io博客，参考”用hexo创建博客并发布到github pages“，假设为zs.github.io
-有自己的coding.me博客，参考”利用hexo将博">
+有自己的github.io博客，参考”(Hexo 1) 用hexo创建博客并发布到github pages“，假设为zs.github.io
+有自己的coding.me博客，参考">
 <meta name="twitter:image" content="http://mdeng1985.github.io/2017/01/24/domian-analytical/before_analy.png">
 
 
@@ -141,7 +143,7 @@
 
 
 
-  <title> coding.me + github.io + 域名解析 | MLi's Blog </title>
+  <title> (Hexo 3) coding.me + github.io + 域名解析 | MLi's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -341,7 +343,7 @@
             
             
               
-                coding.me + github.io + 域名解析
+                (Hexo 3) coding.me + github.io + 域名解析
               
             
           </h1>
@@ -409,19 +411,31 @@
       
         <h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>这篇文章的目的就是将coding.me上的和github.io的个人博客和自己注册的域名关联起来，并且实现国内的用户访问域名的时候定向到 coding.me，国际的用户访问的时候，定向到github.io。</p>
 <h1 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h1><ul>
-<li>有自己的github.io博客，参考”<a href="/2017/01/23/installHexo/" title="用hexo创建博客并发布到github pages">用hexo创建博客并发布到github pages</a>“，假设为zs.github.io</li>
-<li>有自己的coding.me博客，参考”<a href="/2017/01/23/hexo_coding_github/" title="利用hexo将博客同时推送到coding pages和github pages">利用hexo将博客同时推送到coding pages和github pages</a>“, 假设为zs.coding.me</li>
+<li>有自己的github.io博客，参考”<a href="/2017/01/23/installHexo/" title="(Hexo 1) 用hexo创建博客并发布到github pages">(Hexo 1) 用hexo创建博客并发布到github pages</a>“，假设为zs.github.io</li>
+<li>有自己的coding.me博客，参考”<a href="/2017/01/23/hexo_coding_github/" title="(Hexo2)利用hexo将博客同时推送到coding pages和github pages">(Hexo2)利用hexo将博客同时推送到coding pages和github pages</a>“, 假设为zs.coding.me</li>
 <li>注册了自己的域名，我用的是<a href="https://www.godaddy.com" target="_blank" rel="external">godaddy</a> 上注册的，假设为zs.com</li>
 <li>在dnspod上注册账号， 用于解析域名</li>
 </ul>
 <h1 id="域名解析的相关概念"><a href="#域名解析的相关概念" class="headerlink" title="域名解析的相关概念"></a>域名解析的相关概念</h1><p>域名解析的示意图如下图：</p>
 <p><img src="/2017/01/24/domian-analytical/before_analy.png" alt=""></p>
-<p>由图可见，在解析前github对应自己的ip,coding对应自己的ip，而且没有和自己的域名相互关联，两者是相互独立的。解析以后如下图</p>
+<p>由图可见，在解析前github对应自己的ip,coding对应自己的ip，而且没有和自己的域名相互关联，两者是相互独立的。 域名解析有两种方式：A记录和CNAME。A (Address) 记录是用来指定主机名（或域名）对应的IP地址记录。CNAME记录，即名记录。这种记录允许您将多个名字映射到另外一个域名。 解析以后如下图</p>
 <p><img src="/2017/01/24/domian-analytical/after_analy.png" alt=""></p>
-<p>域名解析有两种方式：A记录和CNAME。A (Address) 记录是用来指定主机名（或域名）对应的IP地址记录。CNAME记录，即名记录。这种记录允许您将多个名字映射到另外一个域名。 由图可见，无论用户访问coding.io还是guihub.io，还是zs.com，都会定向到zs.com（这称为CNAME，相当于别名）； 然后zs.com会根据用户的ip来指向具体的ip，这称为A记录 （<strong>这是我自己的理解，不一定对</strong>）。</p>
+<p>相应的配置截图如下：</p>
+<p><img src="/2017/01/24/domian-analytical/dns_set.png" alt=""></p>
+<p>如下几点说明：</p>
+<ul>
+<li>主机记录中为@，表示zs.com指向另外的域名或者ip，如果为www则表示www.zs.com（为zs.com二级域名）指向另外的域名或者ip。同样可以设置为blog.zs.com</li>
+<li>图中5是把自己的站点提交给百度搜索用的，和本文没有关系，参考<a href="http://www.franktly.com/2016/07/06/%E8%AE%A9Baidu%E5%92%8CGoogle%E6%94%B6%E5%BD%95Hexo%E5%8D%9A%E5%AE%A2/" target="_blank" rel="external">此处</a></li>
+<li>CNAME的解析的优先级要比A记录的解析要高。</li>
+<li>其中3和4是系统自带的不用管</li>
+<li>8中的ip参考<a href="https://help.github.com/articles/setting-up-an-apex-domain" target="_blank" rel="external">github的官网</a></li>
+</ul>
 <p>关于域名解析的概念性的文章，我推荐：<a href="http://quantumman.me/blog/setting-up-a-domain-with-gitHub-pages.html" target="_blank" rel="external">GitHub Pages 绑定来自阿里云的域名</a></p>
 <h1 id="域名解析的具体步骤"><a href="#域名解析的具体步骤" class="headerlink" title="域名解析的具体步骤"></a>域名解析的具体步骤</h1><p>我参考的是”<a href="http://www.franktly.com/2016/01/09/%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-2/" target="_blank" rel="external">Hexo同时部署在Coding和GitHub上并使用DNSPod分流</a>“，不做赘述。</p>
-<h1 id="测试是否分流成功"><a href="#测试是否分流成功" class="headerlink" title="测试是否分流成功"></a>测试是否分流成功</h1><p><a href="http://www.webkaka.com/dns/" target="_blank" rel="external">http://www.webkaka.com/dns/</a></p>
+<p>最后需要绑定下，进入coding的pages里绑定域名为zs.com。这样不管输入zs.coding.me还是zs.github.io都会跳转到zs.com</p>
+<h1 id="测试是否分流成功"><a href="#测试是否分流成功" class="headerlink" title="测试是否分流成功"></a>测试是否分流成功</h1><p>在这个<a href="http://tools.fastweb.com.cn/Index/Mdig" target="_blank" rel="external">网站</a>进去查询，输入域名和类型CNAME，得到如下的结果</p>
+<p><img src="/2017/01/24/domian-analytical/dns1.png" alt=""></p>
+<p>可见国内分流成功，国外的分流查询可以通过”<a href="http://www.webkaka.com/dns/" target="_blank" rel="external">DNS查询</a>“查询得到</p>
 
       
     </div>
@@ -462,8 +476,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/01/24/hexo-edit-blog/" rel="next" title="Hexo撰写博客教程">
-                <i class="fa fa-chevron-left"></i> Hexo撰写博客教程
+              <a href="/2017/01/24/hexo-edit-blog/" rel="next" title="(Hexo 5) Hexo撰写博客教程">
+                <i class="fa fa-chevron-left"></i> (Hexo 5) Hexo撰写博客教程
               </a>
             
           </div>
@@ -471,6 +485,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/01/25/hexo-summary/" rel="prev" title="(Hexo 0) 利用Hexo创建自己的站点并发布(全记录)">
+                (Hexo 0) 利用Hexo创建自己的站点并发布(全记录) <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -488,9 +506,9 @@
         </div>
 
         <div class="copyright" style="clear:both;">
-           <p><span>本文标题:</span><a href="/2017/01/24/domian-analytical/">coding.me + github.io + 域名解析</a></p>
+           <p><span>本文标题:</span><a href="/2017/01/24/domian-analytical/">(Hexo 3) coding.me + github.io + 域名解析</a></p>
            <p><span>文章作者:</span><a href="/" title="访问 Matthew Li 的个人博客">Matthew Li</a></p>
-           <p><span>原始链接:</span><a href="/2017/01/24/domian-analytical/" title="coding.me + github.io + 域名解析">http://mdeng1985.github.io/2017/01/24/domian-analytical/</a></p>
+           <p><span>原始链接:</span><a href="/2017/01/24/domian-analytical/" title="(Hexo 3) coding.me + github.io + 域名解析">http://mdeng1985.github.io/2017/01/24/domian-analytical/</a></p>
            <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" title="Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)">Attribution-NonCommercial 4.0</a></p>
            <p><span>转载请保留以上信息。</span></p>
         </div>
@@ -500,11 +518,13 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2017/01/25/hexo-summary/">(Hexo 0) 利用Hexo创建自己的站点并发布(全记录)</a>
+            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/01/24/hexo-edit-blog/">Hexo撰写博客教程</a>
+              <a href="/2017/01/24/hexo-edit-blog/">(Hexo 5) Hexo撰写博客教程</a>
             
           </div>
         </div>
@@ -517,7 +537,7 @@
     <div class="post-spread">
       
         <div class="ds-share flat" data-thread-key="2017/01/24/domian-analytical/"
-     data-title="coding.me + github.io + 域名解析"
+     data-title="(Hexo 3) coding.me + github.io + 域名解析"
      data-content=""
      data-url="http://mdeng1985.github.io/2017/01/24/domian-analytical/">
   <div class="ds-share-inline">
@@ -547,7 +567,7 @@
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2017/01/24/domian-analytical/"
-           data-title="coding.me + github.io + 域名解析" data-url="http://mdeng1985.github.io/2017/01/24/domian-analytical/">
+           data-title="(Hexo 3) coding.me + github.io + 域名解析" data-url="http://mdeng1985.github.io/2017/01/24/domian-analytical/">
       </div>
     
   </div>
@@ -594,7 +614,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -612,7 +632,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
