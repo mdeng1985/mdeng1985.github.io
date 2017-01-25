@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[coding.me + github.io + 域名解析]]></title>
+      <url>%2F2017%2F01%2F24%2Fdomian-analytical%2F</url>
+      <content type="text"><![CDATA[说明这篇文章的目的就是将coding.me上的和github.io的个人博客和自己注册的域名关联起来，并且实现国内的用户访问域名的时候定向到 coding.me，国际的用户访问的时候，定向到github.io。 前期准备 有自己的github.io博客，参考”用hexo创建博客并发布到github pages“，假设为zs.github.io 有自己的coding.me博客，参考”利用hexo将博客同时推送到coding pages和github pages“, 假设为zs.coding.me 注册了自己的域名，我用的是godaddy 上注册的，假设为zs.com 域名解析的相关概念域名解析的示意图如下图： 由图可见，在解析前github对应自己的ip,coding对应自己的ip，而且没有和自己的域名相互关联，两者是相互独立的。解析以后如下图 域名解析有两种方式：A记录和CNAME。A (Address) 记录是用来指定主机名（或域名）对应的IP地址记录。CNAME记录，即名记录。这种记录允许您将多个名字映射到另外一个域名。 由图可见，无论用户访问coding.io还是guihub.io，还是zs.com，都会定向到zs.com（这称为CNAME，相当于别名）； 然后zs.com会根据用户的ip来指向具体的ip，这称为A记录 （这是我自己的理解，不一定对）。 关于域名解析的概念性的文章，我推荐：GitHub Pages 绑定来自阿里云的域名 域名解析的具体步骤我参考的是”Hexo同时部署在Coding和GitHub上并使用DNSPod分流“，不做赘述。]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[Hexo撰写博客教程]]></title>
       <url>%2F2017%2F01%2F24%2Fhexo-edit-blog%2F</url>
       <content type="text"><![CDATA[说明这篇文章的内容是利用Hexo撰写博客的相关内容，关于Hexo的配置和发布过程可以参见 用hexo创建博客并发布到github pages 创建新文章在命令行工具下进入到hexoBlog目录，运行： hexo new &quot;arc1&quot; 这样在source/_posts目录下就新建了一个arc1.md博客文件，打开以后有固定的格式： 12345---title: myarcdate: 2017-01-23 10:24:47tags:--- 其中title为博客的标题，tags为博客的标签，对于多个标签可以采用tags:[tag1,tag2]来实现。博客的撰写需要采用markdown语法，可以参见Markdown语法总结. 写完以后运行hexo s -p 3600 进行预览，没问题了再运行hexo generate hexo deploy发布到github pages 如果要添加私密文章或者草稿，则需要运行hexo new **draft** &quot;arc1&quot;, 这样在source/_drafts目录下新建了arc1.md，然后在本地可以强行预览草稿：hexo server --drafts 插入图片有两种典型的方式可以插入图片： - hexo的官方方式：这种方式需要将站点的配置文件_config.yml里设置：’post_asset_folder: true’, 然后在cmd输入: hexo new &quot;post-test&quot;, 这样 source\_posts 下建立post-test.md和post-test的文件夹。再把图片(比如：example.jpg)放到post-test这个文件夹里。post-test.md里进行调用的时候输入： 12&#123;% asset_img example.jpg aaa %&#125;` 但是，这种方法我没有试验成功。不知道怎么回事 基于Markdown语法的调用方式: ![](example.jpg的相对路径)。但是如果’post_asset_folder: true’情况下，如果把exaple.jpg放在上一级目录中是无法显示的。参考下面的测试结果(首页能不能显示还和具体模板有关系) 总结下有两种比较靠谱的方式: _config_yml中设置’post_asset_folder: false’，然后将所有的图片放到_post的同级目录images下，然后进行调用![](/images/example.jpg) _config_yml中设置’post_asset_folder: true’, 这样建立aa.md的时候就同时新建了aa的文件夹，将图片放aa文件夹下，aa.md里调用的时候为![](aa/compare_markdown_img.png) 测试的时候犯了一个很低级的错误，就是我将图片命名为example.jpg.jpg, 导致一直预览不到。另外基于Markdown语法的图片可能会在首页和归档页看不到，不过对于我而言不是很重要。]]></content>

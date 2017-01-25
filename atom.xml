@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mdeng1985.github.io/"/>
-  <updated>2017-01-25T03:13:40.271Z</updated>
+  <updated>2017-01-25T05:35:12.366Z</updated>
   <id>http://mdeng1985.github.io/</id>
   
   <author>
@@ -16,11 +16,52 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>coding.me + github.io + 域名解析</title>
+    <link href="http://mdeng1985.github.io/2017/01/24/domian-analytical/"/>
+    <id>http://mdeng1985.github.io/2017/01/24/domian-analytical/</id>
+    <published>2017-01-25T05:09:13.000Z</published>
+    <updated>2017-01-25T05:35:12.366Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>这篇文章的目的就是将coding.me上的和github.io的个人博客和自己注册的域名关联起来，并且实现国内的用户访问域名的时候定向到 coding.me，国际的用户访问的时候，定向到github.io。</p>
+<h1 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h1><ul>
+<li>有自己的github.io博客，参考”<a href="/2017/01/23/installHexo/" title="用hexo创建博客并发布到github pages">用hexo创建博客并发布到github pages</a>“，假设为zs.github.io</li>
+<li>有自己的coding.me博客，参考”<a href="/2017/01/23/hexo_coding_github/" title="利用hexo将博客同时推送到coding pages和github pages">利用hexo将博客同时推送到coding pages和github pages</a>“, 假设为zs.coding.me</li>
+<li>注册了自己的域名，我用的是<a href="https://www.godaddy.com" target="_blank" rel="external">godaddy</a> 上注册的，假设为zs.com</li>
+</ul>
+<h1 id="域名解析的相关概念"><a href="#域名解析的相关概念" class="headerlink" title="域名解析的相关概念"></a>域名解析的相关概念</h1><p>域名解析的示意图如下图：</p>
+<p><img src="/2017/01/24/domian-analytical/before_analy.png" alt=""></p>
+<p>由图可见，在解析前github对应自己的ip,coding对应自己的ip，而且没有和自己的域名相互关联，两者是相互独立的。解析以后如下图</p>
+<p><img src="/2017/01/24/domian-analytical/after_analy.png" alt=""></p>
+<p>域名解析有两种方式：A记录和CNAME。A (Address) 记录是用来指定主机名（或域名）对应的IP地址记录。CNAME记录，即名记录。这种记录允许您将多个名字映射到另外一个域名。 由图可见，无论用户访问coding.io还是guihub.io，还是zs.com，都会定向到zs.com（这称为CNAME，相当于别名）； 然后zs.com会根据用户的ip来指向具体的ip，这称为A记录 （<strong>这是我自己的理解，不一定对</strong>）。</p>
+<p>关于域名解析的概念性的文章，我推荐：<a href="http://quantumman.me/blog/setting-up-a-domain-with-gitHub-pages.html" target="_blank" rel="external">GitHub Pages 绑定来自阿里云的域名</a></p>
+<h1 id="域名解析的具体步骤"><a href="#域名解析的具体步骤" class="headerlink" title="域名解析的具体步骤"></a>域名解析的具体步骤</h1><p>我参考的是”<a href="http://www.franktly.com/2016/01/09/%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-2/" target="_blank" rel="external">Hexo同时部署在Coding和GitHub上并使用DNSPod分流</a>“，不做赘述。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;说明&quot;&gt;&lt;a href=&quot;#说明&quot; class=&quot;headerlink&quot; title=&quot;说明&quot;&gt;&lt;/a&gt;说明&lt;/h1&gt;&lt;p&gt;这篇文章的目的就是将coding.me上的和github.io的个人博客和自己注册的域名关联起来，并且实现国内的用户访问域名的时候定向到 c
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="http://mdeng1985.github.io/tags/hexo/"/>
+    
+      <category term="coding.me" scheme="http://mdeng1985.github.io/tags/coding-me/"/>
+    
+      <category term="github pages" scheme="http://mdeng1985.github.io/tags/github-pages/"/>
+    
+      <category term="github.io" scheme="http://mdeng1985.github.io/tags/github-io/"/>
+    
+      <category term="域名解析" scheme="http://mdeng1985.github.io/tags/%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hexo撰写博客教程</title>
     <link href="http://mdeng1985.github.io/2017/01/24/hexo-edit-blog/"/>
     <id>http://mdeng1985.github.io/2017/01/24/hexo-edit-blog/</id>
     <published>2017-01-24T16:50:51.000Z</published>
-    <updated>2017-01-25T03:13:40.271Z</updated>
+    <updated>2017-01-25T05:35:14.111Z</updated>
     
     <content type="html"><![CDATA[<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>这篇文章的内容是利用Hexo撰写博客的相关内容，关于Hexo的配置和发布过程可以参见 <a href="/2017/01/23/installHexo/" title="用hexo创建博客并发布到github pages">用hexo创建博客并发布到github pages</a></p>
 <h1 id="创建新文章"><a href="#创建新文章" class="headerlink" title="创建新文章"></a>创建新文章</h1><p>在命令行工具下进入到hexoBlog目录，运行：</p>
