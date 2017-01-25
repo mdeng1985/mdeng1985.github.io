@@ -121,17 +121,17 @@
     </summary>
     
     
-      <category term="coding.me" scheme="http://mdeng1985.github.io/tags/coding-me/"/>
-    
       <category term="hexo" scheme="http://mdeng1985.github.io/tags/hexo/"/>
-    
-      <category term="域名解析" scheme="http://mdeng1985.github.io/tags/%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90/"/>
     
       <category term="git" scheme="http://mdeng1985.github.io/tags/git/"/>
     
       <category term="github" scheme="http://mdeng1985.github.io/tags/github/"/>
     
+      <category term="coding.me" scheme="http://mdeng1985.github.io/tags/coding-me/"/>
+    
       <category term="markdown" scheme="http://mdeng1985.github.io/tags/markdown/"/>
+    
+      <category term="域名解析" scheme="http://mdeng1985.github.io/tags/%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90/"/>
     
       <category term="index" scheme="http://mdeng1985.github.io/tags/index/"/>
     
@@ -180,15 +180,15 @@
     </summary>
     
     
+      <category term="hexo" scheme="http://mdeng1985.github.io/tags/hexo/"/>
+    
       <category term="coding.me" scheme="http://mdeng1985.github.io/tags/coding-me/"/>
+    
+      <category term="域名解析" scheme="http://mdeng1985.github.io/tags/%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90/"/>
     
       <category term="github pages" scheme="http://mdeng1985.github.io/tags/github-pages/"/>
     
       <category term="github.io" scheme="http://mdeng1985.github.io/tags/github-io/"/>
-    
-      <category term="hexo" scheme="http://mdeng1985.github.io/tags/hexo/"/>
-    
-      <category term="域名解析" scheme="http://mdeng1985.github.io/tags/%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90/"/>
     
   </entry>
   
@@ -300,11 +300,11 @@
       <category term="建站" scheme="http://mdeng1985.github.io/categories/%E5%BB%BA%E7%AB%99/"/>
     
     
-      <category term="github pages" scheme="http://mdeng1985.github.io/tags/github-pages/"/>
-    
       <category term="hexo" scheme="http://mdeng1985.github.io/tags/hexo/"/>
     
       <category term="git" scheme="http://mdeng1985.github.io/tags/git/"/>
+    
+      <category term="github pages" scheme="http://mdeng1985.github.io/tags/github-pages/"/>
     
   </entry>
   
@@ -338,11 +338,11 @@
       <category term="建站" scheme="http://mdeng1985.github.io/categories/%E5%BB%BA%E7%AB%99/"/>
     
     
-      <category term="github pages" scheme="http://mdeng1985.github.io/tags/github-pages/"/>
-    
       <category term="hexo" scheme="http://mdeng1985.github.io/tags/hexo/"/>
     
       <category term="git" scheme="http://mdeng1985.github.io/tags/git/"/>
+    
+      <category term="github pages" scheme="http://mdeng1985.github.io/tags/github-pages/"/>
     
       <category term="coding pages" scheme="http://mdeng1985.github.io/tags/coding-pages/"/>
     
@@ -432,9 +432,9 @@
       <category term="建站" scheme="http://mdeng1985.github.io/categories/%E5%BB%BA%E7%AB%99/"/>
     
     
-      <category term="github pages" scheme="http://mdeng1985.github.io/tags/github-pages/"/>
-    
       <category term="markdown" scheme="http://mdeng1985.github.io/tags/markdown/"/>
+    
+      <category term="github pages" scheme="http://mdeng1985.github.io/tags/github-pages/"/>
     
   </entry>
   
