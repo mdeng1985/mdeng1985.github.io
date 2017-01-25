@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="hexo,coding.me,github pages,github.io,域名解析," />
+  <meta name="keywords" content="coding.me,github pages,github.io,hexo,域名解析," />
 
 
 
@@ -100,7 +100,7 @@
 有自己的coding.me博客，参考”利用hexo将博">
 <meta property="og:image" content="http://mdeng1985.github.io/2017/01/24/domian-analytical/before_analy.png">
 <meta property="og:image" content="http://mdeng1985.github.io/2017/01/24/domian-analytical/after_analy.png">
-<meta property="og:updated_time" content="2017-01-25T05:35:12.366Z">
+<meta property="og:updated_time" content="2017-01-25T06:44:53.657Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="coding.me + github.io + 域名解析">
 <meta name="twitter:description" content="说明这篇文章的目的就是将coding.me上的和github.io的个人博客和自己注册的域名关联起来，并且实现国内的用户访问域名的时候定向到 coding.me，国际的用户访问的时候，定向到github.io。
@@ -412,6 +412,7 @@
 <li>有自己的github.io博客，参考”<a href="/2017/01/23/installHexo/" title="用hexo创建博客并发布到github pages">用hexo创建博客并发布到github pages</a>“，假设为zs.github.io</li>
 <li>有自己的coding.me博客，参考”<a href="/2017/01/23/hexo_coding_github/" title="利用hexo将博客同时推送到coding pages和github pages">利用hexo将博客同时推送到coding pages和github pages</a>“, 假设为zs.coding.me</li>
 <li>注册了自己的域名，我用的是<a href="https://www.godaddy.com" target="_blank" rel="external">godaddy</a> 上注册的，假设为zs.com</li>
+<li>在dnspod上注册账号， 用于解析域名</li>
 </ul>
 <h1 id="域名解析的相关概念"><a href="#域名解析的相关概念" class="headerlink" title="域名解析的相关概念"></a>域名解析的相关概念</h1><p>域名解析的示意图如下图：</p>
 <p><img src="/2017/01/24/domian-analytical/before_analy.png" alt=""></p>
@@ -420,6 +421,7 @@
 <p>域名解析有两种方式：A记录和CNAME。A (Address) 记录是用来指定主机名（或域名）对应的IP地址记录。CNAME记录，即名记录。这种记录允许您将多个名字映射到另外一个域名。 由图可见，无论用户访问coding.io还是guihub.io，还是zs.com，都会定向到zs.com（这称为CNAME，相当于别名）； 然后zs.com会根据用户的ip来指向具体的ip，这称为A记录 （<strong>这是我自己的理解，不一定对</strong>）。</p>
 <p>关于域名解析的概念性的文章，我推荐：<a href="http://quantumman.me/blog/setting-up-a-domain-with-gitHub-pages.html" target="_blank" rel="external">GitHub Pages 绑定来自阿里云的域名</a></p>
 <h1 id="域名解析的具体步骤"><a href="#域名解析的具体步骤" class="headerlink" title="域名解析的具体步骤"></a>域名解析的具体步骤</h1><p>我参考的是”<a href="http://www.franktly.com/2016/01/09/%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-2/" target="_blank" rel="external">Hexo同时部署在Coding和GitHub上并使用DNSPod分流</a>“，不做赘述。</p>
+<h1 id="测试是否分流成功"><a href="#测试是否分流成功" class="headerlink" title="测试是否分流成功"></a>测试是否分流成功</h1><p><a href="http://www.webkaka.com/dns/" target="_blank" rel="external">http://www.webkaka.com/dns/</a></p>
 
       
     </div>
@@ -443,13 +445,13 @@
       
         <div class="post-tags">
           
-            <a href="/tags/hexo/" rel="tag"># hexo</a>
-          
             <a href="/tags/coding-me/" rel="tag"># coding.me</a>
           
             <a href="/tags/github-pages/" rel="tag"># github pages</a>
           
             <a href="/tags/github-io/" rel="tag"># github.io</a>
+          
+            <a href="/tags/hexo/" rel="tag"># hexo</a>
           
             <a href="/tags/域名解析/" rel="tag"># 域名解析</a>
           
@@ -669,7 +671,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#说明"><span class="nav-number">1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#前期准备"><span class="nav-number">2.</span> <span class="nav-text">前期准备</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#域名解析的相关概念"><span class="nav-number">3.</span> <span class="nav-text">域名解析的相关概念</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#域名解析的具体步骤"><span class="nav-number">4.</span> <span class="nav-text">域名解析的具体步骤</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#说明"><span class="nav-number">1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#前期准备"><span class="nav-number">2.</span> <span class="nav-text">前期准备</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#域名解析的相关概念"><span class="nav-number">3.</span> <span class="nav-text">域名解析的相关概念</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#域名解析的具体步骤"><span class="nav-number">4.</span> <span class="nav-text">域名解析的具体步骤</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#测试是否分流成功"><span class="nav-number">5.</span> <span class="nav-text">测试是否分流成功</span></a></li></ol></div>
             
 
           </div>

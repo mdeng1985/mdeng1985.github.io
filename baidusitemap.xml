@@ -4,8 +4,33 @@
 
     
   <url>
+    <loc>http://mdeng1985.github.io/2017/01/24/domian-analytical/</loc>
+    <lastmod>2017-01-25T06:44:53.657Z</lastmod>
+    <data>
+        <display>
+        <title>coding.me + github.io + 域名解析</title>
+        <pubTime>2017-01-25T05:09:13.000Z</pubTime>
+        
+        <tag>coding.me</tag>
+         
+        <tag>github pages</tag>
+         
+        <tag>github.io</tag>
+         
+        <tag>hexo</tag>
+         
+        <tag>域名解析</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://mdeng1985.github.io/2017/01/24/hexo-edit-blog/</loc>
-    <lastmod>2017-01-25T05:35:14.111Z</lastmod>
+    <lastmod>2017-01-25T05:38:16.582Z</lastmod>
     <data>
         <display>
         <title>Hexo撰写博客教程</title>
@@ -26,43 +51,18 @@
 
     
   <url>
-    <loc>http://mdeng1985.github.io/2017/01/24/domian-analytical/</loc>
-    <lastmod>2017-01-25T05:35:12.366Z</lastmod>
-    <data>
-        <display>
-        <title>coding.me + github.io + 域名解析</title>
-        <pubTime>2017-01-25T05:09:13.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-        <tag>coding.me</tag>
-         
-        <tag>github pages</tag>
-         
-        <tag>github.io</tag>
-         
-        <tag>域名解析</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://mdeng1985.github.io/2017/01/23/installHexo/</loc>
-    <lastmod>2017-01-25T03:12:00.452Z</lastmod>
+    <lastmod>2017-01-25T05:37:51.074Z</lastmod>
     <data>
         <display>
         <title>用hexo创建博客并发布到github pages</title>
         <pubTime>2017-01-23T15:58:24.000Z</pubTime>
         
+        <tag>github pages</tag>
+         
         <tag>hexo</tag>
          
         <tag>git</tag>
-         
-        <tag>github pages</tag>
          
          
            
@@ -84,11 +84,11 @@
         <title>利用hexo将博客同时推送到coding pages和github pages</title>
         <pubTime>2017-01-23T15:58:24.000Z</pubTime>
         
+        <tag>github pages</tag>
+         
         <tag>hexo</tag>
          
         <tag>git</tag>
-         
-        <tag>github pages</tag>
          
         <tag>coding pages</tag>
          
