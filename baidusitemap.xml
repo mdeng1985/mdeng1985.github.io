@@ -3,6 +3,154 @@
 
 
     
+  <url>
+    <loc>http://mdeng1985.github.io/2017/01/23/markdown_gram/</loc>
+    <lastmod>2017-01-26T04:36:36.446Z</lastmod>
+    <data>
+        <display>
+        <title>Markdown语法总结</title>
+        <pubTime>2017-01-23T15:58:00.000Z</pubTime>
+        
+        <tag>markdown</tag>
+         
+        <tag>github pages</tag>
+         
+         
+           
+             
+              <breadCrumb title="建站" url="http://mdeng1985.github.io/categories/%E5%BB%BA%E7%AB%99/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://mdeng1985.github.io/2017/01/25/atom_study/</loc>
+    <lastmod>2017-01-26T04:15:36.313Z</lastmod>
+    <data>
+        <display>
+        <title>Atom编辑器学习</title>
+        <pubTime>2017-01-26T04:12:24.000Z</pubTime>
+        
+        <tag>markdown</tag>
+         
+        <tag>atom</tag>
+         
+         
+           
+             
+              <breadCrumb title="gitbook" url="http://mdeng1985.github.io/categories/gitbook/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://mdeng1985.github.io/2017/01/25/gitbook_plugin/</loc>
+    <lastmod>2017-01-26T04:09:24.544Z</lastmod>
+    <data>
+        <display>
+        <title>Gitbook学习笔记(3):gitbook的常用插件</title>
+        <pubTime>2017-01-26T04:08:24.000Z</pubTime>
+        
+        <tag>gitbook</tag>
+         
+         
+           
+             
+              <breadCrumb title="gitbook" url="http://mdeng1985.github.io/categories/gitbook/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://mdeng1985.github.io/2017/01/25/publish_gitbook/</loc>
+    <lastmod>2017-01-26T04:06:20.264Z</lastmod>
+    <data>
+        <display>
+        <title>Gitbook学习笔记(2): 发布书籍到github pages上</title>
+        <pubTime>2017-01-26T04:05:24.000Z</pubTime>
+        
+        <tag>gitbook</tag>
+         
+         
+           
+             
+              <breadCrumb title="gitbook" url="http://mdeng1985.github.io/categories/gitbook/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://mdeng1985.github.io/2017/01/25/gitbook_cmd_study/</loc>
+    <lastmod>2017-01-26T04:04:40.533Z</lastmod>
+    <data>
+        <display>
+        <title>Gitbook学习笔记(1):利用gitbook命令行工具创建和编译书籍</title>
+        <pubTime>2017-01-26T04:04:24.000Z</pubTime>
+        
+        <tag>gitbook</tag>
+         
+         
+           
+             
+              <breadCrumb title="gitbook" url="http://mdeng1985.github.io/categories/gitbook/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://mdeng1985.github.io/2017/01/23/installHexo/</loc>
+    <lastmod>2017-01-26T04:04:26.498Z</lastmod>
+    <data>
+        <display>
+        <title>(Hexo 1) 用hexo创建博客并发布到github pages</title>
+        <pubTime>2017-01-24T04:04:24.000Z</pubTime>
+        
+        <tag>github pages</tag>
+         
+        <tag>hexo</tag>
+         
+        <tag>git</tag>
+         
+         
+           
+             
+              <breadCrumb title="建站" url="http://mdeng1985.github.io/categories/%E5%BB%BA%E7%AB%99/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://mdeng1985.github.io/2017/01/25/hexo-enhance/</loc>
+    <lastmod>2017-01-26T03:39:19.521Z</lastmod>
+    <data>
+        <display>
+        <title>(Hexo 4) hexo站点的丰富和优化</title>
+        <pubTime>2017-01-25T16:42:46.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+         
+           
+             
+              <breadCrumb title="建站" url="http://mdeng1985.github.io/categories/%E5%BB%BA%E7%AB%99/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>http://mdeng1985.github.io/2017/01/24/domian-analytical/</loc>
@@ -33,26 +181,6 @@
 
     
   <url>
-    <loc>http://mdeng1985.github.io/2017/01/25/hexo-enhance/</loc>
-    <lastmod>2017-01-26T01:41:36.838Z</lastmod>
-    <data>
-        <display>
-        <title>(Hexo 4) hexo站点的丰富和优化</title>
-        <pubTime>2017-01-25T16:42:46.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-         
-           
-             
-              <breadCrumb title="建站" url="http://mdeng1985.github.io/categories/%E5%BB%BA%E7%AB%99/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://mdeng1985.github.io/2017/01/25/hexo-summary/</loc>
     <lastmod>2017-01-25T17:04:23.344Z</lastmod>
     <data>
@@ -60,6 +188,8 @@
         <title>(Hexo 0) 利用Hexo创建自己的站点并发布(全记录)</title>
         <pubTime>2017-01-25T16:12:56.000Z</pubTime>
         
+        <tag>markdown</tag>
+         
         <tag>coding.me</tag>
          
         <tag>hexo</tag>
@@ -69,8 +199,6 @@
         <tag>git</tag>
          
         <tag>github</tag>
-         
-        <tag>markdown</tag>
          
         <tag>index</tag>
          
@@ -89,30 +217,6 @@
         <title>(Hexo 5) Hexo撰写博客教程</title>
         <pubTime>2017-01-24T16:50:51.000Z</pubTime>
         
-        <tag>hexo</tag>
-         
-        <tag>git</tag>
-         
-         
-           
-             
-              <breadCrumb title="建站" url="http://mdeng1985.github.io/categories/%E5%BB%BA%E7%AB%99/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://mdeng1985.github.io/2017/01/23/installHexo/</loc>
-    <lastmod>2017-01-25T16:46:52.193Z</lastmod>
-    <data>
-        <display>
-        <title>(Hexo 1) 用hexo创建博客并发布到github pages</title>
-        <pubTime>2017-01-23T15:58:24.000Z</pubTime>
-        
-        <tag>github pages</tag>
-         
         <tag>hexo</tag>
          
         <tag>git</tag>
@@ -164,28 +268,6 @@
         
          
            
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://mdeng1985.github.io/2017/01/23/markdown_gram/</loc>
-    <lastmod>2017-01-23T23:10:06.285Z</lastmod>
-    <data>
-        <display>
-        <title>Markdown语法总结</title>
-        <pubTime>2017-01-23T15:58:24.000Z</pubTime>
-        
-        <tag>github pages</tag>
-         
-        <tag>markdown</tag>
-         
-         
-           
-             
-              <breadCrumb title="建站" url="http://mdeng1985.github.io/categories/%E5%BB%BA%E7%AB%99/"/>
-          
         </display>
     </data>
     </url>

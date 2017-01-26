@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mdeng1985.github.io/"/>
-  <updated>2017-01-26T01:41:36.838Z</updated>
+  <updated>2017-01-26T04:15:36.313Z</updated>
   <id>http://mdeng1985.github.io/</id>
   
   <author>
@@ -16,11 +16,239 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Atom编辑器学习</title>
+    <link href="http://mdeng1985.github.io/2017/01/25/atom_study/"/>
+    <id>http://mdeng1985.github.io/2017/01/25/atom_study/</id>
+    <published>2017-01-26T04:12:24.000Z</published>
+    <updated>2017-01-26T04:15:36.313Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Atom基本操作"><a href="#Atom基本操作" class="headerlink" title="Atom基本操作"></a>Atom基本操作</h1><h2 id="寻找和运行可用的命令"><a href="#寻找和运行可用的命令" class="headerlink" title="寻找和运行可用的命令"></a>寻找和运行可用的命令</h2><p><code>ctrl+shift+p</code>可以呼出命令窗口，用于寻找和运行可令的命令</p>
+<h2 id="管理包-package"><a href="#管理包-package" class="headerlink" title="管理包(package)"></a>管理包(package)</h2><ul>
+<li><p><strong>查看和卸载package</strong>：<code>ctrl+shift+p</code>呼出命令栏，然后输入<code>settings view view installed packages</code>可以对已经安装的package进行查看并卸载</p>
+</li>
+<li><p><strong>安装工具包package</strong>有两种方式：</p>
+<ul>
+<li>通过菜单栏进行安装packge：atom主界面-file-settings，然后点击左边的install输入package关键词进行安装</li>
+<li>通过命令行运行apm（Atom Package Manager）进行安装</li>
+</ul>
+</li>
+<li><p><strong>开启或者关闭markdown的预览功能</strong>： <code>ctrl+shift+m</code> (需要安装markdown-preview，安装atom时默认是已经安装的)</p>
+</li>
+<li><p><strong>关闭拼写检查</strong>: 对于中文写作，关闭这个比较好。<code>ctrl+shift+p</code>然后输入spell check: toggle，然后点击关闭</p>
+</li>
+</ul>
+<p><code>Ctrl + [</code> 对选中内容向左缩进 <code>Ctrl + ]</code> 对选中内容向右缩进</p>
+<h1 id="Atom安装markdown的相关插件"><a href="#Atom安装markdown的相关插件" class="headerlink" title="Atom安装markdown的相关插件"></a>Atom安装markdown的相关插件</h1><h2 id="markdown-writer"><a href="#markdown-writer" class="headerlink" title="[markdown-writer]"></a>[markdown-writer]</h2><p><a href="https://atom.io/packages/markdown-writer" target="_blank" rel="external">官方主页</a></p>
+<p>顾名思义，这个插件目的是辅助进行Markdown文档写作，可以通过菜单栏来添加标题、添加连接、添加图片。 比如插入图片，可以选择图片大小、自动复制图片到当前文件夹，方便书籍制作。</p>
+<p>Markdown的两种方便的运行方式为快捷键和工具栏运行方法。</p>
+<ul>
+<li><strong>快捷键运行方式</strong> 这种运行方式直接通过菜单栏安装markdown-writer 即可，安装方法参见<a href="#atomBasic">“管理包”</a> 可以创建相应的atom快捷键来调用该插件的相应命令，首先<code>ctrl+shift+p</code>呼出命令栏，然后输入<code>Markdown Writer: Create Default Keymaps</code>则配置好了相应快捷键，在windows系统下的快捷键（通过<code>ctrl+shift+p</code>然后输入keymap查看）如下所示：</li>
+</ul>
+<blockquote>
+<p>插入超链接:<code>shift-ctrl-K</code></p>
+<p>插入图片： <code>shift-ctrl-I</code></p>
+<p>斜体：<code>ctrl-i</code></p>
+<p>粗体：<code>ctrl-b</code></p>
+<p>代码块：<code>ctrl-&#39;</code></p>
+<p>删除线：<code>ctrl-h</code>:</p>
+<p>1级标题: <code>ctrl-1</code></p>
+<p>2级标题: <code>ctrl-2</code> 以此类推</p>
+</blockquote>
+<p>更多的mwrkdown-writer快捷键可以参考： <a href="https://github.com/zhuochun/md-writer/wiki/Settings-for-Keymaps" target="_blank" rel="external">markdown-writer-wiki</a></p>
+<ul>
+<li><strong>工具栏运行方式</strong> 这种方式更为直观些，安装完以后会在atom的顶部（或者其他位置）显示markdown-writer的菜单栏。如下图所示。 <img src="/2017/01/25/atom_study/images/2017/01/writer_toolbar.png" alt="    "> 具体<a href="https://atom.io/packages/tool-bar-markdown-writer" target="_blank" rel="external">安装方式</a>需要在命令行下进行，首先打开cmd终端，切换本地的<code>.atm/packages</code>目录下，然后输入： <code>apm install tool-bar markdown-writer</code> 然后再次输入 <code>apm install tool-bar-markdown-writer</code> 重启atom即可。</li>
+</ul>
+<h2 id="markdown-preview"><a href="#markdown-preview" class="headerlink" title="markdown-preview"></a>markdown-preview</h2><p><a href="https://github.com/atom/markdown-preview" target="_blank" rel="external">官方主页</a></p>
+<p>预览插件，安装atom的时候默认已经安装该插件</p>
+<h2 id="markdown-scroll-sync"><a href="#markdown-scroll-sync" class="headerlink" title="markdown-scroll-sync"></a>markdown-scroll-sync</h2><p><a href="https://github.com/mark-hahn/markdown-scroll-sync" target="_blank" rel="external">官方主页</a></p>
+<p>滚动预览插件，</p>
+<h2 id="atomic-chrome"><a href="#atomic-chrome" class="headerlink" title="atomic chrome"></a>atomic chrome</h2><p>适用于利用markdown写公众号的，未深究,有兴趣可以参考:<a href="http://www.jianshu.com/p/b4c8479cfaa5" target="_blank" rel="external">Atom：优雅迷人的编辑神器</a></p>
+<h2 id="markdown-toc"><a href="#markdown-toc" class="headerlink" title="markdown-toc"></a>markdown-toc</h2><p><a href="https://atom.io/packages/markdown-toc" target="_blank" rel="external">官方主页</a></p>
+<p>生成目录的插件，安装完以后在Packages-markdown toc里进入使用</p>
+<h1 id="Atom安装git的相关插件"><a href="#Atom安装git的相关插件" class="headerlink" title="Atom安装git的相关插件"></a>Atom安装git的相关插件</h1><ul>
+<li><p>git plus</p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2></li>
+<li><p><a href="http://www.jianshu.com/p/ad3e737e5dc2" target="_blank" rel="external">Atom与markdown</a></p>
+</li>
+<li><p><a href="http://www.jianshu.com/p/b4c8479cfaa5" target="_blank" rel="external">Atom：优雅迷人的编辑神器</a></p>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Atom基本操作&quot;&gt;&lt;a href=&quot;#Atom基本操作&quot; class=&quot;headerlink&quot; title=&quot;Atom基本操作&quot;&gt;&lt;/a&gt;Atom基本操作&lt;/h1&gt;&lt;h2 id=&quot;寻找和运行可用的命令&quot;&gt;&lt;a href=&quot;#寻找和运行可用的命令&quot; class=&quot;
+    
+    </summary>
+    
+      <category term="gitbook" scheme="http://mdeng1985.github.io/categories/gitbook/"/>
+    
+    
+      <category term="markdown" scheme="http://mdeng1985.github.io/tags/markdown/"/>
+    
+      <category term="atom" scheme="http://mdeng1985.github.io/tags/atom/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Gitbook学习笔记(3):gitbook的常用插件</title>
+    <link href="http://mdeng1985.github.io/2017/01/25/gitbook_plugin/"/>
+    <id>http://mdeng1985.github.io/2017/01/25/gitbook_plugin/</id>
+    <published>2017-01-26T04:08:24.000Z</published>
+    <updated>2017-01-26T04:09:24.544Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="插件安装方法"><a href="#插件安装方法" class="headerlink" title="插件安装方法"></a>插件安装方法</h1><p>首先上<code>https://plugins.gitbook.com/</code>查找插件，比如说安装exercises，则在书籍的根目录创建book.json，格式如下：完成安装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">     &quot;gitbook&quot; : &quot;3.2.2&quot;,</div><div class="line">     &quot;plugins&quot;: [&quot;exercises&quot;]</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+<p>其中gitbook的版本号可以通过gitbook -version得到。如果要安装多个插件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">     &quot;gitbook&quot; : &quot;3.2.2&quot;,</div><div class="line">     &quot;plugins&quot;: [&quot;exercises&quot;,&quot;另外一个插件的名字&quot;]</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+<h1 id="我需要的一些插件"><a href="#我需要的一些插件" class="headerlink" title="我需要的一些插件"></a>我需要的一些插件</h1><ul>
+<li><a href="https://plugins.gitbook.com/plugin/latex-codecogs" target="_blank" rel="external">latex-codecogs</a>(写数学公式)</li>
+<li><a href="https://plugins.gitbook.com/plugin/mermaid" target="_blank" rel="external">mermaid</a>(画流程图)</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;插件安装方法&quot;&gt;&lt;a href=&quot;#插件安装方法&quot; class=&quot;headerlink&quot; title=&quot;插件安装方法&quot;&gt;&lt;/a&gt;插件安装方法&lt;/h1&gt;&lt;p&gt;首先上&lt;code&gt;https://plugins.gitbook.com/&lt;/code&gt;查找插件，比如说安装
+    
+    </summary>
+    
+      <category term="gitbook" scheme="http://mdeng1985.github.io/categories/gitbook/"/>
+    
+    
+      <category term="gitbook" scheme="http://mdeng1985.github.io/tags/gitbook/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Gitbook学习笔记(2): 发布书籍到github pages上</title>
+    <link href="http://mdeng1985.github.io/2017/01/25/publish_gitbook/"/>
+    <id>http://mdeng1985.github.io/2017/01/25/publish_gitbook/</id>
+    <published>2017-01-26T04:05:24.000Z</published>
+    <updated>2017-01-26T04:06:20.264Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="利用命令行工具创建github的项目页-project-pages"><a href="#利用命令行工具创建github的项目页-project-pages" class="headerlink" title="利用命令行工具创建github的项目页(project pages)"></a>利用命令行工具创建github的项目页(project pages)</h1><h2 id="仅发布网页文件"><a href="#仅发布网页文件" class="headerlink" title="仅发布网页文件"></a>仅发布网页文件</h2><p>假设已经通过gitbook-seve可以在本地创建了网页文件，在_book目录下。基本思路就是在 _book目录下创建一个仓库，将网页文件加到库的master分支下，然后推送到远程的github项目里，即可。</p>
+<p>具体操作如下：</p>
+<ul>
+<li><p>本地进入到_book目录下，创建仓库</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git init</div><div class="line">git add .</div><div class="line">git commit -m &quot;book version&quot; (这样就创建了个master分支)</div></pre></td></tr></table></figure>
+</li>
+<li><p>github网上上新建一个仓库，比如名叫book，假设我的用户名为aaa，那么它的网址为：<br><br><code>https://github.com/aaa/book.git</code></p>
+</li>
+<li><p>本地cmd,通过下述命令将仓库推送到远程</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git remote add origin https://github.com/aaa/book.git</div><div class="line">git  git push -u origin master</div></pre></td></tr></table></figure>
+</li>
+<li><p>github网上进入book这个项目，然后setting-github Pages里那一栏source选为master branch。</p>
+</li>
+<li><p>地址栏输入 <a href="https://aaa.github.io/book/" target="_blank" rel="external">https://aaa.github.io/book/</a>就可以显示了，取决于网络，有时候得等过几分钟。</p>
+</li>
+</ul>
+<h2 id="发布网页文件和-md源文件"><a href="#发布网页文件和-md源文件" class="headerlink" title="发布网页文件和.md源文件"></a>发布网页文件和.md源文件</h2><p>如果要把网页的.md源文件也推送到github的仓库里的一种实现途径为：master分支里放.md文件、然后创建一个gh-pages分支放网页，再推送到github仓库里。</p>
+<ul>
+<li>第一步在github上新建一个空仓库,比如说book，链接为<code>https://github.com/aaa/book.git</code></li>
+<li><p>然后在本地进入到源码根目录，假设已经通过gitbook serve命令创建了_book目录。例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">├─Append</div><div class="line">├─chapter1</div><div class="line">├─chapter2</div><div class="line">└─_book</div><div class="line">  ├─Append</div><div class="line">  ├─chapter1</div><div class="line">  ├─chapter2</div><div class="line">  └─gitbook</div></pre></td></tr></table></figure>
+<p>_book为网页的目录，其他文件夹为.md所在文件夹。</p>
+</li>
+<li><p>源码那个分支需要将_book屏蔽掉，因此新建一个.gitignore, 内容为_book,也可以根据个人需要添加需要屏蔽的后缀或者文件夹。然后新建仓库，将源码添加至master分支并推送到github，具体命令如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">git init</div><div class="line">git add .</div><div class="line">git commit -m &quot;master&apos;s version&quot;</div><div class="line">git remote add origin https://github.com/aaa/book.git</div><div class="line">git push -u origin master</div></pre></td></tr></table></figure>
+</li>
+<li><p>在书籍_book录下新建仓库新建gh-pages分支，并将网页添加至该分支，最后推送到github。具体命令如下（#号后为说明）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">cd _book \#进入到_book目录</div><div class="line">git init \#新建仓库</div><div class="line">git -rm .gitignore \#删除.gitignore文件</div><div class="line">git checkout --orphan gh-pages \# 新建分支gh-pages</div><div class="line">git add . \#添加文件到该分支</div><div class="line">git commit -m &quot;html&apos;s branch&quot; \# 生成版本</div><div class="line">git remote add origin https://github.com/aaa/book.git \#给远程仓库设置昵称</div><div class="line">git push -u origin gh-pages \#推送gh-pages分支内容到远程</div></pre></td></tr></table></figure>
+</li>
+<li><p>最后在github进入到项目，settings-GitHub Pages-source-选择gh-pages，过一会打开Github pages那里给出的网址就可以看到网页了。</p>
+</li>
+</ul>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ol>
+<li><a href="https://help.github.com/categories/github-pages-basics" target="_blank" rel="external">github pages</a></li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;利用命令行工具创建github的项目页-project-pages&quot;&gt;&lt;a href=&quot;#利用命令行工具创建github的项目页-project-pages&quot; class=&quot;headerlink&quot; title=&quot;利用命令行工具创建github的项目页(projec
+    
+    </summary>
+    
+      <category term="gitbook" scheme="http://mdeng1985.github.io/categories/gitbook/"/>
+    
+    
+      <category term="gitbook" scheme="http://mdeng1985.github.io/tags/gitbook/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Gitbook学习笔记(1):利用gitbook命令行工具创建和编译书籍</title>
+    <link href="http://mdeng1985.github.io/2017/01/25/gitbook_cmd_study/"/>
+    <id>http://mdeng1985.github.io/2017/01/25/gitbook_cmd_study/</id>
+    <published>2017-01-26T04:04:24.000Z</published>
+    <updated>2017-01-26T04:04:40.533Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="需要用到的软件"><a href="#需要用到的软件" class="headerlink" title="需要用到的软件"></a>需要用到的软件</h1><ul>
+<li><a href="https://nodejs.org/en/" title="nodes.js" target="_blank" rel="external">nodes.js</a>；</li>
+<li>gitbook命令行工具(用于创建和编译书籍，不用手动下载，安装完nodes.js通过命令行工具自动安装)；</li>
+<li><a href="https://zh.wikipedia.org/wiki/Markdown" title="Markdown" target="_blank" rel="external">Markdown</a>语法编辑器（用于编辑书本的内容和格式。在线或者离线均可，可以参考：<a href="https://wizardforcel.gitbooks.io/markdown-simple-world/content/1.html" title="Markdown 编辑器推荐" target="_blank" rel="external">Markdown 编辑器推荐</a>）；</li>
+</ul>
+<h1 id="gitbook命令行工具安装"><a href="#gitbook命令行工具安装" class="headerlink" title="gitbook命令行工具安装"></a>gitbook命令行工具安装</h1><p>安装教程主要参考：<a href="https://toolchain.gitbook.com/setup.html" title="SIOgitBook" target="_blank" rel="external">SIOgitBook</a></p>
+<ol>
+<li><p>下载<a href="https://nodejs.org/en/" title="node.js" target="_blank" rel="external">node.js</a>的源文件并安装。安装完以后在系统CMD里输入:<code>node -v</code>查看node.jsb版本，以校验是否安装成功。</p>
+</li>
+<li><p>系统cmd里安装gitbook命令行工具: <code>npm install gitbook-cli -g</code>; 然后输入<code>gitbook -V</code> (V大写)查看gitbook命令行工具版本，以校验gitbook是否安装成功。返回版本号则说明安装成功。 如果需要卸载gitbook,则可以<code>npm uninstall -g gitbook</code></p>
+</li>
+</ol>
+<h1 id="创建和编译一个只有目录的书籍"><a href="#创建和编译一个只有目录的书籍" class="headerlink" title="创建和编译一个只有目录的书籍"></a>创建和编译一个只有目录的书籍</h1><h2 id="创建书籍目录"><a href="#创建书籍目录" class="headerlink" title="创建书籍目录"></a>创建书籍目录</h2><p>在本地电脑上新建一个文件夹，比如test；然后CMD下进入该文件夹，输入</p>
+<blockquote>
+<p><code>gitbook init</code></p>
+</blockquote>
+<p>会在该文件夹下创建两个基本文件README.md和SUMMARY.md。其中README.md为书本的介绍，用编辑器打开以后默认内容为：</p>
+<blockquote>
+<p><code># Introduction</code></p>
+</blockquote>
+<p>SUMMARY.md为书籍的框架文件，用编辑器打开以后默认内容为：</p>
+<blockquote>
+<p><code># Summary</code> <code>*</code> <code>[Introduction]</code> <code>(README.md)</code></p>
+</blockquote>
+<p>其中<code># Summary</code>为固定格式，下一行声明的是生成一个标题为Introduction的章，里面的具体内容由README.md文件给出。</p>
+<h2 id="编辑书籍目录和框架"><a href="#编辑书籍目录和框架" class="headerlink" title="编辑书籍目录和框架"></a>编辑书籍目录和框架</h2><p>系统默认的SUMMARY.md里的README.md实际上是书籍的介绍文件，因此我们自己撰写的时候可以另外创建一个.md文件（比如chap1_body.md）然后将Summary.md文件里的第二行改为 <code>* [Introduction]</code> <code>(chap1_body.md)</code>。</p>
+<p>如果一个章节里有好几个小节，每个小节再由不同的.md文件给出，则可以参考<a href="https://yuzeshan.gitbooks.io/gitbook-studying/content/book/gitbook-cli.html" target="_blank" rel="external">下例</a>修改SUMMARY.md源代码为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"># Summary</div><div class="line">* [基本安装](howtouse/README.md)</div><div class="line">   - [Node.js安装](howtouse/Nodejsinstall.md)</div><div class="line">   - [Gitbook安装](howtouse/gitbookinstall.md)</div><div class="line">   - [Gitbook命令行速览](howtouse/gitbookcli.md)</div></pre></td></tr></table></figure>
+<p>这时候需要再次执行<code>gitbook init</code>，这样在当前目录下会创建名howtouse的子文件夹，该子文件夹下有README.md、Nodejsinstall.md、gitbookinstall.md和gitbookcli.md四个文件。值得注意的是，SUMMARY.md里</p>
+<blockquote>
+<ul>
+<li>] 和 ( 中间不能有空格</li>
+<li>[ 和前面的*和-要有空格。</li>
+<li>运行完gitbook init，文件夹内已有的文件不会被覆盖，也不会被删除。</li>
+</ul>
+</blockquote>
+<p>否则不能创建成功。</p>
+<h2 id="编辑书籍的内容"><a href="#编辑书籍的内容" class="headerlink" title="编辑书籍的内容"></a>编辑书籍的内容</h2><p>上一小节里已经创建了书籍的框架，接下来就需要采用Markdown编辑器进行编辑添加内容到Nodejsinstall.md、gitbookinstall.md和gitbookcli.md、README.md里。</p>
+<h2 id="编译生成和预览书籍"><a href="#编译生成和预览书籍" class="headerlink" title="编译生成和预览书籍"></a>编译生成和预览书籍</h2><p>最后需要在系统CMD下再次运行gitbook命令生成书籍，</p>
+<blockquote>
+<p>生成服务器？：<code>gitbook serve</code> 最后在浏览器网页地址栏输入<code>http://localhost:4000/</code>进行预览</p>
+<p>生成静态网页：<code>gitbook build</code></p>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;需要用到的软件&quot;&gt;&lt;a href=&quot;#需要用到的软件&quot; class=&quot;headerlink&quot; title=&quot;需要用到的软件&quot;&gt;&lt;/a&gt;需要用到的软件&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://nodejs.org/en/&quot; title=&quot;node
+    
+    </summary>
+    
+      <category term="gitbook" scheme="http://mdeng1985.github.io/categories/gitbook/"/>
+    
+    
+      <category term="gitbook" scheme="http://mdeng1985.github.io/tags/gitbook/"/>
+    
+  </entry>
+  
+  <entry>
     <title>(Hexo 4) hexo站点的丰富和优化</title>
     <link href="http://mdeng1985.github.io/2017/01/25/hexo-enhance/"/>
     <id>http://mdeng1985.github.io/2017/01/25/hexo-enhance/</id>
     <published>2017-01-25T16:42:46.000Z</published>
-    <updated>2017-01-26T01:41:36.838Z</updated>
+    <updated>2017-01-26T03:39:19.521Z</updated>
     
     <content type="html"><![CDATA[<h1 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h1><p>安装主题的主要流程：将主题包下载下来，放到themes文件夹下，然后在_config.yml里进行配置， 以<a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">next</a>主题为例进行说明：</p>
 <ul>
@@ -75,6 +303,7 @@
 <li>添加到搜索引擎，参见前文</li>
 <li><a href="http://theme-next.iissnan.com/third-party-services.html#analytics-baidu" target="_blank" rel="external">添加百度统计</a></li>
 <li><a href="http://www.jianshu.com/p/393d067dba8d" target="_blank" rel="external">首页仅不显示全文只显示预览</a></li>
+<li><a href="http://jaredforsyth.com/hexo-admin/" target="_blank" rel="external">添加hexo-admin插件，用于后台管理</a></li>
 </ul>
 </li>
 </ul>
@@ -123,6 +352,8 @@
     </summary>
     
     
+      <category term="markdown" scheme="http://mdeng1985.github.io/tags/markdown/"/>
+    
       <category term="coding.me" scheme="http://mdeng1985.github.io/tags/coding-me/"/>
     
       <category term="hexo" scheme="http://mdeng1985.github.io/tags/hexo/"/>
@@ -132,8 +363,6 @@
       <category term="git" scheme="http://mdeng1985.github.io/tags/git/"/>
     
       <category term="github" scheme="http://mdeng1985.github.io/tags/github/"/>
-    
-      <category term="markdown" scheme="http://mdeng1985.github.io/tags/markdown/"/>
     
       <category term="index" scheme="http://mdeng1985.github.io/tags/index/"/>
     
@@ -247,51 +476,11 @@
   </entry>
   
   <entry>
-    <title>(Hexo2)利用hexo将博客同时推送到coding pages和github pages</title>
-    <link href="http://mdeng1985.github.io/2017/01/23/hexo_coding_github/"/>
-    <id>http://mdeng1985.github.io/2017/01/23/hexo_coding_github/</id>
-    <published>2017-01-23T15:58:24.000Z</published>
-    <updated>2017-01-25T16:37:43.137Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在文章<a href="/2017/01/23/installHexo/" title="(Hexo 1) 用hexo创建博客并发布到github pages">(Hexo 1) 用hexo创建博客并发布到github pages</a>中给出了如何将hexo创建的博客推送到github，这篇文章在”<a href="/2017/01/23/installHexo/" title="(Hexo 1) 用hexo创建博客并发布到github pages">(Hexo 1) 用hexo创建博客并发布到github pages</a>“的基础上，将hexo创建的 博客同时发布到github pages和coding pages. 之所以这么做是有连个目的：一是为了分流，使得国内的用户访问coding pages，国外的用户访问github pages； 另外一个原因就是github pages貌似不能被百度收录，所以还要用coding pages。</p>
-<h1 id="预备内容"><a href="#预备内容" class="headerlink" title="预备内容"></a>预备内容</h1><p>需要安装git软件，并生成公私匙，可以参考<a href="http://itfan.github.io/#show/2013-06-07-use-github-on-windows" target="_blank" rel="external">这篇文章</a>和<a href="https://coding.net/help/doc/git/ssh-key.html" target="_blank" rel="external">配置SSH公钥</a>。这里只需要用公钥<code>id_rsa.pub</code>文件</p>
-<h1 id="在coding-net上创建仓库"><a href="#在coding-net上创建仓库" class="headerlink" title="在coding.net上创建仓库"></a>在coding.net上创建仓库</h1><p>coding.net和github类似，它的page也分为用户页和项目页两大类( <a href="https://coding.net/help/doc/pages/index.html" target="_blank" rel="external">Coding Pages 介绍</a>)。在coding上申请一个账户，假设用户名为zhangshan，创建一个仓库，名字为<code>zhangshan.coding.me</code> (这种格式对应的是用户页，如果需要创建项目页，则名字可以随意。但是我测试发现，<strong>如果创建项目页，博客预览的格式不理想，不知道怎么回事</strong>)</p>
-<h1 id="配置coding上的公钥"><a href="#配置coding上的公钥" class="headerlink" title="配置coding上的公钥"></a>配置coding上的公钥</h1><p>配置的目的是在本地可以git直接将hexo博客推送到coding.net上。首先在<a href="https://coding.net/user" target="_blank" rel="external">用户主页</a>，将本地<code>id_rsa.pub</code>文件的内容配置到coding上。如下图所示 <img src="/2017/01/23/hexo_coding_github/ssh_key.png" alt=""></p>
-<p>配置完以后，在本地的git bash(不是cmd里)进行验证</p>
-<p><code>ssh -T git@git.coding.net</code></p>
-<p>会提示”The authenticity of host ‘git.coding.net (220.243.237.72)’ can’t be established…”，这时候直接按回车，直到提示”You’ve connected to Coding.net via SSH successfully!”, 就说明配置成功。</p>
-<h1 id="在hexo里配置coding的推送地址"><a href="#在hexo里配置coding的推送地址" class="headerlink" title="在hexo里配置coding的推送地址"></a>在hexo里配置coding的推送地址</h1><p>在hexo的站点目录下(我的为hexoBlog)打开_config.yml，将coding.net的git地址放进去，如下所示</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repository:</div><div class="line">    github: git@github.com:zhangshan/zhangshan.github.io.git</div><div class="line">    coding: git@git.coding.net:zhangshan/zhangshan.coding.me.git</div><div class="line">  branch: master</div><div class="line">  message: hexo deploy</div></pre></td></tr></table></figure>
-<h1 id="进行推送"><a href="#进行推送" class="headerlink" title="进行推送"></a>进行推送</h1><p>和github pages的推送方式一样，不做赘述, 可以参考(<a href="/2017/01/23/installHexo/" title="(Hexo 1) 用hexo创建博客并发布到github pages">(Hexo 1) 用hexo创建博客并发布到github pages</a>)</p>
-<h1 id="coding-的pages设置"><a href="#coding-的pages设置" class="headerlink" title="coding 的pages设置"></a>coding 的pages设置</h1><p>在coding.net进入到自己的zhangshan.coding.me点pages服务，然后”部署来源”为master分支，就可以在浏览器中输入<code>http://zhangshan.coding.me/zhangshan.coding.me</code>中浏览博客。</p>
-<p>至此已经完成了hexo博客同时推送到coding pages和github pages的任务。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;在文章&lt;a href=&quot;/2017/01/23/installHexo/&quot; title=&quot;(Hexo 1) 用hexo创建博客并发布到git
-    
-    </summary>
-    
-      <category term="建站" scheme="http://mdeng1985.github.io/categories/%E5%BB%BA%E7%AB%99/"/>
-    
-    
-      <category term="github pages" scheme="http://mdeng1985.github.io/tags/github-pages/"/>
-    
-      <category term="hexo" scheme="http://mdeng1985.github.io/tags/hexo/"/>
-    
-      <category term="git" scheme="http://mdeng1985.github.io/tags/git/"/>
-    
-      <category term="coding pages" scheme="http://mdeng1985.github.io/tags/coding-pages/"/>
-    
-  </entry>
-  
-  <entry>
     <title>(Hexo 1) 用hexo创建博客并发布到github pages</title>
     <link href="http://mdeng1985.github.io/2017/01/23/installHexo/"/>
     <id>http://mdeng1985.github.io/2017/01/23/installHexo/</id>
-    <published>2017-01-23T15:58:24.000Z</published>
-    <updated>2017-01-25T16:46:52.193Z</updated>
+    <published>2017-01-24T04:04:24.000Z</published>
+    <updated>2017-01-26T04:04:26.498Z</updated>
     
     <content type="html"><![CDATA[<hr>
 <h1 id="安装和配置hexo"><a href="#安装和配置hexo" class="headerlink" title="安装和配置hexo"></a>安装和配置hexo</h1><p>首先需要安装<a href="https://nodejs.org/zh-cn/" target="_blank" rel="external">node.js</a>和<a href="https://git-scm.com/" target="_blank" rel="external">git</a>, 然后在命令行(或者window powerShell)下安装hexo:<br><br><code>npm install -g hexo</code></p>
@@ -353,11 +542,51 @@
   </entry>
   
   <entry>
+    <title>(Hexo2)利用hexo将博客同时推送到coding pages和github pages</title>
+    <link href="http://mdeng1985.github.io/2017/01/23/hexo_coding_github/"/>
+    <id>http://mdeng1985.github.io/2017/01/23/hexo_coding_github/</id>
+    <published>2017-01-23T15:58:24.000Z</published>
+    <updated>2017-01-25T16:37:43.137Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在文章<a href="/2017/01/23/installHexo/" title="(Hexo 1) 用hexo创建博客并发布到github pages">(Hexo 1) 用hexo创建博客并发布到github pages</a>中给出了如何将hexo创建的博客推送到github，这篇文章在”<a href="/2017/01/23/installHexo/" title="(Hexo 1) 用hexo创建博客并发布到github pages">(Hexo 1) 用hexo创建博客并发布到github pages</a>“的基础上，将hexo创建的 博客同时发布到github pages和coding pages. 之所以这么做是有连个目的：一是为了分流，使得国内的用户访问coding pages，国外的用户访问github pages； 另外一个原因就是github pages貌似不能被百度收录，所以还要用coding pages。</p>
+<h1 id="预备内容"><a href="#预备内容" class="headerlink" title="预备内容"></a>预备内容</h1><p>需要安装git软件，并生成公私匙，可以参考<a href="http://itfan.github.io/#show/2013-06-07-use-github-on-windows" target="_blank" rel="external">这篇文章</a>和<a href="https://coding.net/help/doc/git/ssh-key.html" target="_blank" rel="external">配置SSH公钥</a>。这里只需要用公钥<code>id_rsa.pub</code>文件</p>
+<h1 id="在coding-net上创建仓库"><a href="#在coding-net上创建仓库" class="headerlink" title="在coding.net上创建仓库"></a>在coding.net上创建仓库</h1><p>coding.net和github类似，它的page也分为用户页和项目页两大类( <a href="https://coding.net/help/doc/pages/index.html" target="_blank" rel="external">Coding Pages 介绍</a>)。在coding上申请一个账户，假设用户名为zhangshan，创建一个仓库，名字为<code>zhangshan.coding.me</code> (这种格式对应的是用户页，如果需要创建项目页，则名字可以随意。但是我测试发现，<strong>如果创建项目页，博客预览的格式不理想，不知道怎么回事</strong>)</p>
+<h1 id="配置coding上的公钥"><a href="#配置coding上的公钥" class="headerlink" title="配置coding上的公钥"></a>配置coding上的公钥</h1><p>配置的目的是在本地可以git直接将hexo博客推送到coding.net上。首先在<a href="https://coding.net/user" target="_blank" rel="external">用户主页</a>，将本地<code>id_rsa.pub</code>文件的内容配置到coding上。如下图所示 <img src="/2017/01/23/hexo_coding_github/ssh_key.png" alt=""></p>
+<p>配置完以后，在本地的git bash(不是cmd里)进行验证</p>
+<p><code>ssh -T git@git.coding.net</code></p>
+<p>会提示”The authenticity of host ‘git.coding.net (220.243.237.72)’ can’t be established…”，这时候直接按回车，直到提示”You’ve connected to Coding.net via SSH successfully!”, 就说明配置成功。</p>
+<h1 id="在hexo里配置coding的推送地址"><a href="#在hexo里配置coding的推送地址" class="headerlink" title="在hexo里配置coding的推送地址"></a>在hexo里配置coding的推送地址</h1><p>在hexo的站点目录下(我的为hexoBlog)打开_config.yml，将coding.net的git地址放进去，如下所示</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repository:</div><div class="line">    github: git@github.com:zhangshan/zhangshan.github.io.git</div><div class="line">    coding: git@git.coding.net:zhangshan/zhangshan.coding.me.git</div><div class="line">  branch: master</div><div class="line">  message: hexo deploy</div></pre></td></tr></table></figure>
+<h1 id="进行推送"><a href="#进行推送" class="headerlink" title="进行推送"></a>进行推送</h1><p>和github pages的推送方式一样，不做赘述, 可以参考(<a href="/2017/01/23/installHexo/" title="(Hexo 1) 用hexo创建博客并发布到github pages">(Hexo 1) 用hexo创建博客并发布到github pages</a>)</p>
+<h1 id="coding-的pages设置"><a href="#coding-的pages设置" class="headerlink" title="coding 的pages设置"></a>coding 的pages设置</h1><p>在coding.net进入到自己的zhangshan.coding.me点pages服务，然后”部署来源”为master分支，就可以在浏览器中输入<code>http://zhangshan.coding.me/zhangshan.coding.me</code>中浏览博客。</p>
+<p>至此已经完成了hexo博客同时推送到coding pages和github pages的任务。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;在文章&lt;a href=&quot;/2017/01/23/installHexo/&quot; title=&quot;(Hexo 1) 用hexo创建博客并发布到git
+    
+    </summary>
+    
+      <category term="建站" scheme="http://mdeng1985.github.io/categories/%E5%BB%BA%E7%AB%99/"/>
+    
+    
+      <category term="github pages" scheme="http://mdeng1985.github.io/tags/github-pages/"/>
+    
+      <category term="hexo" scheme="http://mdeng1985.github.io/tags/hexo/"/>
+    
+      <category term="git" scheme="http://mdeng1985.github.io/tags/git/"/>
+    
+      <category term="coding pages" scheme="http://mdeng1985.github.io/tags/coding-pages/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Markdown语法总结</title>
     <link href="http://mdeng1985.github.io/2017/01/23/markdown_gram/"/>
     <id>http://mdeng1985.github.io/2017/01/23/markdown_gram/</id>
-    <published>2017-01-23T15:58:24.000Z</published>
-    <updated>2017-01-23T23:10:06.285Z</updated>
+    <published>2017-01-23T15:58:00.000Z</published>
+    <updated>2017-01-26T04:36:36.446Z</updated>
     
     <content type="html"><![CDATA[<p>@: [gitbookLearnBook, markdown_grammer] <!-- gitbookLearnBook 为本地的书籍的标题 --> <!-- markdown_grammer为本地的.md名字 --></p>
 <h1 id="分级标题"><a href="#分级标题" class="headerlink" title="分级标题"></a>分级标题</h1><blockquote>
@@ -436,9 +665,9 @@
       <category term="建站" scheme="http://mdeng1985.github.io/categories/%E5%BB%BA%E7%AB%99/"/>
     
     
-      <category term="github pages" scheme="http://mdeng1985.github.io/tags/github-pages/"/>
-    
       <category term="markdown" scheme="http://mdeng1985.github.io/tags/markdown/"/>
+    
+      <category term="github pages" scheme="http://mdeng1985.github.io/tags/github-pages/"/>
     
   </entry>
   
