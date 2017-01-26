@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mdeng1985.github.io/"/>
-  <updated>2017-01-26T04:15:36.313Z</updated>
+  <updated>2017-01-26T04:43:31.736Z</updated>
   <id>http://mdeng1985.github.io/</id>
   
   <author>
@@ -14,6 +14,40 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>gitbook学习笔记(4):FAQ</title>
+    <link href="http://mdeng1985.github.io/2017/01/25/gitbook-FAQ/"/>
+    <id>http://mdeng1985.github.io/2017/01/25/gitbook-FAQ/</id>
+    <published>2017-01-26T04:37:00.000Z</published>
+    <updated>2017-01-26T04:43:31.736Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="FAQ"><a href="#FAQ" class="headerlink" title="FAQ"></a>FAQ</h1><ul>
+<li>如果乱码，则需要将编码格式改成UTF-8</li>
+<li><p>gitbook调用本地图片的时候，给出的路径为相对于调用的.md文件的路径，比如</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">├─chapter1</div><div class="line">    ├─sec1.md</div><div class="line">├─imgs</div><div class="line">    ├─1.png</div></pre></td></tr></table></figure>
+<p>如果sec1.md需要调用1.png，则给出的格式为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">![Alt text](../imgs/1.png)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;FAQ&quot;&gt;&lt;a href=&quot;#FAQ&quot; class=&quot;headerlink&quot; title=&quot;FAQ&quot;&gt;&lt;/a&gt;FAQ&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;如果乱码，则需要将编码格式改成UTF-8&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;gitbook调用本地图片的时候，给出的路径为相对于调
+    
+    </summary>
+    
+      <category term="gitbook" scheme="http://mdeng1985.github.io/categories/gitbook/"/>
+    
+    
+      <category term="markdown" scheme="http://mdeng1985.github.io/tags/markdown/"/>
+    
+      <category term="gitbook" scheme="http://mdeng1985.github.io/tags/gitbook/"/>
+    
+  </entry>
   
   <entry>
     <title>Atom编辑器学习</title>
@@ -327,7 +361,7 @@
     <link href="http://mdeng1985.github.io/2017/01/25/hexo-summary/"/>
     <id>http://mdeng1985.github.io/2017/01/25/hexo-summary/</id>
     <published>2017-01-25T16:12:56.000Z</published>
-    <updated>2017-01-25T17:04:23.344Z</updated>
+    <updated>2017-01-26T04:40:19.966Z</updated>
     
     <content type="html"><![CDATA[<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>本文总结利用hexo创建和发布自己的站点的全过程</p>
 <h1 id="安装和配置hexo"><a href="#安装和配置hexo" class="headerlink" title="安装和配置hexo"></a>安装和配置hexo</h1><p>参见 <a href="/2017/01/23/installHexo/" title="(Hexo 1) 用hexo创建博客并发布到github pages">(Hexo 1) 用hexo创建博客并发布到github pages</a></p>

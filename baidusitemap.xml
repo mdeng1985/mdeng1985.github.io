@@ -4,6 +4,57 @@
 
     
   <url>
+    <loc>http://mdeng1985.github.io/2017/01/25/gitbook-FAQ/</loc>
+    <lastmod>2017-01-26T04:43:31.736Z</lastmod>
+    <data>
+        <display>
+        <title>gitbook学习笔记(4):FAQ</title>
+        <pubTime>2017-01-26T04:37:00.000Z</pubTime>
+        
+        <tag>markdown</tag>
+         
+        <tag>gitbook</tag>
+         
+         
+           
+             
+              <breadCrumb title="gitbook" url="http://mdeng1985.github.io/categories/gitbook/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://mdeng1985.github.io/2017/01/25/hexo-summary/</loc>
+    <lastmod>2017-01-26T04:40:19.966Z</lastmod>
+    <data>
+        <display>
+        <title>(Hexo 0) 利用Hexo创建自己的站点并发布(全记录)</title>
+        <pubTime>2017-01-25T16:12:56.000Z</pubTime>
+        
+        <tag>markdown</tag>
+         
+        <tag>coding.me</tag>
+         
+        <tag>hexo</tag>
+         
+        <tag>域名解析</tag>
+         
+        <tag>git</tag>
+         
+        <tag>github</tag>
+         
+        <tag>index</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://mdeng1985.github.io/2017/01/23/markdown_gram/</loc>
     <lastmod>2017-01-26T04:36:36.446Z</lastmod>
     <data>
@@ -175,35 +226,6 @@
              
               <breadCrumb title="建站" url="http://mdeng1985.github.io/categories/%E5%BB%BA%E7%AB%99/"/>
           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://mdeng1985.github.io/2017/01/25/hexo-summary/</loc>
-    <lastmod>2017-01-25T17:04:23.344Z</lastmod>
-    <data>
-        <display>
-        <title>(Hexo 0) 利用Hexo创建自己的站点并发布(全记录)</title>
-        <pubTime>2017-01-25T16:12:56.000Z</pubTime>
-        
-        <tag>markdown</tag>
-         
-        <tag>coding.me</tag>
-         
-        <tag>hexo</tag>
-         
-        <tag>域名解析</tag>
-         
-        <tag>git</tag>
-         
-        <tag>github</tag>
-         
-        <tag>index</tag>
-         
-         
-           
         </display>
     </data>
     </url>

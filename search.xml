@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[gitbook学习笔记(4):FAQ]]></title>
+      <url>%2F2017%2F01%2F25%2Fgitbook-FAQ%2F</url>
+      <content type="text"><![CDATA[FAQ 如果乱码，则需要将编码格式改成UTF-8 gitbook调用本地图片的时候，给出的路径为相对于调用的.md文件的路径，比如 1234├─chapter1 ├─sec1.md├─imgs ├─1.png 如果sec1.md需要调用1.png，则给出的格式为： 1![Alt text](../imgs/1.png)]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[Atom编辑器学习]]></title>
       <url>%2F2017%2F01%2F25%2Fatom_study%2F</url>
       <content type="text"><![CDATA[Atom基本操作寻找和运行可用的命令ctrl+shift+p可以呼出命令窗口，用于寻找和运行可令的命令 管理包(package) 查看和卸载package：ctrl+shift+p呼出命令栏，然后输入settings view view installed packages可以对已经安装的package进行查看并卸载 安装工具包package有两种方式： 通过菜单栏进行安装packge：atom主界面-file-settings，然后点击左边的install输入package关键词进行安装 通过命令行运行apm（Atom Package Manager）进行安装 开启或者关闭markdown的预览功能： ctrl+shift+m (需要安装markdown-preview，安装atom时默认是已经安装的) 关闭拼写检查: 对于中文写作，关闭这个比较好。ctrl+shift+p然后输入spell check: toggle，然后点击关闭 Ctrl + [ 对选中内容向左缩进 Ctrl + ] 对选中内容向右缩进 Atom安装markdown的相关插件[markdown-writer]官方主页 顾名思义，这个插件目的是辅助进行Markdown文档写作，可以通过菜单栏来添加标题、添加连接、添加图片。 比如插入图片，可以选择图片大小、自动复制图片到当前文件夹，方便书籍制作。 Markdown的两种方便的运行方式为快捷键和工具栏运行方法。 快捷键运行方式 这种运行方式直接通过菜单栏安装markdown-writer 即可，安装方法参见“管理包” 可以创建相应的atom快捷键来调用该插件的相应命令，首先ctrl+shift+p呼出命令栏，然后输入Markdown Writer: Create Default Keymaps则配置好了相应快捷键，在windows系统下的快捷键（通过ctrl+shift+p然后输入keymap查看）如下所示： 插入超链接:shift-ctrl-K 插入图片： shift-ctrl-I 斜体：ctrl-i 粗体：ctrl-b 代码块：ctrl-&#39; 删除线：ctrl-h: 1级标题: ctrl-1 2级标题: ctrl-2 以此类推 更多的mwrkdown-writer快捷键可以参考： markdown-writer-wiki 工具栏运行方式 这种方式更为直观些，安装完以后会在atom的顶部（或者其他位置）显示markdown-writer的菜单栏。如下图所示。 具体安装方式需要在命令行下进行，首先打开cmd终端，切换本地的.atm/packages目录下，然后输入： apm install tool-bar markdown-writer 然后再次输入 apm install tool-bar-markdown-writer 重启atom即可。 markdown-preview官方主页 预览插件，安装atom的时候默认已经安装该插件 markdown-scroll-sync官方主页 滚动预览插件， atomic chrome适用于利用markdown写公众号的，未深究,有兴趣可以参考:Atom：优雅迷人的编辑神器 markdown-toc官方主页 生成目录的插件，安装完以后在Packages-markdown toc里进入使用 Atom安装git的相关插件 git plus 参考资料 Atom与markdown Atom：优雅迷人的编辑神器]]></content>
