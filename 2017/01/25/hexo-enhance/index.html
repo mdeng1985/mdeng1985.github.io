@@ -104,7 +104,7 @@
 这样主题就自动下载到next文件夹了(也可以手动下载主题，然后解压缩)
 
 修改he">
-<meta property="og:updated_time" content="2017-01-26T17:17:32.917Z">
+<meta property="og:updated_time" content="2017-01-26T19:23:50.974Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo站点的丰富和优化">
 <meta name="twitter:description" content="安装主题安装主题的主要流程：将主题包下载下来，放到themes文件夹下，然后在_config.yml里进行配置， 以next主题为例进行说明：
@@ -475,6 +475,9 @@
 <p>然后的具体的博客的源文件(.md)开头加上top项，当top的值取0的时候，表示默认排序，即是按照时间顺序来排序，当top的值取1到无为置顶文件限大的时候，值最高的md文件即是置顶文章。比如说</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">title: 索引页</div><div class="line">date: 2017-01-25T10:12:56.000Z</div><div class="line">categories: 建站</div><div class="line">top: 2</div><div class="line">tags: hexo</div></pre></td></tr></table></figure>
 <p>注意只能首页置顶，其他里还是置顶不了。参考资料：<a href="http://yanhuili.github.io/2016/11/21/hexo%E5%8D%9A%E6%96%87%E7%BD%AE%E9%A1%B6%E6%8A%80%E5%B7%A7/" target="_blank" rel="external">hexo博文置顶技巧</a></p>
+<h1 id="修改文章内链接文本样式"><a href="#修改文章内链接文本样式" class="headerlink" title="修改文章内链接文本样式"></a>修改文章内链接文本样式</h1><p>修改文件<code>themes\next\source\css\_common\components\post\post.styl</code> ，添加如下css样式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">.post-body a&#123;</div><div class="line">  color: #0593d3;</div><div class="line">  border-bottom: none;</div><div class="line"></div><div class="line">  &amp;:hover &#123;</div><div class="line">    color: #0477ab;</div><div class="line">    text-decoration: underline;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>参考<a href="http://www.wuxubj.cn/2016/08/Hexo-nexT-build-personal-blog/" target="_blank" rel="external">此处</a></p>
 <h1 id="我进行的相关配置总结"><a href="#我进行的相关配置总结" class="headerlink" title="我进行的相关配置总结"></a>我进行的相关配置总结</h1><ul>
 <li>本地博客根目录下hexoBlog配置远程仓库的网址(修改站点配置文件_config.yml，参见前文)</li>
 <li><a href="https://github.com/iissnan/hexo-theme-next/wiki/%E5%88%9B%E5%BB%BA-%22%E5%85%B3%E4%BA%8E%E6%88%91%22-%E9%A1%B5%E9%9D%A2" target="_blank" rel="external">创建”关于我”的页面</a></li>
@@ -497,6 +500,7 @@
 <li><a href="http://www.jianshu.com/p/393d067dba8d" target="_blank" rel="external">首页仅不显示全文只显示预览</a></li>
 <li><a href="http://jaredforsyth.com/hexo-admin/" target="_blank" rel="external">添加hexo-admin插件，用于后台管理</a></li>
 <li>添加首页置顶功能,参见前文</li>
+<li>修改超链接的文本样式及颜色等，参见前文</li>
 </ul>
 </li>
 </ul>
@@ -532,8 +536,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/01/25/hexo-summary/" rel="next" title="利用Hexo创建自己的站点并发布(索引页)">
-                <i class="fa fa-chevron-left"></i> 利用Hexo创建自己的站点并发布(索引页)
+              <a href="/2017/01/24/domian-analytical/" rel="next" title="(Hexo 3) coding.me + github.io + 域名解析">
+                <i class="fa fa-chevron-left"></i> (Hexo 3) coding.me + github.io + 域名解析
               </a>
             
           </div>
@@ -542,8 +546,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/01/25/gitbook_cmd_study/" rel="prev" title="Gitbook学习笔记(1):利用gitbook命令行工具创建和编译书籍">
-                Gitbook学习笔记(1):利用gitbook命令行工具创建和编译书籍 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/01/25/hexo-summary/" rel="prev" title="利用Hexo创建自己的站点并发布(索引页)">
+                利用Hexo创建自己的站点并发布(索引页) <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -572,13 +576,13 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/01/25/gitbook_cmd_study/">Gitbook学习笔记(1):利用gitbook命令行工具创建和编译书籍</a>
+              <a href="/2017/01/25/hexo-summary/">利用Hexo创建自己的站点并发布(索引页)</a>
             
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/01/25/hexo-summary/">利用Hexo创建自己的站点并发布(索引页)</a>
+              <a href="/2017/01/24/domian-analytical/">(Hexo 3) coding.me + github.io + 域名解析</a>
             
           </div>
         </div>
@@ -745,7 +749,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#安装主题"><span class="nav-number">1.</span> <span class="nav-text">安装主题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#添加多说分享和评论功能"><span class="nav-number">2.</span> <span class="nav-text">添加多说分享和评论功能</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#添加版权申明"><span class="nav-number">3.</span> <span class="nav-text">添加版权申明</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#站点的menu的链接失效都指向主页的解决方案"><span class="nav-number">4.</span> <span class="nav-text">站点的menu的链接失效都指向主页的解决方案</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#git无法添加themes-next的解决方案"><span class="nav-number">5.</span> <span class="nav-text">git无法添加themes/next的解决方案</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#添加到搜索引擎"><span class="nav-number">6.</span> <span class="nav-text">添加到搜索引擎</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#设置首页只显示预览，不显示全文"><span class="nav-number">7.</span> <span class="nav-text">设置首页只显示预览，不显示全文</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#增加首页文章置顶的功能"><span class="nav-number">8.</span> <span class="nav-text">增加首页文章置顶的功能</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#我进行的相关配置总结"><span class="nav-number">9.</span> <span class="nav-text">我进行的相关配置总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#安装主题"><span class="nav-number">1.</span> <span class="nav-text">安装主题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#添加多说分享和评论功能"><span class="nav-number">2.</span> <span class="nav-text">添加多说分享和评论功能</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#添加版权申明"><span class="nav-number">3.</span> <span class="nav-text">添加版权申明</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#站点的menu的链接失效都指向主页的解决方案"><span class="nav-number">4.</span> <span class="nav-text">站点的menu的链接失效都指向主页的解决方案</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#git无法添加themes-next的解决方案"><span class="nav-number">5.</span> <span class="nav-text">git无法添加themes/next的解决方案</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#添加到搜索引擎"><span class="nav-number">6.</span> <span class="nav-text">添加到搜索引擎</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#设置首页只显示预览，不显示全文"><span class="nav-number">7.</span> <span class="nav-text">设置首页只显示预览，不显示全文</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#增加首页文章置顶的功能"><span class="nav-number">8.</span> <span class="nav-text">增加首页文章置顶的功能</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#修改文章内链接文本样式"><span class="nav-number">9.</span> <span class="nav-text">修改文章内链接文本样式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#我进行的相关配置总结"><span class="nav-number">10.</span> <span class="nav-text">我进行的相关配置总结</span></a></li></ol></div>
             
 
           </div>

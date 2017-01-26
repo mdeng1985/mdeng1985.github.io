@@ -5,13 +5,37 @@
     
   <url>
     <loc>http://mdeng1985.github.io/2017/01/25/hexo-enhance/</loc>
-    <lastmod>2017-01-26T17:17:32.917Z</lastmod>
+    <lastmod>2017-01-26T19:23:50.974Z</lastmod>
     <data>
         <display>
         <title>hexo站点的丰富和优化</title>
         <pubTime>2017-01-25T16:12:56.000Z</pubTime>
         
         <tag>hexo</tag>
+         
+         
+           
+             
+              <breadCrumb title="建站" url="http://mdeng1985.github.io/categories/%E5%BB%BA%E7%AB%99/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://mdeng1985.github.io/2017/01/23/installHexo/</loc>
+    <lastmod>2017-01-26T17:25:14.740Z</lastmod>
+    <data>
+        <display>
+        <title>(Hexo 1) 用hexo创建博客并发布到github pages</title>
+        <pubTime>2017-01-23T15:58:24.000Z</pubTime>
+        
+        <tag>github pages</tag>
+         
+        <tag>hexo</tag>
+         
+        <tag>git</tag>
          
          
            
@@ -85,9 +109,9 @@
         <title>gitbook学习笔记(4):FAQ</title>
         <pubTime>2017-01-26T04:37:00.000Z</pubTime>
         
-        <tag>gitbook</tag>
-         
         <tag>markdown</tag>
+         
+        <tag>gitbook</tag>
          
          
            
@@ -197,30 +221,6 @@
            
              
               <breadCrumb title="gitbook" url="http://mdeng1985.github.io/categories/gitbook/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://mdeng1985.github.io/2017/01/23/installHexo/</loc>
-    <lastmod>2017-01-26T04:04:26.498Z</lastmod>
-    <data>
-        <display>
-        <title>(Hexo 1) 用hexo创建博客并发布到github pages</title>
-        <pubTime>2017-01-24T04:04:24.000Z</pubTime>
-        
-        <tag>github pages</tag>
-         
-        <tag>hexo</tag>
-         
-        <tag>git</tag>
-         
-         
-           
-             
-              <breadCrumb title="建站" url="http://mdeng1985.github.io/categories/%E5%BB%BA%E7%AB%99/"/>
           
         </display>
     </data>
