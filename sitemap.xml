@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://mdeng1985.github.io/about/index.html</loc>
+    
+    <lastmod>2017-01-27T23:56:48.179Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://mdeng1985.github.io/2017/01/24/domian-analytical/</loc>
     
     <lastmod>2017-01-26T19:38:20.223Z</lastmod>
@@ -82,13 +89,6 @@
     <loc>http://mdeng1985.github.io/2017/01/25/gitbook_cmd_study/</loc>
     
     <lastmod>2017-01-26T04:04:40.533Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://mdeng1985.github.io/about/index.html</loc>
-    
-    <lastmod>2017-01-26T02:59:06.889Z</lastmod>
     
   </url>
   
