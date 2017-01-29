@@ -2,6 +2,41 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://mdeng1985.github.io/2017/01/29/gitbook-in-rstudio/</loc>
+    
+    <lastmod>2017-01-29T21:38:15.067Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://mdeng1985.github.io/2017/01/25/gitbook_plugin/</loc>
+    
+    <lastmod>2017-01-29T16:03:00.929Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://mdeng1985.github.io/2017/01/27/hexo-gitbook/</loc>
+    
+    <lastmod>2017-01-28T05:54:23.894Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://mdeng1985.github.io/2017/01/25/hexo-summary/</loc>
+    
+    <lastmod>2017-01-28T05:46:54.360Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://mdeng1985.github.io/2017/01/24/hexo-edit-blog/</loc>
+    
+    <lastmod>2017-01-28T04:12:37.469Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://mdeng1985.github.io/about/index.html</loc>
     
     <lastmod>2017-01-27T23:56:48.179Z</lastmod>
@@ -30,23 +65,9 @@
   </url>
   
   <url>
-    <loc>http://mdeng1985.github.io/2017/01/24/hexo-edit-blog/</loc>
-    
-    <lastmod>2017-01-26T19:37:13.286Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://mdeng1985.github.io/2017/01/23/hexo_coding_github/</loc>
     
     <lastmod>2017-01-26T19:36:57.012Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://mdeng1985.github.io/2017/01/25/hexo-summary/</loc>
-    
-    <lastmod>2017-01-26T19:36:13.791Z</lastmod>
     
   </url>
   
@@ -68,13 +89,6 @@
     <loc>http://mdeng1985.github.io/2017/01/25/atom_study/</loc>
     
     <lastmod>2017-01-26T04:15:36.313Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://mdeng1985.github.io/2017/01/25/gitbook_plugin/</loc>
-    
-    <lastmod>2017-01-26T04:09:24.544Z</lastmod>
     
   </url>
   

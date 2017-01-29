@@ -3,6 +3,122 @@
 
 
     
+  <url>
+    <loc>http://mdeng1985.github.io/2017/01/29/gitbook-in-rstudio/</loc>
+    <lastmod>2017-01-29T21:38:15.067Z</lastmod>
+    <data>
+        <display>
+        <title>R studio中Rgitbook的应用</title>
+        <pubTime>2017-01-29T17:20:37.000Z</pubTime>
+        
+        <tag>R-studio, R语言, gitbook, R-Markdown</tag>
+         
+         
+           
+             
+              <breadCrumb title="gitbook" url="http://mdeng1985.github.io/categories/gitbook/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://mdeng1985.github.io/2017/01/25/gitbook_plugin/</loc>
+    <lastmod>2017-01-29T16:03:00.929Z</lastmod>
+    <data>
+        <display>
+        <title>Gitbook学习笔记(3):gitbook的常用插件</title>
+        <pubTime>2017-01-26T04:08:24.000Z</pubTime>
+        
+        <tag>gitbook</tag>
+         
+         
+           
+             
+              <breadCrumb title="gitbook" url="http://mdeng1985.github.io/categories/gitbook/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://mdeng1985.github.io/2017/01/27/hexo-gitbook/</loc>
+    <lastmod>2017-01-28T05:54:23.894Z</lastmod>
+    <data>
+        <display>
+        <title>Hexo学习6-hexo里整合gitbook制作的电子书</title>
+        <pubTime>2017-01-28T05:26:34.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+        <tag>gitbook</tag>
+         
+         
+           
+             
+              <breadCrumb title="建站" url="http://mdeng1985.github.io/categories/%E5%BB%BA%E7%AB%99/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://mdeng1985.github.io/2017/01/25/hexo-summary/</loc>
+    <lastmod>2017-01-28T05:46:54.360Z</lastmod>
+    <data>
+        <display>
+        <title>利用Hexo创建自己的站点并发布(索引页)</title>
+        <pubTime>2017-01-25T16:12:56.000Z</pubTime>
+        
+        <tag>markdown</tag>
+         
+        <tag>coding.me</tag>
+         
+        <tag>hexo</tag>
+         
+        <tag>域名解析</tag>
+         
+        <tag>git</tag>
+         
+        <tag>github</tag>
+         
+        <tag>index</tag>
+         
+         
+           
+             
+              <breadCrumb title="建站" url="http://mdeng1985.github.io/categories/%E5%BB%BA%E7%AB%99/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://mdeng1985.github.io/2017/01/24/hexo-edit-blog/</loc>
+    <lastmod>2017-01-28T04:12:37.469Z</lastmod>
+    <data>
+        <display>
+        <title>Hexo学习5-Hexo撰写博客教程</title>
+        <pubTime>2017-01-24T16:50:51.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+        <tag>git</tag>
+         
+         
+           
+             
+              <breadCrumb title="建站" url="http://mdeng1985.github.io/categories/%E5%BB%BA%E7%AB%99/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>http://mdeng1985.github.io/2017/01/24/domian-analytical/</loc>
@@ -77,28 +193,6 @@
 
     
   <url>
-    <loc>http://mdeng1985.github.io/2017/01/24/hexo-edit-blog/</loc>
-    <lastmod>2017-01-26T19:37:13.286Z</lastmod>
-    <data>
-        <display>
-        <title>Hexo学习5-Hexo撰写博客教程</title>
-        <pubTime>2017-01-24T16:50:51.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-        <tag>git</tag>
-         
-         
-           
-             
-              <breadCrumb title="建站" url="http://mdeng1985.github.io/categories/%E5%BB%BA%E7%AB%99/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://mdeng1985.github.io/2017/01/23/hexo_coding_github/</loc>
     <lastmod>2017-01-26T19:36:57.012Z</lastmod>
     <data>
@@ -113,38 +207,6 @@
         <tag>git</tag>
          
         <tag>coding pages</tag>
-         
-         
-           
-             
-              <breadCrumb title="建站" url="http://mdeng1985.github.io/categories/%E5%BB%BA%E7%AB%99/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://mdeng1985.github.io/2017/01/25/hexo-summary/</loc>
-    <lastmod>2017-01-26T19:36:13.791Z</lastmod>
-    <data>
-        <display>
-        <title>利用Hexo创建自己的站点并发布(索引页)</title>
-        <pubTime>2017-01-25T16:12:56.000Z</pubTime>
-        
-        <tag>markdown</tag>
-         
-        <tag>coding.me</tag>
-         
-        <tag>hexo</tag>
-         
-        <tag>域名解析</tag>
-         
-        <tag>git</tag>
-         
-        <tag>github</tag>
-         
-        <tag>index</tag>
          
          
            
@@ -211,26 +273,6 @@
         <tag>markdown</tag>
          
         <tag>atom</tag>
-         
-         
-           
-             
-              <breadCrumb title="gitbook" url="http://mdeng1985.github.io/categories/gitbook/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://mdeng1985.github.io/2017/01/25/gitbook_plugin/</loc>
-    <lastmod>2017-01-26T04:09:24.544Z</lastmod>
-    <data>
-        <display>
-        <title>Gitbook学习笔记(3):gitbook的常用插件</title>
-        <pubTime>2017-01-26T04:08:24.000Z</pubTime>
-        
-        <tag>gitbook</tag>
          
          
            

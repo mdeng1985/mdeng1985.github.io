@@ -86,22 +86,31 @@
 
 
 
-<meta name="description" content="插件安装方法首先上https://plugins.gitbook.com/查找插件，比如说安装exercises，则在书籍的根目录创建book.json，格式如下：完成安装
-1234&amp;#123;     &amp;quot;gitbook&amp;quot; : &amp;quot;3.2.2&amp;quot;,     &amp;quot;plugins&amp;quot;: [&amp;quot;exercises&amp;quot;] &amp;#125;
-其">
+<meta name="description" content="安装自动生成SUMMARY的插件首先安装：
+1npm install -g gitbook-summary
+然后运行book sm 即可
+tips：可以以数字顺序排列，具体参考主页
+gitbook安装引用文献的插件插件名为：bibtex-cite，安装方法在book.json里添加：
+1234&amp;#123;     &amp;quot;gitbook&amp;quot; : &amp;quot;3.2.2&amp;quot;,">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Gitbook学习笔记(3):gitbook的常用插件">
 <meta property="og:url" content="http://mdeng1985.github.io/2017/01/25/gitbook_plugin/index.html">
 <meta property="og:site_name" content="MLi's Blog">
-<meta property="og:description" content="插件安装方法首先上https://plugins.gitbook.com/查找插件，比如说安装exercises，则在书籍的根目录创建book.json，格式如下：完成安装
-1234&amp;#123;     &amp;quot;gitbook&amp;quot; : &amp;quot;3.2.2&amp;quot;,     &amp;quot;plugins&amp;quot;: [&amp;quot;exercises&amp;quot;] &amp;#125;
-其">
-<meta property="og:updated_time" content="2017-01-26T04:09:24.544Z">
+<meta property="og:description" content="安装自动生成SUMMARY的插件首先安装：
+1npm install -g gitbook-summary
+然后运行book sm 即可
+tips：可以以数字顺序排列，具体参考主页
+gitbook安装引用文献的插件插件名为：bibtex-cite，安装方法在book.json里添加：
+1234&amp;#123;     &amp;quot;gitbook&amp;quot; : &amp;quot;3.2.2&amp;quot;,">
+<meta property="og:updated_time" content="2017-01-29T16:03:00.929Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Gitbook学习笔记(3):gitbook的常用插件">
-<meta name="twitter:description" content="插件安装方法首先上https://plugins.gitbook.com/查找插件，比如说安装exercises，则在书籍的根目录创建book.json，格式如下：完成安装
-1234&amp;#123;     &amp;quot;gitbook&amp;quot; : &amp;quot;3.2.2&amp;quot;,     &amp;quot;plugins&amp;quot;: [&amp;quot;exercises&amp;quot;] &amp;#125;
-其">
+<meta name="twitter:description" content="安装自动生成SUMMARY的插件首先安装：
+1npm install -g gitbook-summary
+然后运行book sm 即可
+tips：可以以数字顺序排列，具体参考主页
+gitbook安装引用文献的插件插件名为：bibtex-cite，安装方法在book.json里添加：
+1234&amp;#123;     &amp;quot;gitbook&amp;quot; : &amp;quot;3.2.2&amp;quot;,">
 
 
 
@@ -423,7 +432,16 @@
       
 
       
-        <h1 id="插件安装方法"><a href="#插件安装方法" class="headerlink" title="插件安装方法"></a>插件安装方法</h1><p>首先上<code>https://plugins.gitbook.com/</code>查找插件，比如说安装exercises，则在书籍的根目录创建book.json，格式如下：完成安装</p>
+        <h1 id="安装自动生成SUMMARY的插件"><a href="#安装自动生成SUMMARY的插件" class="headerlink" title="安装自动生成SUMMARY的插件"></a>安装自动生成SUMMARY的插件</h1><p>首先安装：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g gitbook-summary</div></pre></td></tr></table></figure>
+<p>然后运行<code>book sm</code> 即可</p>
+<p>tips：可以以数字顺序排列，具体参考<a href="https://www.npmjs.com/package/gitbook-summary" target="_blank" rel="external">主页</a></p>
+<h1 id="gitbook安装引用文献的插件"><a href="#gitbook安装引用文献的插件" class="headerlink" title="gitbook安装引用文献的插件"></a>gitbook安装引用文献的插件</h1><p>插件名为：<a href="https://plugins.gitbook.com/plugin/bibtex-cite" target="_blank" rel="external">bibtex-cite</a>，安装方法在<code>book.json</code>里添加：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">     &quot;gitbook&quot; : &quot;3.2.2&quot;,</div><div class="line">     &quot;plugins&quot;: [&quot;bibtex-cite&quot;]</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+<p>然后运行<code>gitbook install</code>。文献的bib为<code>literature.bib</code>, 引用方式为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;&#123;&quot;bib文件中的key&quot;|cite&#125;&#125;</div></pre></td></tr></table></figure>
+<h1 id="汇总后的book-json"><a href="#汇总后的book-json" class="headerlink" title="汇总后的book.json"></a>汇总后的book.json</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">     &quot;gitbook&quot; : &quot;3.2.2&quot;,</div><div class="line">     &quot;plugins&quot;: [&quot;bibtex-cite&quot;,&quot;exercises&quot;]</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+<h1 id="插件安装方法"><a href="#插件安装方法" class="headerlink" title="插件安装方法"></a>插件安装方法</h1><p>首先上<code>https://plugins.gitbook.com/</code>查找插件，比如说安装exercises，则在书籍的根目录创建book.json，格式如下：完成安装</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">     &quot;gitbook&quot; : &quot;3.2.2&quot;,</div><div class="line">     &quot;plugins&quot;: [&quot;exercises&quot;]</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
 <p>其中gitbook的版本号可以通过gitbook -version得到。如果要安装多个插件：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">     &quot;gitbook&quot; : &quot;3.2.2&quot;,</div><div class="line">     &quot;plugins&quot;: [&quot;exercises&quot;,&quot;另外一个插件的名字&quot;]</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
@@ -599,7 +617,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-count">15</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -617,7 +635,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">13</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -676,7 +694,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#插件安装方法"><span class="nav-number">1.</span> <span class="nav-text">插件安装方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#我需要的一些插件"><span class="nav-number">2.</span> <span class="nav-text">我需要的一些插件</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#安装自动生成SUMMARY的插件"><span class="nav-number">1.</span> <span class="nav-text">安装自动生成SUMMARY的插件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#gitbook安装引用文献的插件"><span class="nav-number">2.</span> <span class="nav-text">gitbook安装引用文献的插件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#汇总后的book-json"><span class="nav-number">3.</span> <span class="nav-text">汇总后的book.json</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#插件安装方法"><span class="nav-number">4.</span> <span class="nav-text">插件安装方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#我需要的一些插件"><span class="nav-number">5.</span> <span class="nav-text">我需要的一些插件</span></a></li></ol></div>
             
 
           </div>
