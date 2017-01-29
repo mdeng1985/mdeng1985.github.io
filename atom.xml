@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mdeng1985.github.io/"/>
-  <updated>2017-01-29T21:38:15.067Z</updated>
+  <updated>2017-01-29T21:41:22.975Z</updated>
   <id>http://mdeng1985.github.io/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>R studio中Rgitbook的应用</title>
+    <title>Rstudio中Rgitbook的应用</title>
     <link href="http://mdeng1985.github.io/2017/01/29/gitbook-in-rstudio/"/>
     <id>http://mdeng1985.github.io/2017/01/29/gitbook-in-rstudio/</id>
     <published>2017-01-29T17:20:37.000Z</published>
-    <updated>2017-01-29T21:38:15.067Z</updated>
+    <updated>2017-01-29T21:41:22.975Z</updated>
     
     <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>之所以安装rgitbook是因为想在gitbook里引用文献，然后就找到了<a href="http://jason.bryer.org/Rgitbook/creating/citations.html" target="_blank" rel="external">rgitbook</a>。由于rgitbook是需要r语言支持，所以 就安装了Rstudio。</p>
 <h1 id="前期准备工作"><a href="#前期准备工作" class="headerlink" title="前期准备工作"></a>前期准备工作</h1><ul>
@@ -56,7 +56,13 @@
       <category term="gitbook" scheme="http://mdeng1985.github.io/categories/gitbook/"/>
     
     
-      <category term="R-studio, R语言, gitbook, R-Markdown" scheme="http://mdeng1985.github.io/tags/R-studio-R%E8%AF%AD%E8%A8%80-gitbook-R-Markdown/"/>
+      <category term="gitbook" scheme="http://mdeng1985.github.io/tags/gitbook/"/>
+    
+      <category term="Rstudio" scheme="http://mdeng1985.github.io/tags/Rstudio/"/>
+    
+      <category term="R语言" scheme="http://mdeng1985.github.io/tags/R%E8%AF%AD%E8%A8%80/"/>
+    
+      <category term="RMarkdown" scheme="http://mdeng1985.github.io/tags/RMarkdown/"/>
     
   </entry>
   
