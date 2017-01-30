@@ -4,8 +4,34 @@
 
     
   <url>
+    <loc>http://mdeng1985.github.io/2017/01/29/bookdown-study/</loc>
+    <lastmod>2017-01-30T05:52:58.000Z</lastmod>
+    <data>
+        <display>
+        <title>bookdown_study</title>
+        <pubTime>2017-01-30T01:05:14.000Z</pubTime>
+        
+        <tag>R语言</tag>
+         
+        <tag>bookdown</tag>
+         
+        <tag>RMarkdown</tag>
+         
+        <tag>gitbook</tag>
+         
+         
+           
+             
+              <breadCrumb title="知识平台" url="http://mdeng1985.github.io/categories/%E7%9F%A5%E8%AF%86%E5%B9%B3%E5%8F%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://mdeng1985.github.io/2017/01/29/Rmarkdown-bookdown-concept/</loc>
-    <lastmod>2017-01-30T01:03:43.933Z</lastmod>
+    <lastmod>2017-01-30T01:05:59.432Z</lastmod>
     <data>
         <display>
         <title>RMarkdown</title>
@@ -19,9 +45,6 @@
          
          
            
-             
-              <breadCrumb title="知识平台" url="http://mdeng1985.github.io/categories/%E7%9F%A5%E8%AF%86%E5%B9%B3%E5%8F%B0/"/>
-          
         </display>
     </data>
     </url>
@@ -39,11 +62,11 @@
          
         <tag>R语言</tag>
          
+        <tag>RMarkdown</tag>
+         
         <tag>gitbook</tag>
          
         <tag>Rstudio</tag>
-         
-        <tag>RMarkdown</tag>
          
          
            
@@ -105,13 +128,13 @@
         <title>利用Hexo创建自己的站点并发布(索引页)</title>
         <pubTime>2017-01-25T16:12:56.000Z</pubTime>
         
-        <tag>markdown</tag>
-         
         <tag>coding.me</tag>
          
         <tag>hexo</tag>
          
         <tag>域名解析</tag>
+         
+        <tag>markdown</tag>
          
         <tag>git</tag>
          
@@ -258,9 +281,9 @@
         <title>gitbook学习笔记(4):FAQ</title>
         <pubTime>2017-01-26T04:37:00.000Z</pubTime>
         
-        <tag>markdown</tag>
-         
         <tag>gitbook</tag>
+         
+        <tag>markdown</tag>
          
          
            
@@ -280,9 +303,9 @@
         <title>Markdown语法总结</title>
         <pubTime>2017-01-23T15:58:00.000Z</pubTime>
         
-        <tag>markdown</tag>
-         
         <tag>github pages</tag>
+         
+        <tag>markdown</tag>
          
          
            

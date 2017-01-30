@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[bookdown_study]]></title>
+      <url>%2F2017%2F01%2F29%2Fbookdown-study%2F</url>
+      <content type="text"><![CDATA[介绍Bookdown是基于Rmarkdown的工具包。开发它的宗旨在于以单一的形式写书，然后可以输出多种形式(比如GitBook格式) 本文为bookdown的学习笔记，主要参考自：bookdown: Authoring Books and Technical Documents with R Markdown R + Markdown + Pandoc = 多格式(html,pdf,epub,ect,) 安装bookdownbookdown是基于Rmarkdown的工具包，在bookdown安装之前安装： R内核 RStudio 然后启动Rstudio安装并加载bookdown 1install.packages(&quot;bookdown&quot;) 然后下载demo文件，解压缩以后用Rstudio打开bookdown-demo.Rproj，然后build-All`就可以进行预览了。 bookdown创建书籍的源文件的结构组成bookdown语法学习Bookdown usage 引用文献假设bib文件为ref.bib，首先在index.RMD的开头加上 123456---title: &quot;BookDown Test&quot;bibliography: [ref.bib] #指定存储参考文献的bib文件，endote或zotero都可以导出这种引文格式biblio-style: apalike #设定参考文献显示类型link-citations: yes--- 然后直接@key ,key为bib文件中某篇文献的key。]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[RMarkdown]]></title>
       <url>%2F2017%2F01%2F29%2FRmarkdown-bookdown-concept%2F</url>
       <content type="text"><![CDATA[RMarkdown 介绍本节内容来自R + markdown简介。 Markdown是由John Gruber提出的一种轻量式标记语言，markdown的源码和最终输出的结果比起来，除了格式不一样外，只是多出了一些标点符号。 标准的markdown中只是定义了10多种格式。在写作一些科技文献的时候，它提供的基本格式就不够用了。在这种情况下，出现了markdown的几种扩展，可以让人们来方便的处理这些格式。目前比较流行的扩展有pandoc扩展，其次是GitHub扩展。其中GitHub的扩展主要是用于在GutHub的网站上使用。 pandoc是一个强大的格式转换工具，基本上支持各类常见格式之间的转换，其中就包括有markdown。而markdown的格式超级简单，这就使得人们能够用超级简单的markdown来生成看起来复杂的其他格式，比如word、html、pdf等。 在R语言中的几个软件包Rmarkdown，knitr等就使用pandoc作为底层的支持来实现从markdown到各种其他格式的转换。 R语言R语言是一种针对统计分析和数据科学的开源的统计语言，它是一种基于向量的高级函数式编程语言。 由于pandoc的兴起，R社区的开发者发现了这个工具给写作带来的巨大便利，因此开发了一些以pandoc为基础的软件包，其代表是Rmarkdown和knitr。 rmarkdown和knitr前面介绍提到了rmarkdown和knitr是R的软件包，它们把能够在markdown中嵌入R语言，并且执行其中的R代码，而R代码的输出可以作为文档的一部分。 Rmarkdown教程参考官方网址 rmarkdown-reference markdown-cheatsheet-2.0 安装和加载rmarkdown 12install.packages(&quot;rmarkdown&quot;)library(rmarkdown)]]></content>
