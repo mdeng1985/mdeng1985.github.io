@@ -4,6 +4,30 @@
 
     
   <url>
+    <loc>http://mdeng1985.github.io/2017/01/29/Rmarkdown-bookdown-concept/</loc>
+    <lastmod>2017-01-30T00:38:12.046Z</lastmod>
+    <data>
+        <display>
+        <title>RMarkdown和Bookdown</title>
+        <pubTime>2017-01-29T21:46:25.000Z</pubTime>
+        
+        <tag>Rmarkdown</tag>
+         
+        <tag>bookdown</tag>
+         
+        <tag>gitbook</tag>
+         
+         
+           
+             
+              <breadCrumb title="知识平台" url="http://mdeng1985.github.io/categories/%E7%9F%A5%E8%AF%86%E5%B9%B3%E5%8F%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://mdeng1985.github.io/2017/01/29/gitbook-in-rstudio/</loc>
     <lastmod>2017-01-29T21:42:57.771Z</lastmod>
     <data>
@@ -11,11 +35,11 @@
         <title>Rstudio中Rgitbook的应用</title>
         <pubTime>2017-01-29T17:20:37.000Z</pubTime>
         
+        <tag>gitbook</tag>
+         
         <tag>Rstudio</tag>
          
         <tag>R语言</tag>
-         
-        <tag>gitbook</tag>
          
         <tag>Markdown</tag>
          
@@ -59,9 +83,9 @@
         <title>Hexo学习6-hexo里整合gitbook制作的电子书</title>
         <pubTime>2017-01-28T05:26:34.000Z</pubTime>
         
-        <tag>hexo</tag>
-         
         <tag>gitbook</tag>
+         
+        <tag>hexo</tag>
          
          
            

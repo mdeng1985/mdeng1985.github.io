@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mdeng1985.github.io/"/>
-  <updated>2017-01-29T21:42:57.771Z</updated>
+  <updated>2017-01-30T00:38:12.046Z</updated>
   <id>http://mdeng1985.github.io/</id>
   
   <author>
@@ -14,6 +14,41 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>RMarkdown和Bookdown</title>
+    <link href="http://mdeng1985.github.io/2017/01/29/Rmarkdown-bookdown-concept/"/>
+    <id>http://mdeng1985.github.io/2017/01/29/Rmarkdown-bookdown-concept/</id>
+    <published>2017-01-29T21:46:25.000Z</published>
+    <updated>2017-01-30T00:38:12.046Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="RMarkdown-介绍"><a href="#RMarkdown-介绍" class="headerlink" title="RMarkdown 介绍"></a>RMarkdown 介绍</h1><p>本节内容来自<a href="http://www.bagualu.net/wordpress/archives/6172" target="_blank" rel="external">R + markdown简介</a>。</p>
+<p>Markdown是由John Gruber提出的一种轻量式标记语言，markdown的源码和最终输出的结果比起来，除了格式不一样外，只是多出了一些标点符号。 标准的markdown中只是定义了10多种格式。在写作一些科技文献的时候，它提供的基本格式就不够用了。在这种情况下，出现了markdown的几种扩展，可以让人们来方便的处理这些格式。目前比较流行的扩展有pandoc扩展，其次是GitHub扩展。其中GitHub的扩展主要是用于在GutHub的网站上使用。</p>
+<p>pandoc是一个强大的格式转换工具，基本上支持各类常见格式之间的转换，其中就包括有markdown。而markdown的格式超级简单，这就使得人们能够用超级简单的markdown来生成看起来复杂的其他格式，比如word、html、pdf等。</p>
+<p>在R语言中的几个软件包Rmarkdown，knitr等就使用pandoc作为底层的支持来实现从markdown到各种其他格式的转换。</p>
+<h2 id="R语言"><a href="#R语言" class="headerlink" title="R语言"></a>R语言</h2><p>R语言是一种针对统计分析和数据科学的开源的统计语言，它是一种基于向量的高级函数式编程语言。 由于pandoc的兴起，R社区的开发者发现了这个工具给写作带来的巨大便利，因此开发了一些以pandoc为基础的软件包，其代表是Rmarkdown和knitr。</p>
+<h2 id="rmarkdown和knitr"><a href="#rmarkdown和knitr" class="headerlink" title="rmarkdown和knitr"></a>rmarkdown和knitr</h2><p>前面介绍提到了rmarkdown和knitr是R的软件包，它们把能够在markdown中嵌入R语言，并且执行其中的R代码，而R代码的输出可以作为文档的一部分。</p>
+<h1 id="Rmarkdown教程"><a href="#Rmarkdown教程" class="headerlink" title="Rmarkdown教程"></a>Rmarkdown教程</h1><p>参考<a href="http://rmarkdown.rstudio.com/" target="_blank" rel="external">官方网址</a> <a href="https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf" target="_blank" rel="external">rmarkdown-reference</a> <a href="http://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf" target="_blank" rel="external">markdown-cheatsheet-2.0</a></p>
+<p>安装和加载<code>rmarkdown</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">install.packages(&quot;rmarkdown&quot;)</div><div class="line">library(rmarkdown)</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;RMarkdown-介绍&quot;&gt;&lt;a href=&quot;#RMarkdown-介绍&quot; class=&quot;headerlink&quot; title=&quot;RMarkdown 介绍&quot;&gt;&lt;/a&gt;RMarkdown 介绍&lt;/h1&gt;&lt;p&gt;本节内容来自&lt;a href=&quot;http://www.bagu
+    
+    </summary>
+    
+      <category term="知识平台" scheme="http://mdeng1985.github.io/categories/%E7%9F%A5%E8%AF%86%E5%B9%B3%E5%8F%B0/"/>
+    
+    
+      <category term="Rmarkdown" scheme="http://mdeng1985.github.io/tags/Rmarkdown/"/>
+    
+      <category term="bookdown" scheme="http://mdeng1985.github.io/tags/bookdown/"/>
+    
+      <category term="gitbook" scheme="http://mdeng1985.github.io/tags/gitbook/"/>
+    
+  </entry>
   
   <entry>
     <title>Rstudio中Rgitbook的应用</title>
@@ -56,11 +91,11 @@
       <category term="gitbook" scheme="http://mdeng1985.github.io/categories/gitbook/"/>
     
     
+      <category term="gitbook" scheme="http://mdeng1985.github.io/tags/gitbook/"/>
+    
       <category term="Rstudio" scheme="http://mdeng1985.github.io/tags/Rstudio/"/>
     
       <category term="R语言" scheme="http://mdeng1985.github.io/tags/R%E8%AF%AD%E8%A8%80/"/>
-    
-      <category term="gitbook" scheme="http://mdeng1985.github.io/tags/gitbook/"/>
     
       <category term="Markdown" scheme="http://mdeng1985.github.io/tags/Markdown/"/>
     
@@ -102,9 +137,9 @@
       <category term="建站" scheme="http://mdeng1985.github.io/categories/%E5%BB%BA%E7%AB%99/"/>
     
     
-      <category term="hexo" scheme="http://mdeng1985.github.io/tags/hexo/"/>
-    
       <category term="gitbook" scheme="http://mdeng1985.github.io/tags/gitbook/"/>
+    
+      <category term="hexo" scheme="http://mdeng1985.github.io/tags/hexo/"/>
     
   </entry>
   
@@ -381,64 +416,6 @@
   </entry>
   
   <entry>
-    <title>利用Hexo创建自己的站点并发布(索引页)</title>
-    <link href="http://mdeng1985.github.io/2017/01/25/hexo-summary/"/>
-    <id>http://mdeng1985.github.io/2017/01/25/hexo-summary/</id>
-    <published>2017-01-25T16:12:56.000Z</published>
-    <updated>2017-01-28T05:46:54.360Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>本文总结利用hexo创建和发布自己的站点的全过程。下面是具体的目录</p>
-<ul>
-<li><a href="/2017/01/23/installHexo/" title="一、用hexo创建博客并发布到github pages">一、用hexo创建博客并发布到github pages</a></li>
-<li><a href="/2017/01/23/hexo_coding_github/" title="二、利用hexo将博客同时推送到coding pages和github pages">二、利用hexo将博客同时推送到coding pages和github pages</a></li>
-<li><a href="/2017/01/24/domian-analytical/" title="三、coding.me + github.io + 域名解析">三、coding.me + github.io + 域名解析</a></li>
-<li><a href="/2017/01/25/hexo-enhance/" title="四、hexo站点的丰富和优化">四、hexo站点的丰富和优化</a></li>
-<li><a href="/2017/01/24/hexo-edit-blog/" title="五、Hexo撰写博客教程">五、Hexo撰写博客教程</a></li>
-<li><a href="/2017/01/27/hexo-gitbook/" title="六、Hexo和gitbook进行整合">六、Hexo和gitbook进行整合</a>
-</li>
-</ul>
-<h1 id="总结与回顾"><a href="#总结与回顾" class="headerlink" title="总结与回顾"></a>总结与回顾</h1><h2 id="安装和配置hexo"><a href="#安装和配置hexo" class="headerlink" title="安装和配置hexo"></a>安装和配置hexo</h2><p>参见 <a href="/2017/01/23/installHexo/" title="Hexo学习1-用hexo创建博客并发布到github pages">Hexo学习1-用hexo创建博客并发布到github pages</a></p>
-<h2 id="发布hexo博客到github-pages"><a href="#发布hexo博客到github-pages" class="headerlink" title="发布hexo博客到github pages"></a>发布hexo博客到github pages</h2><p>参见 <a href="/2017/01/23/installHexo/" title="Hexo学习1-用hexo创建博客并发布到github pages">Hexo学习1-用hexo创建博客并发布到github pages</a>。发布到远程仓库的三个命令为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo clean</div><div class="line">hexo generate</div><div class="line">hexo deploy</div></pre></td></tr></table></figure>
-<p>如果仅是本地预览则<code>hexo s -p 3600</code>。注意：如果修改了_config.yml文件，则需要先<code>hexo clean</code>和<code>hexo generate</code>.</p>
-<h2 id="发布hexo博客到coding-me的pages"><a href="#发布hexo博客到coding-me的pages" class="headerlink" title="发布hexo博客到coding.me的pages"></a>发布hexo博客到coding.me的pages</h2><p>参见 <a href="/2017/01/23/hexo_coding_github/" title="Hexo学习2-利用hexo将博客同时推送到coding pages和github pages">Hexo学习2-利用hexo将博客同时推送到coding pages和github pages</a>。</p>
-<h2 id="域名解析"><a href="#域名解析" class="headerlink" title="域名解析"></a>域名解析</h2><p>绑定coding.me和github.io为同一个域名，并实现国内外分流，参考<a href="/2017/01/24/domian-analytical/" title="Hexo学习3-coding.me + github.io + 域名解析">Hexo学习3-coding.me + github.io + 域名解析</a></p>
-<h2 id="hexo站点的丰富和优化"><a href="#hexo站点的丰富和优化" class="headerlink" title="hexo站点的丰富和优化"></a>hexo站点的丰富和优化</h2><p>参考<a href="/2017/01/25/hexo-enhance/" title="Hexo学习4-hexo站点的丰富和优化">Hexo学习4-hexo站点的丰富和优化</a></p>
-<h2 id="hexo博客撰写相关"><a href="#hexo博客撰写相关" class="headerlink" title="hexo博客撰写相关"></a>hexo博客撰写相关</h2><p>参考<a href="/2017/01/24/hexo-edit-blog/" title="Hexo学习5-Hexo撰写博客教程">Hexo学习5-Hexo撰写博客教程</a></p>
-<h2 id="hexo版本管理"><a href="#hexo版本管理" class="headerlink" title="hexo版本管理"></a>hexo版本管理</h2><p>在hexo博客的目录下git用于版本管理，由于next主题下有子模块，管理的时候需要进入到该模块进行添加，参见<a href="/2017/01/25/hexo-enhance/" title="Hexo学习4-hexo站点的丰富和优化">Hexo学习4-hexo站点的丰富和优化</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cd themes/next</div><div class="line">git --git-dir=.git --work-tree=. add .</div><div class="line">git --git-dir=.git --work-tree=. commit -m &quot;update next theme&quot;</div></pre></td></tr></table></figure>
-<p>然后返回到站点根目录，添加，具体如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">cd ..</div><div class="line">cd ..</div><div class="line">git add themes/next</div><div class="line">git commit -m &quot;update blog&quot;</div></pre></td></tr></table></figure>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;说明&quot;&gt;&lt;a href=&quot;#说明&quot; class=&quot;headerlink&quot; title=&quot;说明&quot;&gt;&lt;/a&gt;说明&lt;/h1&gt;&lt;p&gt;本文总结利用hexo创建和发布自己的站点的全过程。下面是具体的目录&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;/2017/01/23/in
-    
-    </summary>
-    
-      <category term="建站" scheme="http://mdeng1985.github.io/categories/%E5%BB%BA%E7%AB%99/"/>
-    
-    
-      <category term="markdown" scheme="http://mdeng1985.github.io/tags/markdown/"/>
-    
-      <category term="coding.me" scheme="http://mdeng1985.github.io/tags/coding-me/"/>
-    
-      <category term="hexo" scheme="http://mdeng1985.github.io/tags/hexo/"/>
-    
-      <category term="域名解析" scheme="http://mdeng1985.github.io/tags/%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90/"/>
-    
-      <category term="git" scheme="http://mdeng1985.github.io/tags/git/"/>
-    
-      <category term="github" scheme="http://mdeng1985.github.io/tags/github/"/>
-    
-      <category term="index" scheme="http://mdeng1985.github.io/tags/index/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Hexo学习4-hexo站点的丰富和优化</title>
     <link href="http://mdeng1985.github.io/2017/01/25/hexo-enhance/"/>
     <id>http://mdeng1985.github.io/2017/01/25/hexo-enhance/</id>
@@ -526,6 +503,64 @@
     
     
       <category term="hexo" scheme="http://mdeng1985.github.io/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>利用Hexo创建自己的站点并发布(索引页)</title>
+    <link href="http://mdeng1985.github.io/2017/01/25/hexo-summary/"/>
+    <id>http://mdeng1985.github.io/2017/01/25/hexo-summary/</id>
+    <published>2017-01-25T16:12:56.000Z</published>
+    <updated>2017-01-28T05:46:54.360Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>本文总结利用hexo创建和发布自己的站点的全过程。下面是具体的目录</p>
+<ul>
+<li><a href="/2017/01/23/installHexo/" title="一、用hexo创建博客并发布到github pages">一、用hexo创建博客并发布到github pages</a></li>
+<li><a href="/2017/01/23/hexo_coding_github/" title="二、利用hexo将博客同时推送到coding pages和github pages">二、利用hexo将博客同时推送到coding pages和github pages</a></li>
+<li><a href="/2017/01/24/domian-analytical/" title="三、coding.me + github.io + 域名解析">三、coding.me + github.io + 域名解析</a></li>
+<li><a href="/2017/01/25/hexo-enhance/" title="四、hexo站点的丰富和优化">四、hexo站点的丰富和优化</a></li>
+<li><a href="/2017/01/24/hexo-edit-blog/" title="五、Hexo撰写博客教程">五、Hexo撰写博客教程</a></li>
+<li><a href="/2017/01/27/hexo-gitbook/" title="六、Hexo和gitbook进行整合">六、Hexo和gitbook进行整合</a>
+</li>
+</ul>
+<h1 id="总结与回顾"><a href="#总结与回顾" class="headerlink" title="总结与回顾"></a>总结与回顾</h1><h2 id="安装和配置hexo"><a href="#安装和配置hexo" class="headerlink" title="安装和配置hexo"></a>安装和配置hexo</h2><p>参见 <a href="/2017/01/23/installHexo/" title="Hexo学习1-用hexo创建博客并发布到github pages">Hexo学习1-用hexo创建博客并发布到github pages</a></p>
+<h2 id="发布hexo博客到github-pages"><a href="#发布hexo博客到github-pages" class="headerlink" title="发布hexo博客到github pages"></a>发布hexo博客到github pages</h2><p>参见 <a href="/2017/01/23/installHexo/" title="Hexo学习1-用hexo创建博客并发布到github pages">Hexo学习1-用hexo创建博客并发布到github pages</a>。发布到远程仓库的三个命令为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo clean</div><div class="line">hexo generate</div><div class="line">hexo deploy</div></pre></td></tr></table></figure>
+<p>如果仅是本地预览则<code>hexo s -p 3600</code>。注意：如果修改了_config.yml文件，则需要先<code>hexo clean</code>和<code>hexo generate</code>.</p>
+<h2 id="发布hexo博客到coding-me的pages"><a href="#发布hexo博客到coding-me的pages" class="headerlink" title="发布hexo博客到coding.me的pages"></a>发布hexo博客到coding.me的pages</h2><p>参见 <a href="/2017/01/23/hexo_coding_github/" title="Hexo学习2-利用hexo将博客同时推送到coding pages和github pages">Hexo学习2-利用hexo将博客同时推送到coding pages和github pages</a>。</p>
+<h2 id="域名解析"><a href="#域名解析" class="headerlink" title="域名解析"></a>域名解析</h2><p>绑定coding.me和github.io为同一个域名，并实现国内外分流，参考<a href="/2017/01/24/domian-analytical/" title="Hexo学习3-coding.me + github.io + 域名解析">Hexo学习3-coding.me + github.io + 域名解析</a></p>
+<h2 id="hexo站点的丰富和优化"><a href="#hexo站点的丰富和优化" class="headerlink" title="hexo站点的丰富和优化"></a>hexo站点的丰富和优化</h2><p>参考<a href="/2017/01/25/hexo-enhance/" title="Hexo学习4-hexo站点的丰富和优化">Hexo学习4-hexo站点的丰富和优化</a></p>
+<h2 id="hexo博客撰写相关"><a href="#hexo博客撰写相关" class="headerlink" title="hexo博客撰写相关"></a>hexo博客撰写相关</h2><p>参考<a href="/2017/01/24/hexo-edit-blog/" title="Hexo学习5-Hexo撰写博客教程">Hexo学习5-Hexo撰写博客教程</a></p>
+<h2 id="hexo版本管理"><a href="#hexo版本管理" class="headerlink" title="hexo版本管理"></a>hexo版本管理</h2><p>在hexo博客的目录下git用于版本管理，由于next主题下有子模块，管理的时候需要进入到该模块进行添加，参见<a href="/2017/01/25/hexo-enhance/" title="Hexo学习4-hexo站点的丰富和优化">Hexo学习4-hexo站点的丰富和优化</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cd themes/next</div><div class="line">git --git-dir=.git --work-tree=. add .</div><div class="line">git --git-dir=.git --work-tree=. commit -m &quot;update next theme&quot;</div></pre></td></tr></table></figure>
+<p>然后返回到站点根目录，添加，具体如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">cd ..</div><div class="line">cd ..</div><div class="line">git add themes/next</div><div class="line">git commit -m &quot;update blog&quot;</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;说明&quot;&gt;&lt;a href=&quot;#说明&quot; class=&quot;headerlink&quot; title=&quot;说明&quot;&gt;&lt;/a&gt;说明&lt;/h1&gt;&lt;p&gt;本文总结利用hexo创建和发布自己的站点的全过程。下面是具体的目录&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;/2017/01/23/in
+    
+    </summary>
+    
+      <category term="建站" scheme="http://mdeng1985.github.io/categories/%E5%BB%BA%E7%AB%99/"/>
+    
+    
+      <category term="markdown" scheme="http://mdeng1985.github.io/tags/markdown/"/>
+    
+      <category term="coding.me" scheme="http://mdeng1985.github.io/tags/coding-me/"/>
+    
+      <category term="hexo" scheme="http://mdeng1985.github.io/tags/hexo/"/>
+    
+      <category term="域名解析" scheme="http://mdeng1985.github.io/tags/%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90/"/>
+    
+      <category term="git" scheme="http://mdeng1985.github.io/tags/git/"/>
+    
+      <category term="github" scheme="http://mdeng1985.github.io/tags/github/"/>
+    
+      <category term="index" scheme="http://mdeng1985.github.io/tags/index/"/>
     
   </entry>
   
@@ -638,6 +673,46 @@
   </entry>
   
   <entry>
+    <title>Hexo学习2-利用hexo将博客同时推送到coding pages和github pages</title>
+    <link href="http://mdeng1985.github.io/2017/01/23/hexo_coding_github/"/>
+    <id>http://mdeng1985.github.io/2017/01/23/hexo_coding_github/</id>
+    <published>2017-01-23T15:58:24.000Z</published>
+    <updated>2017-01-26T19:36:57.012Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在文章<a href="/2017/01/23/installHexo/" title="Hexo学习1-用hexo创建博客并发布到github pages">Hexo学习1-用hexo创建博客并发布到github pages</a>中给出了如何将hexo创建的博客推送到github，这篇文章在”<a href="/2017/01/23/installHexo/" title="Hexo学习1-用hexo创建博客并发布到github pages">Hexo学习1-用hexo创建博客并发布到github pages</a>“的基础上，将hexo创建的 博客同时发布到github pages和coding pages. 之所以这么做是有连个目的：一是为了分流，使得国内的用户访问coding pages，国外的用户访问github pages； 另外一个原因就是github pages貌似不能被百度收录，所以还要用coding pages。</p>
+<h1 id="预备内容"><a href="#预备内容" class="headerlink" title="预备内容"></a>预备内容</h1><p>需要安装git软件，并生成公私匙，可以参考<a href="http://itfan.github.io/#show/2013-06-07-use-github-on-windows" target="_blank" rel="external">这篇文章</a>和<a href="https://coding.net/help/doc/git/ssh-key.html" target="_blank" rel="external">配置SSH公钥</a>。这里只需要用公钥<code>id_rsa.pub</code>文件</p>
+<h1 id="在coding-net上创建仓库"><a href="#在coding-net上创建仓库" class="headerlink" title="在coding.net上创建仓库"></a>在coding.net上创建仓库</h1><p>coding.net和github类似，它的page也分为用户页和项目页两大类( <a href="https://coding.net/help/doc/pages/index.html" target="_blank" rel="external">Coding Pages 介绍</a>)。在coding上申请一个账户，假设用户名为zhangshan，创建一个仓库，名字为<code>zhangshan.coding.me</code> (这种格式对应的是用户页，如果需要创建项目页，则名字可以随意。但是我测试发现，<strong>如果创建项目页，博客预览的格式不理想，不知道怎么回事</strong>)</p>
+<h1 id="配置coding上的公钥"><a href="#配置coding上的公钥" class="headerlink" title="配置coding上的公钥"></a>配置coding上的公钥</h1><p>配置的目的是在本地可以git直接将hexo博客推送到coding.net上。首先在<a href="https://coding.net/user" target="_blank" rel="external">用户主页</a>，将本地<code>id_rsa.pub</code>文件的内容配置到coding上。如下图所示 <img src="/2017/01/23/hexo_coding_github/ssh_key.png" alt=""></p>
+<p>配置完以后，在本地的git bash(不是cmd里)进行验证</p>
+<p><code>ssh -T git@git.coding.net</code></p>
+<p>会提示”The authenticity of host ‘git.coding.net (220.243.237.72)’ can’t be established…”，这时候直接按回车，直到提示”You’ve connected to Coding.net via SSH successfully!”, 就说明配置成功。</p>
+<h1 id="在hexo里配置coding的推送地址"><a href="#在hexo里配置coding的推送地址" class="headerlink" title="在hexo里配置coding的推送地址"></a>在hexo里配置coding的推送地址</h1><p>在hexo的站点目录下(我的为hexoBlog)打开_config.yml，将coding.net的git地址放进去，如下所示</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repository:</div><div class="line">    github: git@github.com:zhangshan/zhangshan.github.io.git</div><div class="line">    coding: git@git.coding.net:zhangshan/zhangshan.coding.me.git</div><div class="line">  branch: master</div><div class="line">  message: hexo deploy</div></pre></td></tr></table></figure>
+<h1 id="进行推送"><a href="#进行推送" class="headerlink" title="进行推送"></a>进行推送</h1><p>和github pages的推送方式一样，不做赘述, 可以参考(<a href="/2017/01/23/installHexo/" title="Hexo学习1-用hexo创建博客并发布到github pages">Hexo学习1-用hexo创建博客并发布到github pages</a>)</p>
+<h1 id="coding-的pages设置"><a href="#coding-的pages设置" class="headerlink" title="coding 的pages设置"></a>coding 的pages设置</h1><p>在coding.net进入到自己的zhangshan.coding.me点pages服务，然后”部署来源”为master分支，就可以在浏览器中输入<code>http://zhangshan.coding.me/zhangshan.coding.me</code>中浏览博客。</p>
+<p>至此已经完成了hexo博客同时推送到coding pages和github pages的任务。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;在文章&lt;a href=&quot;/2017/01/23/installHexo/&quot; title=&quot;Hexo学习1-用hexo创建博客并发布到gith
+    
+    </summary>
+    
+      <category term="建站" scheme="http://mdeng1985.github.io/categories/%E5%BB%BA%E7%AB%99/"/>
+    
+    
+      <category term="github pages" scheme="http://mdeng1985.github.io/tags/github-pages/"/>
+    
+      <category term="hexo" scheme="http://mdeng1985.github.io/tags/hexo/"/>
+    
+      <category term="git" scheme="http://mdeng1985.github.io/tags/git/"/>
+    
+      <category term="coding pages" scheme="http://mdeng1985.github.io/tags/coding-pages/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hexo学习1-用hexo创建博客并发布到github pages</title>
     <link href="http://mdeng1985.github.io/2017/01/23/installHexo/"/>
     <id>http://mdeng1985.github.io/2017/01/23/installHexo/</id>
@@ -700,46 +775,6 @@
       <category term="hexo" scheme="http://mdeng1985.github.io/tags/hexo/"/>
     
       <category term="git" scheme="http://mdeng1985.github.io/tags/git/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo学习2-利用hexo将博客同时推送到coding pages和github pages</title>
-    <link href="http://mdeng1985.github.io/2017/01/23/hexo_coding_github/"/>
-    <id>http://mdeng1985.github.io/2017/01/23/hexo_coding_github/</id>
-    <published>2017-01-23T15:58:24.000Z</published>
-    <updated>2017-01-26T19:36:57.012Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在文章<a href="/2017/01/23/installHexo/" title="Hexo学习1-用hexo创建博客并发布到github pages">Hexo学习1-用hexo创建博客并发布到github pages</a>中给出了如何将hexo创建的博客推送到github，这篇文章在”<a href="/2017/01/23/installHexo/" title="Hexo学习1-用hexo创建博客并发布到github pages">Hexo学习1-用hexo创建博客并发布到github pages</a>“的基础上，将hexo创建的 博客同时发布到github pages和coding pages. 之所以这么做是有连个目的：一是为了分流，使得国内的用户访问coding pages，国外的用户访问github pages； 另外一个原因就是github pages貌似不能被百度收录，所以还要用coding pages。</p>
-<h1 id="预备内容"><a href="#预备内容" class="headerlink" title="预备内容"></a>预备内容</h1><p>需要安装git软件，并生成公私匙，可以参考<a href="http://itfan.github.io/#show/2013-06-07-use-github-on-windows" target="_blank" rel="external">这篇文章</a>和<a href="https://coding.net/help/doc/git/ssh-key.html" target="_blank" rel="external">配置SSH公钥</a>。这里只需要用公钥<code>id_rsa.pub</code>文件</p>
-<h1 id="在coding-net上创建仓库"><a href="#在coding-net上创建仓库" class="headerlink" title="在coding.net上创建仓库"></a>在coding.net上创建仓库</h1><p>coding.net和github类似，它的page也分为用户页和项目页两大类( <a href="https://coding.net/help/doc/pages/index.html" target="_blank" rel="external">Coding Pages 介绍</a>)。在coding上申请一个账户，假设用户名为zhangshan，创建一个仓库，名字为<code>zhangshan.coding.me</code> (这种格式对应的是用户页，如果需要创建项目页，则名字可以随意。但是我测试发现，<strong>如果创建项目页，博客预览的格式不理想，不知道怎么回事</strong>)</p>
-<h1 id="配置coding上的公钥"><a href="#配置coding上的公钥" class="headerlink" title="配置coding上的公钥"></a>配置coding上的公钥</h1><p>配置的目的是在本地可以git直接将hexo博客推送到coding.net上。首先在<a href="https://coding.net/user" target="_blank" rel="external">用户主页</a>，将本地<code>id_rsa.pub</code>文件的内容配置到coding上。如下图所示 <img src="/2017/01/23/hexo_coding_github/ssh_key.png" alt=""></p>
-<p>配置完以后，在本地的git bash(不是cmd里)进行验证</p>
-<p><code>ssh -T git@git.coding.net</code></p>
-<p>会提示”The authenticity of host ‘git.coding.net (220.243.237.72)’ can’t be established…”，这时候直接按回车，直到提示”You’ve connected to Coding.net via SSH successfully!”, 就说明配置成功。</p>
-<h1 id="在hexo里配置coding的推送地址"><a href="#在hexo里配置coding的推送地址" class="headerlink" title="在hexo里配置coding的推送地址"></a>在hexo里配置coding的推送地址</h1><p>在hexo的站点目录下(我的为hexoBlog)打开_config.yml，将coding.net的git地址放进去，如下所示</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repository:</div><div class="line">    github: git@github.com:zhangshan/zhangshan.github.io.git</div><div class="line">    coding: git@git.coding.net:zhangshan/zhangshan.coding.me.git</div><div class="line">  branch: master</div><div class="line">  message: hexo deploy</div></pre></td></tr></table></figure>
-<h1 id="进行推送"><a href="#进行推送" class="headerlink" title="进行推送"></a>进行推送</h1><p>和github pages的推送方式一样，不做赘述, 可以参考(<a href="/2017/01/23/installHexo/" title="Hexo学习1-用hexo创建博客并发布到github pages">Hexo学习1-用hexo创建博客并发布到github pages</a>)</p>
-<h1 id="coding-的pages设置"><a href="#coding-的pages设置" class="headerlink" title="coding 的pages设置"></a>coding 的pages设置</h1><p>在coding.net进入到自己的zhangshan.coding.me点pages服务，然后”部署来源”为master分支，就可以在浏览器中输入<code>http://zhangshan.coding.me/zhangshan.coding.me</code>中浏览博客。</p>
-<p>至此已经完成了hexo博客同时推送到coding pages和github pages的任务。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;在文章&lt;a href=&quot;/2017/01/23/installHexo/&quot; title=&quot;Hexo学习1-用hexo创建博客并发布到gith
-    
-    </summary>
-    
-      <category term="建站" scheme="http://mdeng1985.github.io/categories/%E5%BB%BA%E7%AB%99/"/>
-    
-    
-      <category term="github pages" scheme="http://mdeng1985.github.io/tags/github-pages/"/>
-    
-      <category term="hexo" scheme="http://mdeng1985.github.io/tags/hexo/"/>
-    
-      <category term="git" scheme="http://mdeng1985.github.io/tags/git/"/>
-    
-      <category term="coding pages" scheme="http://mdeng1985.github.io/tags/coding-pages/"/>
     
   </entry>
   

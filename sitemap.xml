@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://mdeng1985.github.io/2017/01/29/Rmarkdown-bookdown-concept/</loc>
+    
+    <lastmod>2017-01-30T00:38:12.046Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://mdeng1985.github.io/2017/01/29/gitbook-in-rstudio/</loc>
     
     <lastmod>2017-01-29T21:42:57.771Z</lastmod>
