@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mdeng1985.github.io/"/>
-  <updated>2017-01-30T00:38:12.046Z</updated>
+  <updated>2017-01-30T01:03:43.933Z</updated>
   <id>http://mdeng1985.github.io/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>RMarkdown和Bookdown</title>
+    <title>RMarkdown</title>
     <link href="http://mdeng1985.github.io/2017/01/29/Rmarkdown-bookdown-concept/"/>
     <id>http://mdeng1985.github.io/2017/01/29/Rmarkdown-bookdown-concept/</id>
     <published>2017-01-29T21:46:25.000Z</published>
-    <updated>2017-01-30T00:38:12.046Z</updated>
+    <updated>2017-01-30T01:03:43.933Z</updated>
     
     <content type="html"><![CDATA[<h1 id="RMarkdown-介绍"><a href="#RMarkdown-介绍" class="headerlink" title="RMarkdown 介绍"></a>RMarkdown 介绍</h1><p>本节内容来自<a href="http://www.bagualu.net/wordpress/archives/6172" target="_blank" rel="external">R + markdown简介</a>。</p>
 <p>Markdown是由John Gruber提出的一种轻量式标记语言，markdown的源码和最终输出的结果比起来，除了格式不一样外，只是多出了一些标点符号。 标准的markdown中只是定义了10多种格式。在写作一些科技文献的时候，它提供的基本格式就不够用了。在这种情况下，出现了markdown的几种扩展，可以让人们来方便的处理这些格式。目前比较流行的扩展有pandoc扩展，其次是GitHub扩展。其中GitHub的扩展主要是用于在GutHub的网站上使用。</p>
@@ -44,9 +44,9 @@
     
       <category term="Rmarkdown" scheme="http://mdeng1985.github.io/tags/Rmarkdown/"/>
     
-      <category term="bookdown" scheme="http://mdeng1985.github.io/tags/bookdown/"/>
+      <category term="Markdown" scheme="http://mdeng1985.github.io/tags/Markdown/"/>
     
-      <category term="gitbook" scheme="http://mdeng1985.github.io/tags/gitbook/"/>
+      <category term="R语言" scheme="http://mdeng1985.github.io/tags/R%E8%AF%AD%E8%A8%80/"/>
     
   </entry>
   
@@ -91,13 +91,13 @@
       <category term="gitbook" scheme="http://mdeng1985.github.io/categories/gitbook/"/>
     
     
-      <category term="gitbook" scheme="http://mdeng1985.github.io/tags/gitbook/"/>
-    
-      <category term="Rstudio" scheme="http://mdeng1985.github.io/tags/Rstudio/"/>
+      <category term="Markdown" scheme="http://mdeng1985.github.io/tags/Markdown/"/>
     
       <category term="R语言" scheme="http://mdeng1985.github.io/tags/R%E8%AF%AD%E8%A8%80/"/>
     
-      <category term="Markdown" scheme="http://mdeng1985.github.io/tags/Markdown/"/>
+      <category term="gitbook" scheme="http://mdeng1985.github.io/tags/gitbook/"/>
+    
+      <category term="Rstudio" scheme="http://mdeng1985.github.io/tags/Rstudio/"/>
     
       <category term="RMarkdown" scheme="http://mdeng1985.github.io/tags/RMarkdown/"/>
     
@@ -137,9 +137,9 @@
       <category term="建站" scheme="http://mdeng1985.github.io/categories/%E5%BB%BA%E7%AB%99/"/>
     
     
-      <category term="gitbook" scheme="http://mdeng1985.github.io/tags/gitbook/"/>
-    
       <category term="hexo" scheme="http://mdeng1985.github.io/tags/hexo/"/>
+    
+      <category term="gitbook" scheme="http://mdeng1985.github.io/tags/gitbook/"/>
     
   </entry>
   
