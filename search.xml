@@ -3,120 +3,120 @@
   
     
     <entry>
-      <title><![CDATA[bookdown_study]]></title>
-      <url>%2F2017%2F01%2F29%2Fbookdown-study%2F</url>
-      <content type="text"><![CDATA[介绍Bookdown是基于Rmarkdown的工具包。开发它的宗旨在于以单一的形式写书，然后可以输出多种形式(比如GitBook格式) 本文为bookdown的学习笔记，主要参考自：bookdown: Authoring Books and Technical Documents with R Markdown R + Markdown + Pandoc = 多格式(html,pdf,epub,ect,) 安装bookdownbookdown是基于Rmarkdown的工具包，在bookdown安装之前安装： R内核 RStudio 然后启动Rstudio安装并加载bookdown 1install.packages(&quot;bookdown&quot;) 然后下载demo文件，解压缩以后用Rstudio打开bookdown-demo.Rproj，然后build-All`就可以进行预览了。 bookdown创建书籍的源文件的结构组成bookdown语法学习Bookdown usage 引用文献假设bib文件为ref.bib，首先在index.RMD的开头加上 123456---title: &quot;BookDown Test&quot;bibliography: [ref.bib] #指定存储参考文献的bib文件，endote或zotero都可以导出这种引文格式biblio-style: apalike #设定参考文献显示类型link-citations: yes--- 然后直接@key ,key为bib文件中某篇文献的key。]]></content>
+      <title><![CDATA[bookdown创建电子书全记录]]></title>
+      <url>%2Fbookdown-study%2F</url>
+      <content type="text"><![CDATA[介绍下面是我学习bookdown写的bookdown读书笔记: bookdown读书笔记]]></content>
     </entry>
 
     
     <entry>
       <title><![CDATA[RMarkdown]]></title>
-      <url>%2F2017%2F01%2F29%2FRmarkdown-bookdown-concept%2F</url>
+      <url>%2FRmarkdown-bookdown-concept%2F</url>
       <content type="text"><![CDATA[RMarkdown 介绍本节内容来自R + markdown简介。 Markdown是由John Gruber提出的一种轻量式标记语言，markdown的源码和最终输出的结果比起来，除了格式不一样外，只是多出了一些标点符号。 标准的markdown中只是定义了10多种格式。在写作一些科技文献的时候，它提供的基本格式就不够用了。在这种情况下，出现了markdown的几种扩展，可以让人们来方便的处理这些格式。目前比较流行的扩展有pandoc扩展，其次是GitHub扩展。其中GitHub的扩展主要是用于在GutHub的网站上使用。 pandoc是一个强大的格式转换工具，基本上支持各类常见格式之间的转换，其中就包括有markdown。而markdown的格式超级简单，这就使得人们能够用超级简单的markdown来生成看起来复杂的其他格式，比如word、html、pdf等。 在R语言中的几个软件包Rmarkdown，knitr等就使用pandoc作为底层的支持来实现从markdown到各种其他格式的转换。 R语言R语言是一种针对统计分析和数据科学的开源的统计语言，它是一种基于向量的高级函数式编程语言。 由于pandoc的兴起，R社区的开发者发现了这个工具给写作带来的巨大便利，因此开发了一些以pandoc为基础的软件包，其代表是Rmarkdown和knitr。 rmarkdown和knitr前面介绍提到了rmarkdown和knitr是R的软件包，它们把能够在markdown中嵌入R语言，并且执行其中的R代码，而R代码的输出可以作为文档的一部分。 Rmarkdown教程参考官方网址 rmarkdown-reference markdown-cheatsheet-2.0 安装和加载rmarkdown 12install.packages(&quot;rmarkdown&quot;)library(rmarkdown)]]></content>
     </entry>
 
     
     <entry>
       <title><![CDATA[Rstudio中Rgitbook的应用]]></title>
-      <url>%2F2017%2F01%2F29%2Fgitbook-in-rstudio%2F</url>
+      <url>%2Fgitbook-in-rstudio%2F</url>
       <content type="text"><![CDATA[前言之所以安装rgitbook是因为想在gitbook里引用文献，然后就找到了rgitbook。由于rgitbook是需要r语言支持，所以 就安装了Rstudio。 前期准备工作 安装R语言内核 安装Rstudio 安装node.js和gitbook，参见Gitbook学习笔记(1):利用gitbook命令行工具创建和编译书籍 Rstudio里安装Rgitbook首先需要在Rstudio里安装devtools，并载入该工具： 12install.packages(&apos;devtools&apos;)library(devtools) 然后要安装并载入RefManageR, 因为Rgitbook依赖这个工具包 12install.packages(&apos;RefManageR&apos;)library(RefManageR) 接下来 安装Rgitbook（前提需要在命令行工具中安装了gitbook），官方的安装方法是 1devtools::install_github(&quot;jbryer/Rgitbook&quot;) 但是我安装的时候会提示错误： Error in Rgitbook::checkForGitbook() : Cannot find node.js. You can install it from http://nodejs.org/download/ In addition: Warning message: running command ‘npm’ had status 1 所以我安装的是另外一个镜像(参考：此处)： 12devtools::install_github(&apos;renkun-ken/Rgitbook&apos;)library(Rgitbook) 安装完以后，检查下： 1Rgitbook::checkForGitbook() 如果提示gitbook is installed and available，就说明安装成功了。 利用Rgitbook写书的过程在Rstudio中，修改工作目录为保存电子书的目录，然后新建电子书，比如说testbook(和命令行中的gitbook init类似) 123setwd(&quot;D:/gitBookLib&quot;)library(Rgitbook)newGitbook(&quot;testbook&quot;)]]></content>
     </entry>
 
     
     <entry>
       <title><![CDATA[Hexo学习6-hexo里整合gitbook制作的电子书]]></title>
-      <url>%2F2017%2F01%2F27%2Fhexo-gitbook%2F</url>
+      <url>%2Fhexo-gitbook%2F</url>
       <content type="text"><![CDATA[说明对于我而言，有些笔记写成书得形式会更好，这就离不开gitbook。因此我就想把gitbook写得电子书 放到hexo里得博客里。 gitbook编译后(gitbook build)得到电子书网页文件在_book文件夹里(参考Gitbook学习笔记(1):利用gitbook命令行工具创建和编译书籍) 复制gitbook的电子书到hexo目录下 在source文件夹下新建一个文件夹gbook，用于存放所有的的gitbook编译后的电子书网页。 将gibook编译得到的_book拷贝到gbook目录下，并重命名(我是按照电子书的主题来命名，比如说javaStudy)。 由于gitbook编译后的html文件不用渲染，因此需要在站点的_config.yml里设置 skip_render: gbook/** 这行命令的作用是告诉hexo在运行hexo generate的时候,gbook文件夹下的所有文件都不要渲染，直接拷贝到public文件夹下。 注意：skip_render后面的文件夹是相对于source目录下的，而且文件夹首字母不能使下划线，否则该命令无效 博客里引用博客里直接利用markdown语法引用即可，比如 1[java学习笔记](/gbook/javaStudy/index.html)]]></content>
     </entry>
 
     
     <entry>
       <title><![CDATA[gitbook学习笔记(4):FAQ]]></title>
-      <url>%2F2017%2F01%2F25%2Fgitbook-FAQ%2F</url>
+      <url>%2Fgitbook-FAQ%2F</url>
       <content type="text"><![CDATA[FAQ 如果乱码，则需要将编码格式改成UTF-8 gitbook调用本地图片的时候，给出的路径为相对于调用的.md文件的路径，比如 1234├─chapter1 ├─sec1.md├─imgs ├─1.png 如果sec1.md需要调用1.png，则给出的格式为： 1![Alt text](../imgs/1.png)]]></content>
     </entry>
 
     
     <entry>
       <title><![CDATA[Atom编辑器学习]]></title>
-      <url>%2F2017%2F01%2F25%2Fatom_study%2F</url>
+      <url>%2Fatom_study%2F</url>
       <content type="text"><![CDATA[Atom基本操作寻找和运行可用的命令ctrl+shift+p可以呼出命令窗口，用于寻找和运行可令的命令 管理包(package) 查看和卸载package：ctrl+shift+p呼出命令栏，然后输入settings view view installed packages可以对已经安装的package进行查看并卸载 安装工具包package有两种方式： 通过菜单栏进行安装packge：atom主界面-file-settings，然后点击左边的install输入package关键词进行安装 通过命令行运行apm（Atom Package Manager）进行安装 开启或者关闭markdown的预览功能： ctrl+shift+m (需要安装markdown-preview，安装atom时默认是已经安装的) 关闭拼写检查: 对于中文写作，关闭这个比较好。ctrl+shift+p然后输入spell check: toggle，然后点击关闭 Ctrl + [ 对选中内容向左缩进 Ctrl + ] 对选中内容向右缩进 Atom安装markdown的相关插件[markdown-writer]官方主页 顾名思义，这个插件目的是辅助进行Markdown文档写作，可以通过菜单栏来添加标题、添加连接、添加图片。 比如插入图片，可以选择图片大小、自动复制图片到当前文件夹，方便书籍制作。 Markdown的两种方便的运行方式为快捷键和工具栏运行方法。 快捷键运行方式 这种运行方式直接通过菜单栏安装markdown-writer 即可，安装方法参见“管理包” 可以创建相应的atom快捷键来调用该插件的相应命令，首先ctrl+shift+p呼出命令栏，然后输入Markdown Writer: Create Default Keymaps则配置好了相应快捷键，在windows系统下的快捷键（通过ctrl+shift+p然后输入keymap查看）如下所示： 插入超链接:shift-ctrl-K 插入图片： shift-ctrl-I 斜体：ctrl-i 粗体：ctrl-b 代码块：ctrl-&#39; 删除线：ctrl-h: 1级标题: ctrl-1 2级标题: ctrl-2 以此类推 更多的mwrkdown-writer快捷键可以参考： markdown-writer-wiki 工具栏运行方式 这种方式更为直观些，安装完以后会在atom的顶部（或者其他位置）显示markdown-writer的菜单栏。如下图所示。 具体安装方式需要在命令行下进行，首先打开cmd终端，切换本地的.atm/packages目录下，然后输入： apm install tool-bar markdown-writer 然后再次输入 apm install tool-bar-markdown-writer 重启atom即可。 markdown-preview官方主页 预览插件，安装atom的时候默认已经安装该插件 markdown-scroll-sync官方主页 滚动预览插件， atomic chrome适用于利用markdown写公众号的，未深究,有兴趣可以参考:Atom：优雅迷人的编辑神器 markdown-toc官方主页 生成目录的插件，安装完以后在Packages-markdown toc里进入使用 Atom安装git的相关插件 git plus 参考资料 Atom与markdown Atom：优雅迷人的编辑神器]]></content>
     </entry>
 
     
     <entry>
       <title><![CDATA[Gitbook学习笔记(3):gitbook的常用插件]]></title>
-      <url>%2F2017%2F01%2F25%2Fgitbook_plugin%2F</url>
+      <url>%2Fgitbook_plugin%2F</url>
       <content type="text"><![CDATA[安装自动生成SUMMARY的插件首先安装： 1npm install -g gitbook-summary 然后运行book sm 即可 tips：可以以数字顺序排列，具体参考主页 gitbook安装引用文献的插件插件名为：bibtex-cite，安装方法在book.json里添加： 1234&#123; &quot;gitbook&quot; : &quot;3.2.2&quot;, &quot;plugins&quot;: [&quot;bibtex-cite&quot;] &#125; 然后运行gitbook install。文献的bib为literature.bib, 引用方式为： 1&#123;&#123;&quot;bib文件中的key&quot;|cite&#125;&#125; 汇总后的book.json1234&#123; &quot;gitbook&quot; : &quot;3.2.2&quot;, &quot;plugins&quot;: [&quot;bibtex-cite&quot;,&quot;exercises&quot;] &#125; 插件安装方法首先上https://plugins.gitbook.com/查找插件，比如说安装exercises，则在书籍的根目录创建book.json，格式如下：完成安装 1234&#123; &quot;gitbook&quot; : &quot;3.2.2&quot;, &quot;plugins&quot;: [&quot;exercises&quot;] &#125; 其中gitbook的版本号可以通过gitbook -version得到。如果要安装多个插件： 1234&#123; &quot;gitbook&quot; : &quot;3.2.2&quot;, &quot;plugins&quot;: [&quot;exercises&quot;,&quot;另外一个插件的名字&quot;] &#125; 我需要的一些插件 latex-codecogs(写数学公式) mermaid(画流程图)]]></content>
     </entry>
 
     
     <entry>
       <title><![CDATA[Gitbook学习笔记(2): 发布书籍到github pages上]]></title>
-      <url>%2F2017%2F01%2F25%2Fpublish_gitbook%2F</url>
+      <url>%2Fpublish_gitbook%2F</url>
       <content type="text"><![CDATA[利用命令行工具创建github的项目页(project pages)仅发布网页文件假设已经通过gitbook-seve可以在本地创建了网页文件，在_book目录下。基本思路就是在 _book目录下创建一个仓库，将网页文件加到库的master分支下，然后推送到远程的github项目里，即可。 具体操作如下： 本地进入到_book目录下，创建仓库 123git initgit add .git commit -m &quot;book version&quot; (这样就创建了个master分支) github网上上新建一个仓库，比如名叫book，假设我的用户名为aaa，那么它的网址为：https://github.com/aaa/book.git 本地cmd,通过下述命令将仓库推送到远程 12git remote add origin https://github.com/aaa/book.gitgit git push -u origin master github网上进入book这个项目，然后setting-github Pages里那一栏source选为master branch。 地址栏输入 https://aaa.github.io/book/就可以显示了，取决于网络，有时候得等过几分钟。 发布网页文件和.md源文件如果要把网页的.md源文件也推送到github的仓库里的一种实现途径为：master分支里放.md文件、然后创建一个gh-pages分支放网页，再推送到github仓库里。 第一步在github上新建一个空仓库,比如说book，链接为https://github.com/aaa/book.git 然后在本地进入到源码根目录，假设已经通过gitbook serve命令创建了_book目录。例如： 12345678├─Append├─chapter1├─chapter2└─_book ├─Append ├─chapter1 ├─chapter2 └─gitbook _book为网页的目录，其他文件夹为.md所在文件夹。 源码那个分支需要将_book屏蔽掉，因此新建一个.gitignore, 内容为_book,也可以根据个人需要添加需要屏蔽的后缀或者文件夹。然后新建仓库，将源码添加至master分支并推送到github，具体命令如下： 12345git initgit add .git commit -m &quot;master&apos;s version&quot;git remote add origin https://github.com/aaa/book.gitgit push -u origin master 在书籍_book录下新建仓库新建gh-pages分支，并将网页添加至该分支，最后推送到github。具体命令如下（#号后为说明）： 12345678cd _book \#进入到_book目录git init \#新建仓库git -rm .gitignore \#删除.gitignore文件git checkout --orphan gh-pages \# 新建分支gh-pagesgit add . \#添加文件到该分支git commit -m &quot;html&apos;s branch&quot; \# 生成版本git remote add origin https://github.com/aaa/book.git \#给远程仓库设置昵称git push -u origin gh-pages \#推送gh-pages分支内容到远程 最后在github进入到项目，settings-GitHub Pages-source-选择gh-pages，过一会打开Github pages那里给出的网址就可以看到网页了。 参考资料 github pages]]></content>
     </entry>
 
     
     <entry>
       <title><![CDATA[Gitbook学习笔记(1):利用gitbook命令行工具创建和编译书籍]]></title>
-      <url>%2F2017%2F01%2F25%2Fgitbook_cmd_study%2F</url>
+      <url>%2Fgitbook_cmd_study%2F</url>
       <content type="text"><![CDATA[需要用到的软件 nodes.js； gitbook命令行工具(用于创建和编译书籍，不用手动下载，安装完nodes.js通过命令行工具自动安装)； Markdown语法编辑器（用于编辑书本的内容和格式。在线或者离线均可，可以参考：Markdown 编辑器推荐）； gitbook命令行工具安装安装教程主要参考：SIOgitBook 下载node.js的源文件并安装。安装完以后在系统CMD里输入:node -v查看node.jsb版本，以校验是否安装成功。 系统cmd里安装gitbook命令行工具: npm install gitbook-cli -g; 然后输入gitbook -V (V大写)查看gitbook命令行工具版本，以校验gitbook是否安装成功。返回版本号则说明安装成功。 如果需要卸载gitbook,则可以npm uninstall -g gitbook 创建和编译一个只有目录的书籍创建书籍目录在本地电脑上新建一个文件夹，比如test；然后CMD下进入该文件夹，输入 gitbook init 会在该文件夹下创建两个基本文件README.md和SUMMARY.md。其中README.md为书本的介绍，用编辑器打开以后默认内容为： # Introduction SUMMARY.md为书籍的框架文件，用编辑器打开以后默认内容为： # Summary * [Introduction] (README.md) 其中# Summary为固定格式，下一行声明的是生成一个标题为Introduction的章，里面的具体内容由README.md文件给出。 编辑书籍目录和框架系统默认的SUMMARY.md里的README.md实际上是书籍的介绍文件，因此我们自己撰写的时候可以另外创建一个.md文件（比如chap1_body.md）然后将Summary.md文件里的第二行改为 * [Introduction] (chap1_body.md)。 如果一个章节里有好几个小节，每个小节再由不同的.md文件给出，则可以参考下例修改SUMMARY.md源代码为 12345# Summary* [基本安装](howtouse/README.md) - [Node.js安装](howtouse/Nodejsinstall.md) - [Gitbook安装](howtouse/gitbookinstall.md) - [Gitbook命令行速览](howtouse/gitbookcli.md) 这时候需要再次执行gitbook init，这样在当前目录下会创建名howtouse的子文件夹，该子文件夹下有README.md、Nodejsinstall.md、gitbookinstall.md和gitbookcli.md四个文件。值得注意的是，SUMMARY.md里 ] 和 ( 中间不能有空格 [ 和前面的*和-要有空格。 运行完gitbook init，文件夹内已有的文件不会被覆盖，也不会被删除。 否则不能创建成功。 编辑书籍的内容上一小节里已经创建了书籍的框架，接下来就需要采用Markdown编辑器进行编辑添加内容到Nodejsinstall.md、gitbookinstall.md和gitbookcli.md、README.md里。 编译生成和预览书籍最后需要在系统CMD下再次运行gitbook命令生成书籍， 生成服务器？：gitbook serve 最后在浏览器网页地址栏输入http://localhost:4000/进行预览 生成静态网页：gitbook build]]></content>
     </entry>
 
     
     <entry>
       <title><![CDATA[利用Hexo创建自己的站点并发布(索引页)]]></title>
-      <url>%2F2017%2F01%2F25%2Fhexo-summary%2F</url>
+      <url>%2Fhexo-summary%2F</url>
       <content type="text"><![CDATA[说明本文总结利用hexo创建和发布自己的站点的全过程。下面是具体的目录 一、用hexo创建博客并发布到github pages 二、利用hexo将博客同时推送到coding pages和github pages 三、coding.me + github.io + 域名解析 四、hexo站点的丰富和优化 五、Hexo撰写博客教程 六、Hexo和gitbook进行整合 总结与回顾安装和配置hexo参见 Hexo学习1-用hexo创建博客并发布到github pages 发布hexo博客到github pages参见 Hexo学习1-用hexo创建博客并发布到github pages。发布到远程仓库的三个命令为： 123hexo cleanhexo generatehexo deploy 如果仅是本地预览则hexo s -p 3600。注意：如果修改了_config.yml文件，则需要先hexo clean和hexo generate. 发布hexo博客到coding.me的pages参见 Hexo学习2-利用hexo将博客同时推送到coding pages和github pages。 域名解析绑定coding.me和github.io为同一个域名，并实现国内外分流，参考Hexo学习3-coding.me + github.io + 域名解析 hexo站点的丰富和优化参考Hexo学习4-hexo站点的丰富和优化 hexo博客撰写相关参考Hexo学习5-Hexo撰写博客教程 hexo版本管理在hexo博客的目录下git用于版本管理，由于next主题下有子模块，管理的时候需要进入到该模块进行添加，参见Hexo学习4-hexo站点的丰富和优化 123cd themes/nextgit --git-dir=.git --work-tree=. add .git --git-dir=.git --work-tree=. commit -m &quot;update next theme&quot; 然后返回到站点根目录，添加，具体如下： 1234cd ..cd ..git add themes/nextgit commit -m &quot;update blog&quot;]]></content>
     </entry>
 
     
     <entry>
       <title><![CDATA[Hexo学习4-hexo站点的丰富和优化]]></title>
-      <url>%2F2017%2F01%2F25%2Fhexo-enhance%2F</url>
+      <url>%2Fhexo-enhance%2F</url>
       <content type="text"><![CDATA[安装主题安装主题的主要流程：将主题包下载下来，放到themes文件夹下，然后在_config.yml里进行配置， 以next主题为例进行说明： 在hexoBlog目录下进行git克隆 1git clone https://github.com/iissnan/hexo-theme-next themes/next 这样主题就自动下载到next文件夹了(也可以手动下载主题，然后解压缩) 修改hexoBlog目录下的_config.yml文件：theme: next 如果要修改next主题的一些配置，则需要修改next文件夹下的_config_yml文件。 我比较喜欢的两个主题有 next jacman 添加多说分享和评论功能开始以为添加百度分享分享到微博、微信等，但是发现next主题的百度分享不支持https的站点，就使用多说分享了。首先去多说用微信或者 qq登陆，设置shortname, 然后在站点的_config.yml（注意不是主题下的_config.yml）添加两行（第一行设置评论，第二行设置分享） duoshuo_shortname:自己设置的shortnameduoshuo_share: true 具体设置参见next主题的说明文档。如果还是不行的话，可能和其他插件冲突，比如 disqus，检查下主题下的_config.yml和站点下的_config.yml。 添加版权申明参考”为 Next 主题文末添加版权等信息“，只不过我的是在next\layout_macro的post.swig的{\% endmacro \%}那行前面加上如下的代码 1234567891011121314151617181920212223242526272829303132&lt;div class=&quot;page-footer&quot;&gt; &#123;% if not is_index %&#125; &lt;div id=&quot;eof&quot; class=&quot;print-invisible&quot;&gt; &lt;hr class=&quot;eof&quot;&gt; &lt;/div&gt; &lt;div class=&quot;copyright&quot; style=&quot;clear:both;&quot;&gt; &lt;p&gt;&lt;span&gt;本文标题:&lt;/span&gt;&lt;a href=&quot;&#123;&#123; url_for(page.path) &#125;&#125;&quot;&gt;&#123;&#123; page.title &#125;&#125;&lt;/a&gt;&lt;/p&gt; &lt;p&gt;&lt;span&gt;文章作者:&lt;/span&gt;&lt;a href=&quot;/&quot; title=&quot;访问 &#123;&#123; theme.author &#125;&#125; 的个人博客&quot;&gt;&#123;&#123; theme.author &#125;&#125;&lt;/a&gt;&lt;/p&gt; &lt;p&gt;&lt;span&gt;原始链接:&lt;/span&gt;&lt;a href=&quot;&#123;&#123; url_for(page.path) &#125;&#125;&quot; title=&quot;&#123;&#123; page.title &#125;&#125;&quot;&gt;&#123;&#123; page.permalink &#125;&#125;&lt;/a&gt;&lt;/p&gt; &lt;p&gt;&lt;span&gt;许可协议:&lt;/span&gt;&lt;i class=&quot;fa fa-creative-commons&quot;&gt;&lt;/i&gt; &lt;a rel=&quot;license&quot; href=&quot;http://creativecommons.org/licenses/by-nc/4.0/&quot; title=&quot;Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)&quot;&gt;Attribution-NonCommercial 4.0&lt;/a&gt;&lt;/p&gt; &lt;p&gt;&lt;span&gt;转载请保留以上信息。&lt;/span&gt;&lt;/p&gt; &lt;/div&gt; &#123;% endif %&#125; &#123;% if not is_index and (post.prev or post.next) %&#125; &lt;div class=&quot;post-nav&quot;&gt; &lt;div class=&quot;post-nav-prev post-nav-item&quot;&gt; &#123;% if post.prev %&#125; &lt;a href=&quot;&#123;&#123; url_for(post.prev.path) &#125;&#125;&quot;&gt;&#123;&#123;post.prev.title&#125;&#125;&lt;/a&gt; &#123;% endif %&#125; &lt;/div&gt; &lt;div class=&quot;post-nav-next post-nav-item&quot;&gt; &#123;% if post.next %&#125; &lt;a href=&quot;&#123;&#123; url_for(post.next.path) &#125;&#125;&quot;&gt;&#123;&#123;post.next.title&#125;&#125;&lt;/a&gt; &#123;% endif %&#125; &lt;/div&gt; &lt;/div&gt; &#123;% endif %&#125; &lt;/div&gt; 站点的menu的链接失效都指向主页的解决方案站点的_config.yml里的必须为relative_link: false , 否则menu的那些链接都会失效。 git无法添加themes/next的解决方案在站点根目录(我的为hexoBlog)下，新建git仓库，发觉无法添加”themes/next”下的文件，会提示 fatal: Pathspec ‘themes/next/_config.yml’ is in submodule 这时候因为在next下有个submodule，需要先进入到这个目录运行更新子模块，命令如下： 123cd themes/nextgit --git-dir=.git --work-tree=. add .git --git-dir=.git --work-tree=. commit -m &quot;update next theme&quot; 然后返回到站点根目录，添加，具体如下： 1234cd ..cd ..git add themes/nextgit commit -m &quot;update blog&quot; 详见:Git: fatal: Pathspec is in submodule 添加到搜索引擎参考Hexo博客提交百度和Google收录和让Baidu和Google收录Hexo博客，站点能够被google站点工具验证成功，一定要记得将验证文件放到主题下的source文件夹下（themes\next\source），而不是博客的source文件夹(hexoBlog\source)下，否则验证不成功。 设置首页只显示预览，不显示全文设置主题下的_config.yml, 搜索auto_excerpt,将enable改成true。 增加首页文章置顶的功能node_modules/hexo-generator-index/lib/generator.js里的内容为： 123456789101112131415161718&apos;use strict&apos;;var pagination = require(&apos;hexo-pagination&apos;);module.exports = function(locals) &#123; var config = this.config; var posts = locals.posts.sort(config.index_generator.order_by); var paginationDir = config.pagination_dir || &apos;page&apos;; return pagination(&apos;&apos;, posts, &#123; perPage: config.index_generator.per_page, layout: [&apos;index&apos;, &apos;archive&apos;], format: paginationDir + &apos;/%d/&apos;, data: &#123; __index: true &#125; &#125;);&#125;; 将其替换成 12345678910111213141516171819202122232425262728&apos;use strict&apos;;var pagination = require(&apos;hexo-pagination&apos;);module.exports = function(locals)&#123; var config = this.config; var posts = locals.posts; posts.data = posts.data.sort(function(a, b) &#123; if(a.top &amp;&amp; b.top) &#123; // 两篇文章top都有定义 if(a.top == b.top) return b.date - a.date; // 若top值一样则按照文章日期降序排 else return b.top - a.top; // 否则按照top值降序排 &#125; else if(a.top &amp;&amp; !b.top) &#123; // 以下是只有一篇文章top有定义，那么将有top的排在前面（这里用异或操作居然不行233） return -1; &#125; else if(!a.top &amp;&amp; b.top) &#123; return 1; &#125; else return b.date - a.date; // 都没定义按照文章日期降序排 &#125;); var paginationDir = config.pagination_dir || &apos;page&apos;; return pagination(&apos;&apos;, posts, &#123; perPage: config.index_generator.per_page, layout: [&apos;index&apos;, &apos;archive&apos;], format: paginationDir + &apos;/%d/&apos;, data: &#123; __index: true &#125; &#125;);&#125;; 然后的具体的博客的源文件(.md)开头加上top项，当top的值取0的时候，表示默认排序，即是按照时间顺序来排序，当top的值取1到无为置顶文件限大的时候，值最高的md文件即是置顶文章。比如说 12345title: 索引页date: 2017-01-25T10:12:56.000Zcategories: 建站top: 2tags: hexo 注意只能首页置顶，其他里还是置顶不了。参考资料：hexo博文置顶技巧 修改文章内链接文本样式修改文件themes\next\source\css\_common\components\post\post.styl ，添加如下css样式： 123456789.post-body a&#123; color: #0593d3; border-bottom: none; &amp;:hover &#123; color: #0477ab; text-decoration: underline; &#125;&#125; 参考此处 我进行的相关配置总结 本地博客根目录下hexoBlog配置远程仓库的网址(修改站点配置文件_config.yml，参见前文) 创建”关于我”的页面 和主题有关的设置(我用的是next主题) 创建分类页面，创建完以后怎么对博客分类可以参考Hexo的分类和标签设置 创建关于我的页面 设置侧边栏头像 设置语言 添加社交链接 设置多说分享和多说评论，参见前文。 添加版权协议 添加版权申明,参见前文。 添加不蒜子统计 添加local search 添加MathJax 添加最新访客功能 添加到搜索引擎，参见前文 添加百度统计 首页仅不显示全文只显示预览 添加hexo-admin插件，用于后台管理 添加首页置顶功能,参见前文 修改超链接的文本样式及颜色等，参见前文]]></content>
     </entry>
 
     
     <entry>
       <title><![CDATA[Hexo学习3-coding.me + github.io + 域名解析]]></title>
-      <url>%2F2017%2F01%2F24%2Fdomian-analytical%2F</url>
+      <url>%2Fdomian-analytical%2F</url>
       <content type="text"><![CDATA[说明这篇文章的目的就是将coding.me上的和github.io的个人博客和自己注册的域名关联起来，并且实现国内的用户访问域名的时候定向到 coding.me，国际的用户访问的时候，定向到github.io。 前期准备 有自己的github.io博客，参考”Hexo学习1-用hexo创建博客并发布到github pages“，假设为zs.github.io 有自己的coding.me博客，参考”Hexo学习2-利用hexo将博客同时推送到coding pages和github pages“, 假设为zs.coding.me 注册了自己的域名，我用的是godaddy 上注册的，假设为zs.com 在dnspod上注册账号， 用于解析域名 域名解析的相关概念域名解析的示意图如下图： 由图可见，在解析前github对应自己的ip,coding对应自己的ip，而且没有和自己的域名相互关联，两者是相互独立的。 域名解析有两种方式：A记录和CNAME。A (Address) 记录是用来指定主机名（或域名）对应的IP地址记录。CNAME记录，即名记录。这种记录允许您将多个名字映射到另外一个域名。 解析以后如下图 相应的配置截图如下： 如下几点说明： 主机记录中为@，表示zs.com指向另外的域名或者ip，如果为www则表示www.zs.com（为zs.com二级域名）指向另外的域名或者ip。同样可以设置为blog.zs.com 图中5是把自己的站点提交给百度搜索用的，和本文没有关系，参考此处 CNAME的解析的优先级要比A记录的解析要高。 其中3和4是系统自带的不用管 8中的ip参考github的官网 关于域名解析的概念性的文章，我推荐：GitHub Pages 绑定来自阿里云的域名 域名解析的具体步骤我参考的是”Hexo同时部署在Coding和GitHub上并使用DNSPod分流“，不做赘述。 最后需要绑定下，进入coding的pages里绑定域名为zs.com。这样不管输入zs.coding.me还是zs.github.io都会跳转到zs.com 测试是否分流成功在这个网站进去查询，输入域名和类型CNAME，得到如下的结果 可见国内分流成功，国外的分流查询可以通过”DNS查询“查询得到]]></content>
     </entry>
 
     
     <entry>
       <title><![CDATA[Hexo学习5-Hexo撰写博客教程]]></title>
-      <url>%2F2017%2F01%2F24%2Fhexo-edit-blog%2F</url>
+      <url>%2Fhexo-edit-blog%2F</url>
       <content type="text"><![CDATA[说明这篇文章的内容是利用Hexo撰写博客的相关内容，关于Hexo的配置和发布过程可以参见 Hexo学习1-用hexo创建博客并发布到github pages 创建新文章在命令行工具下进入到hexoBlog目录，运行： hexo new &quot;arc1&quot; 这样在source/_posts目录下就新建了一个arc1.md博客文件，打开以后有固定的格式： 12345---title: myarcdate: 2017-01-23 10:24:47tags:--- 其中title为博客的标题，tags为博客的标签，对于多个标签可以采用tags:[tag1,tag2]来实现。博客的撰写需要采用markdown语法，可以参见Markdown语法总结. 写完以后运行hexo s -p 3600 进行预览，没问题了再运行hexo generate hexo deploy发布到github pages 如果要添加私密文章或者草稿，则需要运行hexo new **draft** &quot;arc1&quot;, 这样在source/_drafts目录下新建了arc1.md，然后在本地可以强行预览草稿：hexo server --drafts 引用自己博客的文章A引用Bfg.md，则在A的md文件里输入： 1&#123;% post_link Bfg %&#125; 插入图片有两种典型的方式可以插入图片： - hexo的官方方式：这种方式需要将站点的配置文件_config.yml里设置：’post_asset_folder: true’, 然后在cmd输入: hexo new &quot;post-test&quot;, 这样 source\_posts 下建立post-test.md和post-test的文件夹。再把图片(比如：example.jpg)放到post-test这个文件夹里。post-test.md里进行调用的时候输入： 12&#123;% asset_img example.jpg aaa %&#125;` 但是，这种方法我没有试验成功。不知道怎么回事 基于Markdown语法的调用方式: ![](example.jpg的相对路径)。但是如果’post_asset_folder: true’情况下，如果把exaple.jpg放在上一级目录中是无法显示的。参考下面的测试结果(首页能不能显示还和具体模板有关系) 总结下有两种比较靠谱的方式: _config_yml中设置’post_asset_folder: false’，然后将所有的图片放到_post的同级目录images下，然后进行调用![](/images/example.jpg) _config_yml中设置’post_asset_folder: true’, 这样建立aa.md的时候就同时新建了aa的文件夹，将图片放aa文件夹下，aa.md里调用的时候为![](aa/compare_markdown_img.png) 测试的时候犯了一个很低级的错误，就是我将图片命名为example.jpg.jpg, 导致一直预览不到。另外基于Markdown语法的图片可能会在首页和归档页看不到，不过对于我而言不是很重要。 跳过渲染文件skip_render后面得文件夹名字第一个不能是下划线，比如_book Markdown 语法参见Markdown语法总结]]></content>
     </entry>
 
     
     <entry>
       <title><![CDATA[Hexo学习2-利用hexo将博客同时推送到coding pages和github pages]]></title>
-      <url>%2F2017%2F01%2F23%2Fhexo_coding_github%2F</url>
+      <url>%2Fhexo_coding_github%2F</url>
       <content type="text"><![CDATA[前言在文章Hexo学习1-用hexo创建博客并发布到github pages中给出了如何将hexo创建的博客推送到github，这篇文章在”Hexo学习1-用hexo创建博客并发布到github pages“的基础上，将hexo创建的 博客同时发布到github pages和coding pages. 之所以这么做是有连个目的：一是为了分流，使得国内的用户访问coding pages，国外的用户访问github pages； 另外一个原因就是github pages貌似不能被百度收录，所以还要用coding pages。 预备内容需要安装git软件，并生成公私匙，可以参考这篇文章和配置SSH公钥。这里只需要用公钥id_rsa.pub文件 在coding.net上创建仓库coding.net和github类似，它的page也分为用户页和项目页两大类( Coding Pages 介绍)。在coding上申请一个账户，假设用户名为zhangshan，创建一个仓库，名字为zhangshan.coding.me (这种格式对应的是用户页，如果需要创建项目页，则名字可以随意。但是我测试发现，如果创建项目页，博客预览的格式不理想，不知道怎么回事) 配置coding上的公钥配置的目的是在本地可以git直接将hexo博客推送到coding.net上。首先在用户主页，将本地id_rsa.pub文件的内容配置到coding上。如下图所示 配置完以后，在本地的git bash(不是cmd里)进行验证 ssh -T git@git.coding.net 会提示”The authenticity of host ‘git.coding.net (220.243.237.72)’ can’t be established…”，这时候直接按回车，直到提示”You’ve connected to Coding.net via SSH successfully!”, 就说明配置成功。 在hexo里配置coding的推送地址在hexo的站点目录下(我的为hexoBlog)打开_config.yml，将coding.net的git地址放进去，如下所示 1234567deploy: type: git repository: github: git@github.com:zhangshan/zhangshan.github.io.git coding: git@git.coding.net:zhangshan/zhangshan.coding.me.git branch: master message: hexo deploy 进行推送和github pages的推送方式一样，不做赘述, 可以参考(Hexo学习1-用hexo创建博客并发布到github pages) coding 的pages设置在coding.net进入到自己的zhangshan.coding.me点pages服务，然后”部署来源”为master分支，就可以在浏览器中输入http://zhangshan.coding.me/zhangshan.coding.me中浏览博客。 至此已经完成了hexo博客同时推送到coding pages和github pages的任务。]]></content>
     </entry>
 
     
     <entry>
       <title><![CDATA[Hexo学习1-用hexo创建博客并发布到github pages]]></title>
-      <url>%2F2017%2F01%2F23%2FinstallHexo%2F</url>
+      <url>%2FinstallHexo%2F</url>
       <content type="text"><![CDATA[安装和配置hexo首先需要安装node.js和git, 然后在命令行(或者window powerShell)下安装hexo:npm install -g hexo 命令行进入到blog的上一级目录(比如说D://hexoRoot),创建一个hexo项目 hexo init hexoblog 这样，在hexoRoot目录下就创建了个hexoblog文件夹，进入到hexoBlog文件夹运行 hexo server 然后在浏览器窗口输入 http://localhost:4000/，就可以预览博客。 如果看不到，换一个端口试试，比如：hexo s -p 3600然后在浏览器窗口输入： http://localhost:3600/ 进行预览 最后安装插件（在命令行工具下,先进入到hexoBlog目录中执行下述命令）： 12345678910111213npm install hexo-generator-index --savenpm install hexo-generator-archive --savenpm install hexo-generator-category --savenpm install hexo-generator-tag --savenpm install hexo-server --savenpm install hexo-deployer-git --savenpm install hexo-deployer-heroku --savenpm install hexo-deployer-rsync --savenpm install hexo-deployer-openshift --savenpm install hexo-renderer-marked@0.2 --savenpm install hexo-renderer-stylus@0.2 --savenpm install hexo-generator-feed@1 --savenpm install hexo-generator-sitemap@1 --save 发布hexo博客到github pages github建立远程仓库 首先需要在github上建一个仓库名为username.github.io（username对应自己的github用户名，这里假设为zhangshan; github.io是则说明建的是个人用户页，不是项目页，两者区别参见：User, Organization, and Project Pages）.这个项目的网址为(可在项目里查看): zhangshan/zhangshan.github.io.git 本地配置远程的git仓库 在本地进入到新建的hexoBlog文件夹里，配置_config.yml文件： 1234deploy:type: gitrepository: git@github.com:zhangshan/zhangshan.github.io.gitbranch: master 然后执行如下命令： 123hexo cleanhexo generatehexo deploy 浏览器窗口查看 输入https://zhangshan.github.io/就可以看到博客效果 参考资料 hexo帮助文档 使用hexo-github搭建静态博客：对配置文件里的每项参数做出了说明 next theme的说明文档 Markdown 简单的世界]]></content>
     </entry>
 
     
     <entry>
       <title><![CDATA[Markdown语法总结]]></title>
-      <url>%2F2017%2F01%2F23%2Fmarkdown_gram%2F</url>
+      <url>%2Fmarkdown_gram%2F</url>
       <content type="text"><![CDATA[@: [gitbookLearnBook, markdown_grammer] 分级标题 # 为一级标题## 为二级标题，以此类推 强调 **粗体** 粗体 *斜体* 斜体 ~~删除线~~ 删除线 字符块引用&gt; 你好 你好 代码块行内代码用两个反引号(标准键盘的ESC下的那个键)引着, 比如A=1 大块的代码用前后3个反引号引着，比如 12a=1b=2 也可以是每行代码前加4个空格(tab键)来实现 列表无序列表 *列表1 *列表2 *列表2的子列表(+号或者-号也可以) 列表1 列表2 列表2的子列表 有序列表：前面加具体的数字和顿号即可 任务列表 使用 - [ ] 和 - [x] [x] 已完成事项 [ ] 待办事项 超链接链接http网址： [bbc](https://bbc.com) bbc 链接本地文件： [for this project](docs/CONTRIBUTING.md) 则链接的是当前.md所在的目录的docs文件下的CONTRIBUTING.md文件。 [for this project](../CONTRIBUTING.md) 则链接的是当前.md所在的目录的上一级目录的CONTRIBUTING.md文件。 交叉引用 在B段落处引用的时候引用A段落的内容。首先在A的标题新建标签 A的标题{\#tagA} 然后在B处输入： [&quot;参见A&quot;](\#tagA) 插入图片和表格插入图片 ![github logo](/images/logo.png) 插入的logo.png位于当前的.md文件的目录的images文件夹下 插入表格 表格的列于列之间用|隔开，第一行与第二行之间用—–隔开，比如 | aa | bb | |:---|:---| | dd | ee || aa | bb | |:—|:—| | dd | ee | e 分割线插入三个***即可. 转义字符反斜杠\ 比如，由于#号在markdown语法里代表标题，如果要输入#号，则可以在前面加个反斜杠。 其他 输出空格：Markdown不识别半角空格，当需要空格时，按shift+Space,然后再按空格键即可. 两个空格强制换行 添加备注 &lt;!-- 备注 --&gt; LaTeX 公式流程图 和 时序图参考资料 Basic writing and formatting syntax Markdown Tutorial Markdown 语法基础及使用教程]]></content>
     </entry>
 
     
     <entry>
       <title><![CDATA[Hello World]]></title>
-      <url>%2F2017%2F01%2F23%2Fhello-world%2F</url>
+      <url>%2Fhello-world%2F</url>
       <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. $$a=3^2+\sqrt(3)$$ Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
     </entry>
 

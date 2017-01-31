@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Bookdown Reading Notes</title>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <meta name="description" content="Bookdown Reading Notes">
+  <meta name="generator" content="bookdown 0.3 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Bookdown Reading Notes" />
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="https://mdengli.com/" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Bookdown Reading Notes" />
+  
+  
+  
+
+<meta name="author" content="Matthew Li">
+
+
+<meta name="date" content="2017-01-30">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="install-bookdown.html">
+<link rel="next" href="section-3.html">
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="http://mdengli.com/">Bakc to my blog</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="install-bookdown.html"><a href="install-bookdown.html"><i class="fa fa-check"></i><b>1</b> 安装bookdown</a></li>
+<li class="chapter" data-level="2" data-path="section-2.html"><a href="section-2.html"><i class="fa fa-check"></i><b>2</b> 编辑、预览和发布</a><ul>
+<li class="chapter" data-level="2.1" data-path="section-2.html"><a href="section-2.html#bookdown"><i class="fa fa-check"></i><b>2.1</b> bookdown源码组成</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="section-2.html"><a href="section-2.html#rmd"><i class="fa fa-check"></i><b>2.1.1</b> .rmd文件</a></li>
+<li class="chapter" data-level="2.1.2" data-path="section-2.html"><a href="section-2.html#yml"><i class="fa fa-check"></i><b>2.1.2</b> .yml</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="section-3.html"><a href="section-3.html"><i class="fa fa-check"></i><b>3</b> 语法</a><ul>
+<li class="chapter" data-level="3.1" data-path="section-3.html"><a href="section-3.html#markdown-syntax"><i class="fa fa-check"></i><b>3.1</b> Markdown syntax</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="section-3.html"><a href="section-3.html#inline-formatting"><i class="fa fa-check"></i><b>3.1.1</b> Inline formatting</a></li>
+<li class="chapter" data-level="3.1.2" data-path="section-3.html"><a href="section-3.html#block-level-elements"><i class="fa fa-check"></i><b>3.1.2</b> Block-level elements</a></li>
+<li class="chapter" data-level="3.1.3" data-path="section-3.html"><a href="section-3.html#math-expresions"><i class="fa fa-check"></i><b>3.1.3</b> math expresions</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="section-3.html"><a href="section-3.html#markdown-extensions-by-bookdown"><i class="fa fa-check"></i><b>3.2</b> Markdown extensions by bookdown</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="section-3.html"><a href="section-3.html#number-and-reference-equations"><i class="fa fa-check"></i><b>3.2.1</b> number and reference equations</a></li>
+<li class="chapter" data-level="3.2.2" data-path="section-3.html"><a href="section-3.html#theorems-and-proofs"><i class="fa fa-check"></i><b>3.2.2</b> Theorems and proofs</a></li>
+<li class="chapter" data-level="3.2.3" data-path="section-3.html"><a href="section-3.html#text-references"><i class="fa fa-check"></i><b>3.2.3</b> Text references</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="section-3.html"><a href="section-3.html#figures"><i class="fa fa-check"></i><b>3.3</b> Figures</a></li>
+<li class="chapter" data-level="3.4" data-path="section-3.html"><a href="section-3.html#citations"><i class="fa fa-check"></i><b>3.4</b> Citations</a></li>
+<li class="chapter" data-level="3.5" data-path="section-3.html"><a href="section-3.html#cross-references"><i class="fa fa-check"></i><b>3.5</b> Cross-references</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Bookdown Reading Notes</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="section-2" class="section level1">
+<h1><span class="header-section-number">2</span> 编辑、预览和发布</h1>
+<div id="bookdown" class="section level2">
+<h2><span class="header-section-number">2.1</span> bookdown源码组成</h2>
+<p>bookdown的源文件由下列格式组成 - .rmd - .yml</p>
+<div id="rmd" class="section level3">
+<h3><span class="header-section-number">2.1.1</span> .rmd文件</h3>
+<p>rmd为章节的源文件。主要包括 - index.rmd - 其他章节的rmd</p>
+<p>index.rmd相当于是主页文件，bookdown在渲染的时候将index放在最前面，其他章节则默认按照数字编号排列。 因此一般章节的命名为:01-a,02-aa,…。 如果不想按照数字排列，则需要新建<code>_bookdown.yml</code>文件来指定渲染顺序 参考第<a href="section-2.html#yml">2.1.2</a>小节。</p>
+<p>index.rmd的开始可以放YMAL的数据，以<code>---</code>开始和结束。比如说</p>
+<pre><code>--- 
+title: &quot;Advanced R Solutions&quot;   &lt;!-- 标题. --&gt;
+author: &quot;Malte Grosser &amp; Henning Bumann&quot; &lt;!-- 作者. --&gt;
+date: &quot;2017-01-30&quot;   &lt;!-- 日期. --&gt;
+knit: &quot;bookdown::render_book&quot; 
+site: bookdown::bookdown_site &lt;!--  RStudio will be able to discover the directory as a book source directory，在Rstudio打开project就能build了. --&gt;
+output: &lt;!---输出格式，也可以新建一个.output.yml在.yml里设置---&gt;
+  bookdown::gitbook:
+    config:
+      toc:
+          collapse: section
+          scroll_highlight: yes
+          before: null
+          after: null
+      edit: https://github.com/Tazinho/Advanced-R-Solutions/edit/master/%s
+documentclass: book
+bibliography: [packages.bib] &lt;!--bib文件的名字. --&gt;
+biblio-style: apalike &lt;!--文献显示的格式. --&gt;
+link-citations: yes
+github-repo: Tazinho/Advanced-R-Solutions &lt;!--github仓库的网址 --&gt;
+before_chapter_script: [&quot;before_chapter_script_1.R&quot;]
+description: &quot;Solutions to the exercises in Hadley Wickham&#39;s book Advanced R.&quot;
+cover-image: images/advrs_cover.png   &lt;!--封皮图像--&gt;
+---</code></pre>
+</div>
+<div id="yml" class="section level3">
+<h3><span class="header-section-number">2.1.2</span> .yml</h3>
+<ul>
+<li>_bookdown.yml (可选)</li>
+<li></li>
+</ul>
+<p>_bookdown.yml里的<code>rmd_files</code>可以指定渲染的顺序，比如：</p>
+<pre><code>rmd_files: [&quot;index.RMD&quot;, &quot;01-install_bookdown.Rmd&quot;, &quot;03-edit-preview-publish.Rmd&quot;,&quot;02-test_syntax.rmd&quot;]</code></pre>
+<p>_bookdown.yml还可以包含其他信息，比如</p>
+<pre><code>book_filename: &quot;my-book.Rmd&quot;
+repo: https://github.com/rstudio/bookdown/
+before_chapter_script: [&quot;script1.R&quot;, &quot;script2.R&quot;]
+after_chapter_script: &quot;script3.R&quot;
+edit: https://github.com/rstudio/bookdown-demo/edit/master/%s
+output_dir: &quot;book-output&quot; # 渲染后的目录名字
+clean: [&quot;my-book.bbl&quot;, &quot;R-packages.bib&quot;]
+language:
+  label:
+    fig: &quot;FIGURE &quot;
+    tab: &quot;TABLE &quot;
+  ui:
+    edit: &quot;Edit&quot;
+    chapter_name: &quot;Chapter &quot;</code></pre>
+<p>含义可以参考：<a href="https://bookdown.org/yihui/bookdown/configuration.html#configuration">bookdown书籍</a></p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="install-bookdown.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="section-3.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
+
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    if (location.protocol !== "file:" && /^https?:/.test(script.src))
+      script.src  = script.src.replace(/^https?:/, '');
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

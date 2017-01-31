@@ -1,0 +1,1080 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="gitbook," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="MLi's Blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="需要用到的软件
+nodes.js；
+gitbook命令行工具(用于创建和编译书籍，不用手动下载，安装完nodes.js通过命令行工具自动安装)；
+Markdown语法编辑器（用于编辑书本的内容和格式。在线或者离线均可，可以参考：Markdown 编辑器推荐）；
+
+gitbook命令行工具安装安装教程主要参考：SIOgitBook
+
+下载node.js的源文件并安装。安装完以后在系统CMD里输入:n">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Gitbook学习笔记(1):利用gitbook命令行工具创建和编译书籍">
+<meta property="og:url" content="http://mdeng1985.github.io/gitbook_cmd_study/index.html">
+<meta property="og:site_name" content="MLi's Blog">
+<meta property="og:description" content="需要用到的软件
+nodes.js；
+gitbook命令行工具(用于创建和编译书籍，不用手动下载，安装完nodes.js通过命令行工具自动安装)；
+Markdown语法编辑器（用于编辑书本的内容和格式。在线或者离线均可，可以参考：Markdown 编辑器推荐）；
+
+gitbook命令行工具安装安装教程主要参考：SIOgitBook
+
+下载node.js的源文件并安装。安装完以后在系统CMD里输入:n">
+<meta property="og:updated_time" content="2017-01-26T04:04:40.533Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Gitbook学习笔记(1):利用gitbook命令行工具创建和编译书籍">
+<meta name="twitter:description" content="需要用到的软件
+nodes.js；
+gitbook命令行工具(用于创建和编译书籍，不用手动下载，安装完nodes.js通过命令行工具自动安装)；
+Markdown语法编辑器（用于编辑书本的内容和格式。在线或者离线均可，可以参考：Markdown 编辑器推荐）；
+
+gitbook命令行工具安装安装教程主要参考：SIOgitBook
+
+下载node.js的源文件并安装。安装完以后在系统CMD里输入:n">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://mdeng1985.github.io/gitbook_cmd_study/"/>
+
+
+
+
+
+  <title> Gitbook学习笔记(1):利用gitbook命令行工具创建和编译书籍 | MLi's Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?58f257607474b194888f692488873cb8";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">MLi's Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+    
+      <p class="site-subtitle"></p>
+    
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
+            
+            Sitemap
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://mdeng1985.github.io/gitbook_cmd_study/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Matthew Li">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/uploads/avatar.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="MLi's Blog">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="MLi's Blog" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Gitbook学习笔记(1):利用gitbook命令行工具创建和编译书籍
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-25T22:04:24-06:00">
+                2017-01-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/gitbook/" itemprop="url" rel="index">
+                    <span itemprop="name">gitbook</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/gitbook_cmd_study/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="gitbook_cmd_study/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="需要用到的软件"><a href="#需要用到的软件" class="headerlink" title="需要用到的软件"></a>需要用到的软件</h1><ul>
+<li><a href="https://nodejs.org/en/" title="nodes.js" target="_blank" rel="external">nodes.js</a>；</li>
+<li>gitbook命令行工具(用于创建和编译书籍，不用手动下载，安装完nodes.js通过命令行工具自动安装)；</li>
+<li><a href="https://zh.wikipedia.org/wiki/Markdown" title="Markdown" target="_blank" rel="external">Markdown</a>语法编辑器（用于编辑书本的内容和格式。在线或者离线均可，可以参考：<a href="https://wizardforcel.gitbooks.io/markdown-simple-world/content/1.html" title="Markdown 编辑器推荐" target="_blank" rel="external">Markdown 编辑器推荐</a>）；</li>
+</ul>
+<h1 id="gitbook命令行工具安装"><a href="#gitbook命令行工具安装" class="headerlink" title="gitbook命令行工具安装"></a>gitbook命令行工具安装</h1><p>安装教程主要参考：<a href="https://toolchain.gitbook.com/setup.html" title="SIOgitBook" target="_blank" rel="external">SIOgitBook</a></p>
+<ol>
+<li><p>下载<a href="https://nodejs.org/en/" title="node.js" target="_blank" rel="external">node.js</a>的源文件并安装。安装完以后在系统CMD里输入:<code>node -v</code>查看node.jsb版本，以校验是否安装成功。</p>
+</li>
+<li><p>系统cmd里安装gitbook命令行工具: <code>npm install gitbook-cli -g</code>; 然后输入<code>gitbook -V</code> (V大写)查看gitbook命令行工具版本，以校验gitbook是否安装成功。返回版本号则说明安装成功。 如果需要卸载gitbook,则可以<code>npm uninstall -g gitbook</code></p>
+</li>
+</ol>
+<h1 id="创建和编译一个只有目录的书籍"><a href="#创建和编译一个只有目录的书籍" class="headerlink" title="创建和编译一个只有目录的书籍"></a>创建和编译一个只有目录的书籍</h1><h2 id="创建书籍目录"><a href="#创建书籍目录" class="headerlink" title="创建书籍目录"></a>创建书籍目录</h2><p>在本地电脑上新建一个文件夹，比如test；然后CMD下进入该文件夹，输入</p>
+<blockquote>
+<p><code>gitbook init</code></p>
+</blockquote>
+<p>会在该文件夹下创建两个基本文件README.md和SUMMARY.md。其中README.md为书本的介绍，用编辑器打开以后默认内容为：</p>
+<blockquote>
+<p><code># Introduction</code></p>
+</blockquote>
+<p>SUMMARY.md为书籍的框架文件，用编辑器打开以后默认内容为：</p>
+<blockquote>
+<p><code># Summary</code> <code>*</code> <code>[Introduction]</code> <code>(README.md)</code></p>
+</blockquote>
+<p>其中<code># Summary</code>为固定格式，下一行声明的是生成一个标题为Introduction的章，里面的具体内容由README.md文件给出。</p>
+<h2 id="编辑书籍目录和框架"><a href="#编辑书籍目录和框架" class="headerlink" title="编辑书籍目录和框架"></a>编辑书籍目录和框架</h2><p>系统默认的SUMMARY.md里的README.md实际上是书籍的介绍文件，因此我们自己撰写的时候可以另外创建一个.md文件（比如chap1_body.md）然后将Summary.md文件里的第二行改为 <code>* [Introduction]</code> <code>(chap1_body.md)</code>。</p>
+<p>如果一个章节里有好几个小节，每个小节再由不同的.md文件给出，则可以参考<a href="https://yuzeshan.gitbooks.io/gitbook-studying/content/book/gitbook-cli.html" target="_blank" rel="external">下例</a>修改SUMMARY.md源代码为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"># Summary</div><div class="line">* [基本安装](howtouse/README.md)</div><div class="line">   - [Node.js安装](howtouse/Nodejsinstall.md)</div><div class="line">   - [Gitbook安装](howtouse/gitbookinstall.md)</div><div class="line">   - [Gitbook命令行速览](howtouse/gitbookcli.md)</div></pre></td></tr></table></figure>
+<p>这时候需要再次执行<code>gitbook init</code>，这样在当前目录下会创建名howtouse的子文件夹，该子文件夹下有README.md、Nodejsinstall.md、gitbookinstall.md和gitbookcli.md四个文件。值得注意的是，SUMMARY.md里</p>
+<blockquote>
+<ul>
+<li>] 和 ( 中间不能有空格</li>
+<li>[ 和前面的*和-要有空格。</li>
+<li>运行完gitbook init，文件夹内已有的文件不会被覆盖，也不会被删除。</li>
+</ul>
+</blockquote>
+<p>否则不能创建成功。</p>
+<h2 id="编辑书籍的内容"><a href="#编辑书籍的内容" class="headerlink" title="编辑书籍的内容"></a>编辑书籍的内容</h2><p>上一小节里已经创建了书籍的框架，接下来就需要采用Markdown编辑器进行编辑添加内容到Nodejsinstall.md、gitbookinstall.md和gitbookcli.md、README.md里。</p>
+<h2 id="编译生成和预览书籍"><a href="#编译生成和预览书籍" class="headerlink" title="编译生成和预览书籍"></a>编译生成和预览书籍</h2><p>最后需要在系统CMD下再次运行gitbook命令生成书籍，</p>
+<blockquote>
+<p>生成服务器？：<code>gitbook serve</code> 最后在浏览器网页地址栏输入<code>http://localhost:4000/</code>进行预览</p>
+<p>生成静态网页：<code>gitbook build</code></p>
+</blockquote>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/gitbook/" rel="tag"># gitbook</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/hexo-enhance/" rel="next" title="Hexo学习4-hexo站点的丰富和优化">
+                <i class="fa fa-chevron-left"></i> Hexo学习4-hexo站点的丰富和优化
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/publish_gitbook/" rel="prev" title="Gitbook学习笔记(2): 发布书籍到github pages上">
+                Gitbook学习笔记(2): 发布书籍到github pages上 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+  <div class="page-footer">
+      
+        <div id="eof" class="print-invisible">
+          <hr class="eof">
+        </div>
+
+        <div class="copyright" style="clear:both;">
+           <p><span>本文标题:</span><a href="/gitbook_cmd_study/">Gitbook学习笔记(1):利用gitbook命令行工具创建和编译书籍</a></p>
+           <p><span>文章作者:</span><a href="/" title="访问 Matthew Li 的个人博客">Matthew Li</a></p>
+           <p><span>转载请保留本文标题及原始链接。</span></p>
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/publish_gitbook/">Gitbook学习笔记(2): 发布书籍到github pages上</a>
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/hexo-enhance/">Hexo学习4-hexo站点的丰富和优化</a>
+            
+          </div>
+        </div>
+      
+
+    </div>
+
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="gitbook_cmd_study/"
+     data-title="Gitbook学习笔记(1):利用gitbook命令行工具创建和编译书籍"
+     data-content=""
+     data-url="http://mdeng1985.github.io/gitbook_cmd_study/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="gitbook_cmd_study/"
+           data-title="Gitbook学习笔记(1):利用gitbook命令行工具创建和编译书籍" data-url="http://mdeng1985.github.io/gitbook_cmd_study/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/avatar.jpg"
+               alt="Matthew Li" />
+          <p class="site-author-name" itemprop="name">Matthew Li</p>
+          <p class="site-description motion-element" itemprop="description">Moon and Sixpence</p>
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">17</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">18</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://cn.linkedin.com/in/maodeng-li-aa46b175" target="_blank" title="Linkedin">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Linkedin
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#需要用到的软件"><span class="nav-number">1.</span> <span class="nav-text">需要用到的软件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#gitbook命令行工具安装"><span class="nav-number">2.</span> <span class="nav-text">gitbook命令行工具安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#创建和编译一个只有目录的书籍"><span class="nav-number">3.</span> <span class="nav-text">创建和编译一个只有目录的书籍</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建书籍目录"><span class="nav-number">3.1.</span> <span class="nav-text">创建书籍目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编辑书籍目录和框架"><span class="nav-number">3.2.</span> <span class="nav-text">编辑书籍目录和框架</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编辑书籍的内容"><span class="nav-number">3.3.</span> <span class="nav-text">编辑书籍的内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编译生成和预览书籍"><span class="nav-number">3.4.</span> <span class="nav-text">编译生成和预览书籍</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Matthew Li</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv"><i class="fa fa-user"></i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
+  
+
+  
+    <span class="site-pv"><i class="fa fa-eye"></i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
+  
+  
+</div>
+
+
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"mdengli"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+
+</body>
+</html>
