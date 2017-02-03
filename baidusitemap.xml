@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://mdeng1985.github.io/mtocppLearn/</loc>
-    <lastmod>2017-02-03T17:08:09.966Z</lastmod>
+    <lastmod>2017-02-03T17:33:20.272Z</lastmod>
     <data>
         <display>
         <title>mtoc++创建matlab代码文档</title>
@@ -49,9 +49,9 @@
         <title>bookdown创建电子书全记录</title>
         <pubTime>2017-01-30T01:05:14.000Z</pubTime>
         
-        <tag>bookdown</tag>
-         
         <tag>R语言</tag>
+         
+        <tag>bookdown</tag>
          
         <tag>RMarkdown</tag>
          
@@ -75,11 +75,11 @@
         <title>RMarkdown</title>
         <pubTime>2017-01-29T21:46:25.000Z</pubTime>
         
-        <tag>R语言</tag>
-         
         <tag>Rmarkdown</tag>
          
         <tag>Markdown</tag>
+         
+        <tag>R语言</tag>
          
          
            
@@ -96,13 +96,13 @@
         <title>Rstudio中Rgitbook的应用</title>
         <pubTime>2017-01-29T17:20:37.000Z</pubTime>
         
+        <tag>Markdown</tag>
+         
         <tag>R语言</tag>
          
         <tag>RMarkdown</tag>
          
         <tag>gitbook</tag>
-         
-        <tag>Markdown</tag>
          
         <tag>Rstudio</tag>
          
@@ -319,9 +319,9 @@
         <title>gitbook学习笔记(4):FAQ</title>
         <pubTime>2017-01-26T04:37:00.000Z</pubTime>
         
-        <tag>markdown</tag>
-         
         <tag>gitbook</tag>
+         
+        <tag>markdown</tag>
          
          
            
