@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="gitbook,hexo," />
+  <meta name="keywords" content="mtoc++,文档生成,Doxygen," />
 
 
 
@@ -86,25 +86,24 @@
 
 
 
-<meta name="description" content="说明对于我而言，有些笔记写成书得形式会更好，这就离不开gitbook。因此我就想把gitbook写得电子书 放到hexo里得博客里。
-gitbook编译后(gitbook build)得到电子书网页文件在_book文件夹里(参考Gitbook学习笔记(1):利用gitbook命令行工具创建和编译书籍)
-复制gitbook的电子书到hexo目录下
-在source文件夹下新建一个文件夹gbook，用于">
+<meta name="description" content="mtoc++是什么mtoc++是matlab的doxygen的语法过滤器，能够生成代码文档。
+参见官方说明
+The filter program ‘mtocpp’ transforms relevant parts of the M-Files into C++ syntax, which can be parsed by doxygen. The generated html files can">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo学习6-hexo里整合gitbook制作的电子书">
-<meta property="og:url" content="http://mdeng1985.github.io/hexo-gitbook/index.html">
+<meta property="og:title" content="mtoc++创建matlab代码文档">
+<meta property="og:url" content="http://mdeng1985.github.io/mtocppLearn/index.html">
 <meta property="og:site_name" content="MLi's Blog">
-<meta property="og:description" content="说明对于我而言，有些笔记写成书得形式会更好，这就离不开gitbook。因此我就想把gitbook写得电子书 放到hexo里得博客里。
-gitbook编译后(gitbook build)得到电子书网页文件在_book文件夹里(参考Gitbook学习笔记(1):利用gitbook命令行工具创建和编译书籍)
-复制gitbook的电子书到hexo目录下
-在source文件夹下新建一个文件夹gbook，用于">
-<meta property="og:updated_time" content="2017-01-28T05:54:23.894Z">
+<meta property="og:description" content="mtoc++是什么mtoc++是matlab的doxygen的语法过滤器，能够生成代码文档。
+参见官方说明
+The filter program ‘mtocpp’ transforms relevant parts of the M-Files into C++ syntax, which can be parsed by doxygen. The generated html files can">
+<meta property="og:image" content="http://mdeng1985.github.io/mtocppLearn/comment1.png">
+<meta property="og:updated_time" content="2017-02-03T17:08:09.966Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo学习6-hexo里整合gitbook制作的电子书">
-<meta name="twitter:description" content="说明对于我而言，有些笔记写成书得形式会更好，这就离不开gitbook。因此我就想把gitbook写得电子书 放到hexo里得博客里。
-gitbook编译后(gitbook build)得到电子书网页文件在_book文件夹里(参考Gitbook学习笔记(1):利用gitbook命令行工具创建和编译书籍)
-复制gitbook的电子书到hexo目录下
-在source文件夹下新建一个文件夹gbook，用于">
+<meta name="twitter:title" content="mtoc++创建matlab代码文档">
+<meta name="twitter:description" content="mtoc++是什么mtoc++是matlab的doxygen的语法过滤器，能够生成代码文档。
+参见官方说明
+The filter program ‘mtocpp’ transforms relevant parts of the M-Files into C++ syntax, which can be parsed by doxygen. The generated html files can">
+<meta name="twitter:image" content="http://mdeng1985.github.io/mtocppLearn/comment1.png">
 
 
 
@@ -132,13 +131,13 @@ gitbook编译后(gitbook build)得到电子书网页文件在_book文件夹里(�
 
 
 
-  <link rel="canonical" href="http://mdeng1985.github.io/hexo-gitbook/"/>
+  <link rel="canonical" href="http://mdeng1985.github.io/mtocppLearn/"/>
 
 
 
 
 
-  <title> Hexo学习6-hexo里整合gitbook制作的电子书 | MLi's Blog </title>
+  <title> mtoc++创建matlab代码文档 | MLi's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -314,7 +313,7 @@ gitbook编译后(gitbook build)得到电子书网页文件在_book文件夹里(�
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://mdeng1985.github.io/hexo-gitbook/">
+  <link itemprop="mainEntityOfPage" href="http://mdeng1985.github.io/mtocppLearn/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Matthew Li">
@@ -338,7 +337,7 @@ gitbook编译后(gitbook build)得到电子书网页文件在_book文件夹里(�
             
             
               
-                Hexo学习6-hexo里整合gitbook制作的电子书
+                mtoc++创建matlab代码文档
               
             
           </h1>
@@ -353,8 +352,8 @@ gitbook编译后(gitbook build)得到电子书网页文件在_book文件夹里(�
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-27T23:26:34-06:00">
-                2017-01-27
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-02T22:05:02-06:00">
+                2017-02-02
               </time>
             
 
@@ -364,28 +363,6 @@ gitbook编译后(gitbook build)得到电子书网页文件在_book文件夹里(�
           </span>
 
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/建站/" itemprop="url" rel="index">
-                    <span itemprop="name">建站</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
 
           
             
@@ -394,8 +371,8 @@ gitbook编译后(gitbook build)得到电子书网页文件在_book文件夹里(�
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/hexo-gitbook/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="hexo-gitbook/" itemprop="commentCount"></span>
+                <a href="/mtocppLearn/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="mtocppLearn/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -426,21 +403,60 @@ gitbook编译后(gitbook build)得到电子书网页文件在_book文件夹里(�
       
 
       
-        <h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>对于我而言，有些笔记写成书得形式会更好，这就离不开gitbook。因此我就想把gitbook写得电子书 放到hexo里得博客里。</p>
-<p>gitbook编译后(<code>gitbook build</code>)得到电子书网页文件在<code>_book</code>文件夹里(参考<a href="/gitbook_cmd_study/" title="Gitbook学习笔记(1):利用gitbook命令行工具创建和编译书籍">Gitbook学习笔记(1):利用gitbook命令行工具创建和编译书籍</a>)</p>
-<h1 id="复制gitbook的电子书到hexo目录下"><a href="#复制gitbook的电子书到hexo目录下" class="headerlink" title="复制gitbook的电子书到hexo目录下"></a>复制gitbook的电子书到hexo目录下</h1><ul>
-<li>在source文件夹下新建一个文件夹gbook，用于存放所有的的gitbook编译后的电子书网页。</li>
-<li>将gibook编译得到的<code>_book</code>拷贝到gbook目录下，并重命名(我是按照电子书的主题来命名，比如说javaStudy)。</li>
-<li><p>由于gitbook编译后的html文件不用渲染，因此需要在站点的<code>_config.yml</code>里设置</p>
+        <h1 id="mtoc-是什么"><a href="#mtoc-是什么" class="headerlink" title="mtoc++是什么"></a>mtoc++是什么</h1><p>mtoc++是matlab的doxygen的语法过滤器，能够生成代码文档。</p>
+<p>参见<a href="http://www.ians.uni-stuttgart.de/MoRePaS/software/mtocpp/docs/index.html" target="_blank" rel="external">官方说明</a></p>
+<p>The filter program ‘mtocpp’ transforms relevant parts of the M-Files into C++ syntax, which can be parsed by doxygen. The generated html files can be processed by the program ‘mtocpp_post’ in order to generate documentation looking more like Matlab.</p>
+<p>Short mtoc++ feature list:</p>
+<ul>
+<li>Transforms function m-files into standalone functions</li>
+<li>Supports most of the OOP features from Matlab</li>
+</ul>
+<h1 id="mtoc-安装"><a href="#mtoc-安装" class="headerlink" title="mtoc++安装"></a>mtoc++安装</h1><p>在mtoc++之前首先需要安装Doxygen(必选，1.8版本以后的)和<a href="http://www.graphviz.org/" target="_blank" rel="external">dot graphviz软件</a>(可选，用于生成程序之间的图结构)。</p>
+<p>安装完以后将上面两个软件的bin目录加到系统环境变量中，比如：</p>
 <blockquote>
-<p><code>skip_render: gbook/**</code></p>
+<p><code>C:\Program Files (x86)\Graphviz2.38\bin</code></p>
 </blockquote>
-<p>这行命令的作用是告诉hexo在运行<code>hexo generate</code>的时候,gbook文件夹下的所有文件都不要渲染，直接拷贝到public文件夹下。</p>
-<p><strong>注意：skip_render后面的文件夹是相对于source目录下的，而且文件夹首字母不能使下划线，否则该命令无效</strong></p>
+<p>接下来需要下载mtoc++, 我用的是windows64位系统，直接下载的是编译好的<a href="http://www.ians.uni-stuttgart.de/MoRePaS/software/mtocpp/mtoc++_win_1.5.zip" target="_blank" rel="external">Windows binaries (32/64bit) and tools</a>， 解压缩以后为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">├─tools</div><div class="line">│  └─config</div><div class="line">├─win32</div><div class="line">│  └─debug</div><div class="line">└─win64</div><div class="line">    └─debug</div></pre></td></tr></table></figure>
+<p>将win64文件添加到系统环境变量。</p>
+<h1 id="matlab项目里配置mtoc"><a href="#matlab项目里配置mtoc" class="headerlink" title="matlab项目里配置mtoc++"></a>matlab项目里配置mtoc++</h1><p>我在本地创建了个matlab测试project为testMtocpp(已上传至<a href="https://github.com/mdeng1985/testMtocpp" target="_blank" rel="external">github仓库</a>)：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">└─src</div></pre></td></tr></table></figure>
+<p>其中src里为测试的matlab文件。</p>
+<ul>
+<li>将mtoc++/tools下的MatlabDocMaker.m文件拷贝到src目录下</li>
+<li><p>打开MatlabDocMaker.m，将<code>function name = getProjectName</code>下的error注释掉，并设置项目名，比如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">name = &apos;My mtoc++ test project&apos;;</div></pre></td></tr></table></figure>
+</li>
+<li><p>将mtoc++/tools下的config拷贝到src的同级目录下</p>
+</li>
+<li><p>在src的同级目录下新建doc文件夹，最后的结构为</p>
 </li>
 </ul>
-<h1 id="博客里引用"><a href="#博客里引用" class="headerlink" title="博客里引用"></a>博客里引用</h1><p>博客里直接利用markdown语法引用即可，比如</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[java学习笔记](/gbook/javaStudy/index.html)</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">├─config</div><div class="line">├─doc</div><div class="line">└─src</div></pre></td></tr></table></figure>
+<h1 id="运行MatlabDocMaker生成文档"><a href="#运行MatlabDocMaker生成文档" class="headerlink" title="运行MatlabDocMaker生成文档"></a>运行MatlabDocMaker生成文档</h1><ul>
+<li><p>在matlab命令窗口输入：<code>MatlabDocMaker.setup</code>, 按照提示设置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">your projects source directory (输入n，然后选择src)</div><div class="line">documentation configuration files directory (选config文件夹)</div><div class="line">documentation output directory (选doc文件夹)</div></pre></td></tr></table></figure>
+<p>设置完提示安装成功</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">[Required] Checking for doxygen...  found 1.8.13</div><div class="line">[Required] Checking for mtoc++...  found 1.5</div><div class="line">[Recommended] Checking for dot...  found dot - graphviz version 2.38.0 (20140413.2041)</div><div class="line">[Recommended] Checking for latex...  found MiKTeX-pdfTeX 2.9.4307 (1.40.12) (MiKTeX 2.9)</div><div class="line">[Recommended] Checking for ghostscript...  found 9.05</div><div class="line">&lt;&lt;&lt;&lt; MatlabDocMaker setup successful. &gt;&gt;&gt;&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>运行<code>MatlabDocMaker.create</code>生成文档</p>
+</li>
+</ul>
+<h1 id="进阶学习"><a href="#进阶学习" class="headerlink" title="进阶学习"></a>进阶学习</h1><h2 id="设置中文comment"><a href="#设置中文comment" class="headerlink" title="设置中文comment"></a>设置中文comment</h2><h2 id="函数的简单注释"><a href="#函数的简单注释" class="headerlink" title="函数的简单注释"></a>函数的简单注释</h2><p>源程序为<code>descriptionTest.m</code>，注释如下(<strong>中文部分是解读，在注释里没有</strong>):</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">% This function tests comments of decription,parameters, return values (brief description) 第一行为函数的简短说明</div><div class="line">%</div><div class="line">% This is detailed description (After the first empty documentation line, paragraphs of the detailed</div><div class="line">% description begin) 这个为具体说明，注意和第一行之间有个空行</div><div class="line">%</div><div class="line">% see: http://www.stack.nl/~dimitri/doxygen/manual/docblocks.html#docstructure</div><div class="line">%</div><div class="line">% also see: http://mdengli.com/mtocppLearn/ for a detail explaination</div><div class="line">%</div><div class="line">% Parameters: (参数说明)</div><div class="line">%  a: first parameter of type testnamespace.testclass.</div><div class="line">%</div><div class="line">% Return values: (返回值说明)</div><div class="line">%  y: return value</div></pre></td></tr></table></figure>
+<p>生成网页以后是</p>
+<p><img src="/mtocppLearn/comment1.png" alt=""></p>
+<p><strong>几点解读</strong>：</p>
+<ul>
+<li>注释分为两部分：第一部分为description, parameters, return values； 第二部分为doxygen直接支持的命令</li>
+<li>连接第一部分和第二部分要有个空行，这个空行开头不能有<code>%</code></li>
+<li>第一部分内部和第二部分内部：如果中间是空行，开头必须要有<code>%</code>，否则参数的注释会失效。</li>
+<li>第二部分的执行doxygen命令的时候，要以<code>%|</code>开头。</li>
+<li>第二部分常见的doxygen命令为<code>\author</code>, <code>\todo</code>。好像<code>@命令</code>和<code>\命令</code>的含义是一样的。更多doxygen命令为： <a href="https://www.stack.nl/~dimitri/doxygen/manual/commands.html" target="_blank" rel="external">doxygen commands</a>, 比如</li>
+<li>段落的第一行已冒号结尾，这样这一行就会以黑体显示</li>
+<li>可以直接引用m文件，比如引用<code>demo.m</code>直接输入<code>demo.m</code></li>
+</ul>
+<h2 id="函数注释全解读"><a href="#函数注释全解读" class="headerlink" title="函数注释全解读"></a>函数注释全解读</h2><p>详细的示例文件：<a href="https://www.mathworks.com/matlabcentral/fileexchange/33826-mdrohmann-mtocpp" target="_blank" rel="external"><code>doxygen.m</code></a></p>
 
       
     </div>
@@ -464,9 +480,11 @@ gitbook编译后(gitbook build)得到电子书网页文件在_book文件夹里(�
       
         <div class="post-tags">
           
-            <a href="/tags/gitbook/" rel="tag"># gitbook</a>
+            <a href="/tags/mtoc/" rel="tag"># mtoc++</a>
           
-            <a href="/tags/hexo/" rel="tag"># hexo</a>
+            <a href="/tags/文档生成/" rel="tag"># 文档生成</a>
+          
+            <a href="/tags/Doxygen/" rel="tag"># Doxygen</a>
           
         </div>
       
@@ -475,8 +493,8 @@ gitbook编译后(gitbook build)得到电子书网页文件在_book文件夹里(�
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/gitbook-FAQ/" rel="next" title="gitbook学习笔记(4):FAQ">
-                <i class="fa fa-chevron-left"></i> gitbook学习笔记(4):FAQ
+              <a href="/git-add-remote/" rel="next" title="git本地仓库和远程仓库同步">
+                <i class="fa fa-chevron-left"></i> git本地仓库和远程仓库同步
               </a>
             
           </div>
@@ -484,10 +502,6 @@ gitbook编译后(gitbook build)得到电子书网页文件在_book文件夹里(�
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/gitbook-in-rstudio/" rel="prev" title="Rstudio中Rgitbook的应用">
-                Rstudio中Rgitbook的应用 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -505,7 +519,7 @@ gitbook编译后(gitbook build)得到电子书网页文件在_book文件夹里(�
         </div>
 
         <div class="copyright" style="clear:both;">
-           <p><span>本文标题:</span><a href="/hexo-gitbook/">Hexo学习6-hexo里整合gitbook制作的电子书</a></p>
+           <p><span>本文标题:</span><a href="/mtocppLearn/">mtoc++创建matlab代码文档</a></p>
            <p><span>文章作者:</span><a href="/" title="访问 Matthew Li 的个人博客">Matthew Li</a></p>
            <p><span>转载请保留本文标题及原始链接。</span></p>
         </div>
@@ -515,13 +529,11 @@ gitbook编译后(gitbook build)得到电子书网页文件在_book文件夹里(�
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/gitbook-in-rstudio/">Rstudio中Rgitbook的应用</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/gitbook-FAQ/">gitbook学习笔记(4):FAQ</a>
+              <a href="/git-add-remote/">git本地仓库和远程仓库同步</a>
             
           </div>
         </div>
@@ -533,10 +545,10 @@ gitbook编译后(gitbook build)得到电子书网页文件在_book文件夹里(�
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="hexo-gitbook/"
-     data-title="Hexo学习6-hexo里整合gitbook制作的电子书"
+        <div class="ds-share flat" data-thread-key="mtocppLearn/"
+     data-title="mtoc++创建matlab代码文档"
      data-content=""
-     data-url="http://mdeng1985.github.io/hexo-gitbook/">
+     data-url="http://mdeng1985.github.io/mtocppLearn/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -563,8 +575,8 @@ gitbook编译后(gitbook build)得到电子书网页文件在_book文件夹里(�
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="hexo-gitbook/"
-           data-title="Hexo学习6-hexo里整合gitbook制作的电子书" data-url="http://mdeng1985.github.io/hexo-gitbook/">
+      <div class="ds-thread" data-thread-key="mtocppLearn/"
+           data-title="mtoc++创建matlab代码文档" data-url="http://mdeng1985.github.io/mtocppLearn/">
       </div>
     
   </div>
@@ -688,7 +700,7 @@ gitbook编译后(gitbook build)得到电子书网页文件在_book文件夹里(�
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#说明"><span class="nav-number">1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#复制gitbook的电子书到hexo目录下"><span class="nav-number">2.</span> <span class="nav-text">复制gitbook的电子书到hexo目录下</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#博客里引用"><span class="nav-number">3.</span> <span class="nav-text">博客里引用</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#mtoc-是什么"><span class="nav-number">1.</span> <span class="nav-text">mtoc++是什么</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#mtoc-安装"><span class="nav-number">2.</span> <span class="nav-text">mtoc++安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#matlab项目里配置mtoc"><span class="nav-number">3.</span> <span class="nav-text">matlab项目里配置mtoc++</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#运行MatlabDocMaker生成文档"><span class="nav-number">4.</span> <span class="nav-text">运行MatlabDocMaker生成文档</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#进阶学习"><span class="nav-number">5.</span> <span class="nav-text">进阶学习</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#设置中文comment"><span class="nav-number">5.1.</span> <span class="nav-text">设置中文comment</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数的简单注释"><span class="nav-number">5.2.</span> <span class="nav-text">函数的简单注释</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数注释全解读"><span class="nav-number">5.3.</span> <span class="nav-text">函数注释全解读</span></a></li></ol></li></ol></div>
             
 
           </div>

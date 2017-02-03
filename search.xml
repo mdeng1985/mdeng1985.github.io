@@ -3,6 +3,20 @@
   
     
     <entry>
+      <title><![CDATA[mtoc++创建matlab代码文档]]></title>
+      <url>%2FmtocppLearn%2F</url>
+      <content type="text"><![CDATA[mtoc++是什么mtoc++是matlab的doxygen的语法过滤器，能够生成代码文档。 参见官方说明 The filter program ‘mtocpp’ transforms relevant parts of the M-Files into C++ syntax, which can be parsed by doxygen. The generated html files can be processed by the program ‘mtocpp_post’ in order to generate documentation looking more like Matlab. Short mtoc++ feature list: Transforms function m-files into standalone functions Supports most of the OOP features from Matlab mtoc++安装在mtoc++之前首先需要安装Doxygen(必选，1.8版本以后的)和dot graphviz软件(可选，用于生成程序之间的图结构)。 安装完以后将上面两个软件的bin目录加到系统环境变量中，比如： C:\Program Files (x86)\Graphviz2.38\bin 接下来需要下载mtoc++, 我用的是windows64位系统，直接下载的是编译好的Windows binaries (32/64bit) and tools， 解压缩以后为： 123456├─tools│ └─config├─win32│ └─debug└─win64 └─debug 将win64文件添加到系统环境变量。 matlab项目里配置mtoc++我在本地创建了个matlab测试project为testMtocpp(已上传至github仓库)： 1└─src 其中src里为测试的matlab文件。 将mtoc++/tools下的MatlabDocMaker.m文件拷贝到src目录下 打开MatlabDocMaker.m，将function name = getProjectName下的error注释掉，并设置项目名，比如： 1name = &apos;My mtoc++ test project&apos;; 将mtoc++/tools下的config拷贝到src的同级目录下 在src的同级目录下新建doc文件夹，最后的结构为 123├─config├─doc└─src 运行MatlabDocMaker生成文档 在matlab命令窗口输入：MatlabDocMaker.setup, 按照提示设置 123your projects source directory (输入n，然后选择src)documentation configuration files directory (选config文件夹)documentation output directory (选doc文件夹) 设置完提示安装成功 123456[Required] Checking for doxygen... found 1.8.13[Required] Checking for mtoc++... found 1.5[Recommended] Checking for dot... found dot - graphviz version 2.38.0 (20140413.2041)[Recommended] Checking for latex... found MiKTeX-pdfTeX 2.9.4307 (1.40.12) (MiKTeX 2.9)[Recommended] Checking for ghostscript... found 9.05&lt;&lt;&lt;&lt; MatlabDocMaker setup successful. &gt;&gt;&gt;&gt; 运行MatlabDocMaker.create生成文档 进阶学习设置中文comment函数的简单注释源程序为descriptionTest.m，注释如下(中文部分是解读，在注释里没有): 1234567891011121314% This function tests comments of decription,parameters, return values (brief description) 第一行为函数的简短说明%% This is detailed description (After the first empty documentation line, paragraphs of the detailed% description begin) 这个为具体说明，注意和第一行之间有个空行%% see: http://www.stack.nl/~dimitri/doxygen/manual/docblocks.html#docstructure%% also see: http://mdengli.com/mtocppLearn/ for a detail explaination%% Parameters: (参数说明)% a: first parameter of type testnamespace.testclass.%% Return values: (返回值说明)% y: return value 生成网页以后是 几点解读： 注释分为两部分：第一部分为description, parameters, return values； 第二部分为doxygen直接支持的命令 连接第一部分和第二部分要有个空行，这个空行开头不能有% 第一部分内部和第二部分内部：如果中间是空行，开头必须要有%，否则参数的注释会失效。 第二部分的执行doxygen命令的时候，要以%|开头。 第二部分常见的doxygen命令为\author, \todo。好像@命令和\命令的含义是一样的。更多doxygen命令为： doxygen commands, 比如 段落的第一行已冒号结尾，这样这一行就会以黑体显示 可以直接引用m文件，比如引用demo.m直接输入demo.m 函数注释全解读详细的示例文件：doxygen.m]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[git本地仓库和远程仓库同步]]></title>
+      <url>%2Fgit-add-remote%2F</url>
+      <content type="text"><![CDATA[首先，在GITHUB上新建一个空仓库learngit 本地没有仓库的情况12345git initgit add README.mdgit commit -m &quot;first commit&quot;git remote add origin git@github.com:&apos;自己的用户名&apos;/learngit.gitgit push -u origin master 本地有仓库的情形将本地的仓库和远程的进行关联，并推送到远程 在本地的learngit下运行命令 git remote add origin git@github.com:自己的用户名/learngit.git ‘git push -u origin master’ 其中-u的命令是将本地的master分支和远程的master分支关联起来。 参考资料添加远程库 By 廖雪峰 .gitigonre失效发现并未生效，原因是.gitignore只能忽略那些原来没有被track的文件，如果某些文件已经被纳入了版本管理中，则修改.gitignore是无效的。那么解决方法就是先把本地缓存删除（改变成未track状态），然后再提交： 123git rm -r --cached .git add .git commit -m &apos;update .gitignore&apos;]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[bookdown创建电子书全记录]]></title>
       <url>%2Fbookdown-study%2F</url>
       <content type="text"><![CDATA[介绍下面是我学习bookdown写的bookdown读书笔记: bookdown读书笔记]]></content>

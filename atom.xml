@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mdeng1985.github.io/"/>
-  <updated>2017-01-31T02:35:52.797Z</updated>
+  <updated>2017-02-03T17:08:09.966Z</updated>
   <id>http://mdeng1985.github.io/</id>
   
   <author>
@@ -14,6 +14,118 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>mtoc++创建matlab代码文档</title>
+    <link href="http://mdeng1985.github.io/mtocppLearn/"/>
+    <id>http://mdeng1985.github.io/mtocppLearn/</id>
+    <published>2017-02-03T04:05:02.000Z</published>
+    <updated>2017-02-03T17:08:09.966Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="mtoc-是什么"><a href="#mtoc-是什么" class="headerlink" title="mtoc++是什么"></a>mtoc++是什么</h1><p>mtoc++是matlab的doxygen的语法过滤器，能够生成代码文档。</p>
+<p>参见<a href="http://www.ians.uni-stuttgart.de/MoRePaS/software/mtocpp/docs/index.html" target="_blank" rel="external">官方说明</a></p>
+<p>The filter program ‘mtocpp’ transforms relevant parts of the M-Files into C++ syntax, which can be parsed by doxygen. The generated html files can be processed by the program ‘mtocpp_post’ in order to generate documentation looking more like Matlab.</p>
+<p>Short mtoc++ feature list:</p>
+<ul>
+<li>Transforms function m-files into standalone functions</li>
+<li>Supports most of the OOP features from Matlab</li>
+</ul>
+<h1 id="mtoc-安装"><a href="#mtoc-安装" class="headerlink" title="mtoc++安装"></a>mtoc++安装</h1><p>在mtoc++之前首先需要安装Doxygen(必选，1.8版本以后的)和<a href="http://www.graphviz.org/" target="_blank" rel="external">dot graphviz软件</a>(可选，用于生成程序之间的图结构)。</p>
+<p>安装完以后将上面两个软件的bin目录加到系统环境变量中，比如：</p>
+<blockquote>
+<p><code>C:\Program Files (x86)\Graphviz2.38\bin</code></p>
+</blockquote>
+<p>接下来需要下载mtoc++, 我用的是windows64位系统，直接下载的是编译好的<a href="http://www.ians.uni-stuttgart.de/MoRePaS/software/mtocpp/mtoc++_win_1.5.zip" target="_blank" rel="external">Windows binaries (32/64bit) and tools</a>， 解压缩以后为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">├─tools</div><div class="line">│  └─config</div><div class="line">├─win32</div><div class="line">│  └─debug</div><div class="line">└─win64</div><div class="line">    └─debug</div></pre></td></tr></table></figure>
+<p>将win64文件添加到系统环境变量。</p>
+<h1 id="matlab项目里配置mtoc"><a href="#matlab项目里配置mtoc" class="headerlink" title="matlab项目里配置mtoc++"></a>matlab项目里配置mtoc++</h1><p>我在本地创建了个matlab测试project为testMtocpp(已上传至<a href="https://github.com/mdeng1985/testMtocpp" target="_blank" rel="external">github仓库</a>)：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">└─src</div></pre></td></tr></table></figure>
+<p>其中src里为测试的matlab文件。</p>
+<ul>
+<li>将mtoc++/tools下的MatlabDocMaker.m文件拷贝到src目录下</li>
+<li><p>打开MatlabDocMaker.m，将<code>function name = getProjectName</code>下的error注释掉，并设置项目名，比如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">name = &apos;My mtoc++ test project&apos;;</div></pre></td></tr></table></figure>
+</li>
+<li><p>将mtoc++/tools下的config拷贝到src的同级目录下</p>
+</li>
+<li><p>在src的同级目录下新建doc文件夹，最后的结构为</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">├─config</div><div class="line">├─doc</div><div class="line">└─src</div></pre></td></tr></table></figure>
+<h1 id="运行MatlabDocMaker生成文档"><a href="#运行MatlabDocMaker生成文档" class="headerlink" title="运行MatlabDocMaker生成文档"></a>运行MatlabDocMaker生成文档</h1><ul>
+<li><p>在matlab命令窗口输入：<code>MatlabDocMaker.setup</code>, 按照提示设置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">your projects source directory (输入n，然后选择src)</div><div class="line">documentation configuration files directory (选config文件夹)</div><div class="line">documentation output directory (选doc文件夹)</div></pre></td></tr></table></figure>
+<p>设置完提示安装成功</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">[Required] Checking for doxygen...  found 1.8.13</div><div class="line">[Required] Checking for mtoc++...  found 1.5</div><div class="line">[Recommended] Checking for dot...  found dot - graphviz version 2.38.0 (20140413.2041)</div><div class="line">[Recommended] Checking for latex...  found MiKTeX-pdfTeX 2.9.4307 (1.40.12) (MiKTeX 2.9)</div><div class="line">[Recommended] Checking for ghostscript...  found 9.05</div><div class="line">&lt;&lt;&lt;&lt; MatlabDocMaker setup successful. &gt;&gt;&gt;&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>运行<code>MatlabDocMaker.create</code>生成文档</p>
+</li>
+</ul>
+<h1 id="进阶学习"><a href="#进阶学习" class="headerlink" title="进阶学习"></a>进阶学习</h1><h2 id="设置中文comment"><a href="#设置中文comment" class="headerlink" title="设置中文comment"></a>设置中文comment</h2><h2 id="函数的简单注释"><a href="#函数的简单注释" class="headerlink" title="函数的简单注释"></a>函数的简单注释</h2><p>源程序为<code>descriptionTest.m</code>，注释如下(<strong>中文部分是解读，在注释里没有</strong>):</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">% This function tests comments of decription,parameters, return values (brief description) 第一行为函数的简短说明</div><div class="line">%</div><div class="line">% This is detailed description (After the first empty documentation line, paragraphs of the detailed</div><div class="line">% description begin) 这个为具体说明，注意和第一行之间有个空行</div><div class="line">%</div><div class="line">% see: http://www.stack.nl/~dimitri/doxygen/manual/docblocks.html#docstructure</div><div class="line">%</div><div class="line">% also see: http://mdengli.com/mtocppLearn/ for a detail explaination</div><div class="line">%</div><div class="line">% Parameters: (参数说明)</div><div class="line">%  a: first parameter of type testnamespace.testclass.</div><div class="line">%</div><div class="line">% Return values: (返回值说明)</div><div class="line">%  y: return value</div></pre></td></tr></table></figure>
+<p>生成网页以后是</p>
+<p><img src="/mtocppLearn/comment1.png" alt=""></p>
+<p><strong>几点解读</strong>：</p>
+<ul>
+<li>注释分为两部分：第一部分为description, parameters, return values； 第二部分为doxygen直接支持的命令</li>
+<li>连接第一部分和第二部分要有个空行，这个空行开头不能有<code>%</code></li>
+<li>第一部分内部和第二部分内部：如果中间是空行，开头必须要有<code>%</code>，否则参数的注释会失效。</li>
+<li>第二部分的执行doxygen命令的时候，要以<code>%|</code>开头。</li>
+<li>第二部分常见的doxygen命令为<code>\author</code>, <code>\todo</code>。好像<code>@命令</code>和<code>\命令</code>的含义是一样的。更多doxygen命令为： <a href="https://www.stack.nl/~dimitri/doxygen/manual/commands.html" target="_blank" rel="external">doxygen commands</a>, 比如</li>
+<li>段落的第一行已冒号结尾，这样这一行就会以黑体显示</li>
+<li>可以直接引用m文件，比如引用<code>demo.m</code>直接输入<code>demo.m</code></li>
+</ul>
+<h2 id="函数注释全解读"><a href="#函数注释全解读" class="headerlink" title="函数注释全解读"></a>函数注释全解读</h2><p>详细的示例文件：<a href="https://www.mathworks.com/matlabcentral/fileexchange/33826-mdrohmann-mtocpp" target="_blank" rel="external"><code>doxygen.m</code></a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;mtoc-是什么&quot;&gt;&lt;a href=&quot;#mtoc-是什么&quot; class=&quot;headerlink&quot; title=&quot;mtoc++是什么&quot;&gt;&lt;/a&gt;mtoc++是什么&lt;/h1&gt;&lt;p&gt;mtoc++是matlab的doxygen的语法过滤器，能够生成代码文档。&lt;/p&gt;
+&lt;p
+    
+    </summary>
+    
+    
+      <category term="mtoc++" scheme="http://mdeng1985.github.io/tags/mtoc/"/>
+    
+      <category term="文档生成" scheme="http://mdeng1985.github.io/tags/%E6%96%87%E6%A1%A3%E7%94%9F%E6%88%90/"/>
+    
+      <category term="Doxygen" scheme="http://mdeng1985.github.io/tags/Doxygen/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>git本地仓库和远程仓库同步</title>
+    <link href="http://mdeng1985.github.io/git-add-remote/"/>
+    <id>http://mdeng1985.github.io/git-add-remote/</id>
+    <published>2017-02-03T03:13:47.000Z</published>
+    <updated>2017-02-03T05:47:49.571Z</updated>
+    
+    <content type="html"><![CDATA[<p>首先，在GITHUB上新建一个空仓库<code>learngit</code></p>
+<h1 id="本地没有仓库的情况"><a href="#本地没有仓库的情况" class="headerlink" title="本地没有仓库的情况"></a>本地没有仓库的情况</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">git init</div><div class="line">git add README.md</div><div class="line">git commit -m &quot;first commit&quot;</div><div class="line">git remote add origin git@github.com:&apos;自己的用户名&apos;/learngit.git</div><div class="line">git push -u origin master</div></pre></td></tr></table></figure>
+<h1 id="本地有仓库的情形"><a href="#本地有仓库的情形" class="headerlink" title="本地有仓库的情形"></a>本地有仓库的情形</h1><p>将本地的仓库和远程的进行关联，并推送到远程</p>
+<p>在本地的<code>learngit</code>下运行命令</p>
+<blockquote>
+<p><code>git remote add origin git@github.com:自己的用户名/learngit.git</code></p>
+<p>‘git push -u origin master’</p>
+</blockquote>
+<p>其中<code>-u</code>的命令是将本地的master分支和远程的master分支关联起来。</p>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013752340242354807e192f02a44359908df8a5643103a000" target="_blank" rel="external">添加远程库 By 廖雪峰</a></p>
+<h1 id="gitigonre失效"><a href="#gitigonre失效" class="headerlink" title=".gitigonre失效"></a>.gitigonre失效</h1><p>发现并未生效，原因是.gitignore只能忽略那些原来没有被track的文件，如果某些文件已经被纳入了版本管理中，则修改.gitignore是无效的。那么解决方法就是先把本地缓存删除（改变成未track状态），然后再提交：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git rm -r --cached .</div><div class="line">git add .</div><div class="line">git commit -m &apos;update .gitignore&apos;</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;首先，在GITHUB上新建一个空仓库&lt;code&gt;learngit&lt;/code&gt;&lt;/p&gt;
+&lt;h1 id=&quot;本地没有仓库的情况&quot;&gt;&lt;a href=&quot;#本地没有仓库的情况&quot; class=&quot;headerlink&quot; title=&quot;本地没有仓库的情况&quot;&gt;&lt;/a&gt;本地没有仓库的情况&lt;/h
+    
+    </summary>
+    
+    
+      <category term="git" scheme="http://mdeng1985.github.io/tags/git/"/>
+    
+  </entry>
   
   <entry>
     <title>bookdown创建电子书全记录</title>
@@ -36,9 +148,9 @@
       <category term="知识平台" scheme="http://mdeng1985.github.io/categories/%E7%9F%A5%E8%AF%86%E5%B9%B3%E5%8F%B0/"/>
     
     
-      <category term="R语言" scheme="http://mdeng1985.github.io/tags/R%E8%AF%AD%E8%A8%80/"/>
-    
       <category term="bookdown" scheme="http://mdeng1985.github.io/tags/bookdown/"/>
+    
+      <category term="R语言" scheme="http://mdeng1985.github.io/tags/R%E8%AF%AD%E8%A8%80/"/>
     
       <category term="RMarkdown" scheme="http://mdeng1985.github.io/tags/RMarkdown/"/>
     
@@ -71,11 +183,11 @@
     </summary>
     
     
+      <category term="R语言" scheme="http://mdeng1985.github.io/tags/R%E8%AF%AD%E8%A8%80/"/>
+    
       <category term="Rmarkdown" scheme="http://mdeng1985.github.io/tags/Rmarkdown/"/>
     
       <category term="Markdown" scheme="http://mdeng1985.github.io/tags/Markdown/"/>
-    
-      <category term="R语言" scheme="http://mdeng1985.github.io/tags/R%E8%AF%AD%E8%A8%80/"/>
     
   </entry>
   
@@ -120,13 +232,13 @@
       <category term="gitbook" scheme="http://mdeng1985.github.io/categories/gitbook/"/>
     
     
-      <category term="Markdown" scheme="http://mdeng1985.github.io/tags/Markdown/"/>
-    
       <category term="R语言" scheme="http://mdeng1985.github.io/tags/R%E8%AF%AD%E8%A8%80/"/>
     
       <category term="RMarkdown" scheme="http://mdeng1985.github.io/tags/RMarkdown/"/>
     
       <category term="gitbook" scheme="http://mdeng1985.github.io/tags/gitbook/"/>
+    
+      <category term="Markdown" scheme="http://mdeng1985.github.io/tags/Markdown/"/>
     
       <category term="Rstudio" scheme="http://mdeng1985.github.io/tags/Rstudio/"/>
     
@@ -166,9 +278,9 @@
       <category term="建站" scheme="http://mdeng1985.github.io/categories/%E5%BB%BA%E7%AB%99/"/>
     
     
-      <category term="hexo" scheme="http://mdeng1985.github.io/tags/hexo/"/>
-    
       <category term="gitbook" scheme="http://mdeng1985.github.io/tags/gitbook/"/>
+    
+      <category term="hexo" scheme="http://mdeng1985.github.io/tags/hexo/"/>
     
   </entry>
   
