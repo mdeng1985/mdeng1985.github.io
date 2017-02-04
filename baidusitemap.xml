@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://mdeng1985.github.io/mtocppLearn/</loc>
-    <lastmod>2017-02-03T17:33:20.272Z</lastmod>
+    <lastmod>2017-02-03T18:30:51.791Z</lastmod>
     <data>
         <display>
         <title>mtoc++创建matlab代码文档</title>
@@ -16,6 +16,8 @@
         <tag>文档生成</tag>
          
         <tag>Doxygen</tag>
+         
+        <tag>matlab</tag>
          
          
            
@@ -49,13 +51,13 @@
         <title>bookdown创建电子书全记录</title>
         <pubTime>2017-01-30T01:05:14.000Z</pubTime>
         
-        <tag>bookdown</tag>
-         
         <tag>R语言</tag>
          
-        <tag>RMarkdown</tag>
-         
         <tag>gitbook</tag>
+         
+        <tag>bookdown</tag>
+         
+        <tag>RMarkdown</tag>
          
          
            
@@ -75,11 +77,11 @@
         <title>RMarkdown</title>
         <pubTime>2017-01-29T21:46:25.000Z</pubTime>
         
-        <tag>R语言</tag>
-         
         <tag>Rmarkdown</tag>
          
         <tag>Markdown</tag>
+         
+        <tag>R语言</tag>
          
          
            
@@ -96,13 +98,13 @@
         <title>Rstudio中Rgitbook的应用</title>
         <pubTime>2017-01-29T17:20:37.000Z</pubTime>
         
-        <tag>R语言</tag>
+        <tag>Markdown</tag>
          
-        <tag>RMarkdown</tag>
+        <tag>R语言</tag>
          
         <tag>gitbook</tag>
          
-        <tag>Markdown</tag>
+        <tag>RMarkdown</tag>
          
         <tag>Rstudio</tag>
          
@@ -144,9 +146,9 @@
         <title>Hexo学习6-hexo里整合gitbook制作的电子书</title>
         <pubTime>2017-01-28T05:26:34.000Z</pubTime>
         
-        <tag>gitbook</tag>
-         
         <tag>hexo</tag>
+         
+        <tag>gitbook</tag>
          
          
            
